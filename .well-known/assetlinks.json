@@ -4,10 +4,10 @@
             "delegate_permission/common.handle_all_urls"
         ],
         "target": {
-            "namespace": "android_app",
-            "package_name": "app.tonns",
+            "namespace": "com.tonns.app",
+            "package_name": "com.tonns.app",
             "sha256_cert_fingerprints": [
-                ""
+                "36:EE:4B:1D:14:98:0E:DC:49:AF:BA:74:A9:4C:CE:93:10:E8:EE:42:54:B3:A1:19:F6:51:02:18:4A:AC:BD:EE"
             ]
         }
     }
