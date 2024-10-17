@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target" : { "namespace": "android_app", "package_name": "com.tonns.app",
-               "sha256_cert_fingerprints": ["36:EE:4B:1D:14:98:0E:DC:49:AF:BA:74:A9:4C:CE:93:10:E8:EE:42:54:B3:A1:19:F6:51:02:18:4A:AC:BD:EE"] }
+               "sha256_cert_fingerprints": ["4A:F4:06:3C:E3:85:36:01:E8:9F:55:AF:05:82:2B:B3:52:BC:46:17:E2:74:14:1A:78:31:CD:8E:87:C2:DA:A4"] }
 }]
