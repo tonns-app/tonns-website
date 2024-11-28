@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "<TEAM_ID>.<BUNDLE_ID>",
+        "appID": "29KLRH87J4.app.tonns.trashcanfinder",
         "paths": [ "*" ]
       }
     ]
