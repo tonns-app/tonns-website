@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.tonns.app",
+  "target" : { "namespace": "android_app", "package_name": "app.tonns.trashcanfinder",
                "sha256_cert_fingerprints": ["4A:F4:06:3C:E3:85:36:01:E8:9F:55:AF:05:82:2B:B3:52:BC:46:17:E2:74:14:1A:78:31:CD:8E:87:C2:DA:A4"] }
 }]
