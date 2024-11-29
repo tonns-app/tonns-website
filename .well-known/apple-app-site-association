@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "29KLRH87J4.app.tonns.trashcanfinder",
-        "paths": [ "/infopage/*" ]
+        "paths": [ "*" ]
       }
     ]
   }
