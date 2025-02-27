@@ -1,0 +1,38 @@
+title: Tonns
+description: >-
+  Tonns – Your Slogan
+baseurl: ""
+url: "https://tonns.app"
+company: Tonns
+street: Lorenzer Str. 23
+city: 90402 Nürnberg
+hrb: folgt
+court: folgt
+director: Markus Römer
+email: hey@tonns.app
+phone: hello world
+show_price: false
+
+collections:
+  authors:
+    title: Authors
+    output: true
+    permalink: "/about/:title.html"
+  posts:
+    title: Posts
+    output: true
+    permalink: /:year/:month/:day/:title:output_ext
+  features:
+    title: Features
+    output: false
+  streets:
+    title: Streets
+    output: true
+    permalink: /streets/:title
+  cities:
+    title: Cities
+    output: true
+    permalink: /cities/:title
+cloudflare_image_base: "/cdn-cgi/image/format=webp"
+exclude:
+  - "jekyll_runner"

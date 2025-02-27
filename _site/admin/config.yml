@@ -1,0 +1,99 @@
+backend:
+  name: github
+  repo: biralo-studio/tonns.app
+  branch: main
+  site_domain: https://tonns.app
+  base_url: https://tonns.app
+  auth_endpoint: /api/auth
+media_folder: assets/images
+public_folder: /assets/images
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "_posts/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Meta-Title",
+          name: "meta_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Meta-Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
+  - name: "page"
+    label: "Page"
+    folder: "_pages/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Meta-Title",
+          name: "meta_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Meta-Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
+  - name: "street"
+    label: "Street"
+    folder: "_streets/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "street" }
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "City", name: "city", widget: "relation", collection: "city", search_fields: ["title"], value_field: "title" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - {
+          label: "Meta-Title",
+          name: "meta_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Meta-Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
+  - name: "city"
+    label: "City"
+    folder: "_cities/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "city" }
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - {
+          label: "Meta-Title",
+          name: "meta_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Meta-Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
+publish_mode: editorial_workflow

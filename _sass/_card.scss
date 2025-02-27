@@ -1,0 +1,126 @@
+.card {
+    color: $black;
+    background: rgba($red, 0.5);
+    transition: all 100ms linear;
+    border-radius: 8px;
+
+    padding: 1rem;
+
+    &:hover {
+        background: rgba($red, 0.6);
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    position: relative;
+
+    video {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        width: 100%;
+        border-radius: 8px;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    &.video {
+        padding: 12px;
+        background: $primary;
+        border-radius: 64px;
+
+        video {
+            border-radius: calc(64px - 12px);
+            position: relative;
+            top: 0;
+            height: auto;
+        }
+
+        @include mobile {
+            padding: 10px;
+            border-radius: 48px;
+
+            video {
+                border-radius: calc(48px - 10px);
+                height: auto;
+            }
+        }
+    }
+
+    &.white {
+        background: white;
+    }
+}
+
+.card:has(video) {
+    padding-bottom: 300px;
+}
+
+
+.cities .card {
+
+    svg,
+    img {
+        height: 150px;
+        width: 150px;
+
+        @include mobile {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    img {
+        width: auto;
+        max-width: 200px;
+        object-fit: contain;
+
+        @include mobile {
+            max-width: 150px;
+            height: 75px;
+            width: 100%;
+        }
+    }
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    font-size: 1.2rem;
+
+    @include mobile {
+        min-height: 100px;
+
+        p {
+            font-size: .9rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        img+p {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.cities .card {
+    background: white;
+    opacity: 0.9;
+}
+
+.cities {
+    @include mobile {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}

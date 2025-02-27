@@ -1,0 +1,13 @@
+/* TEAM */
+    Author: 
+    Location: 
+    
+
+/* THANKS */
+
+
+/* SITE */
+    Last update: 2025/02/27
+    Standards: HTML5, CSS3, ...
+    Components: AMP
+    Software: Jekyll, SASS

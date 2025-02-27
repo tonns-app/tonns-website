@@ -1,0 +1,26 @@
+<section>
+    {% if include.limit %}
+    <h2>Product changelog</h2>
+    {% endif %}
+    <div class="grid2">
+        {% assign limit = include.limit | default: 100 %}
+        {% for post in site.posts limit: limit %}
+        <div class="card">
+            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+            <p>Published on {{ post.date | date: "%B %d, %Y" }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% if include.limit %}
+    <div class="button-row">
+        <a class="button small" href="/blog.html">Read all product posts ...</a>
+    </div>
+    {% endif %}
+</section>
+{% if include.limit %}
+{% else %}
+<section>
+    <a href="/" class="button small">Home</a>
+</section>
+{% endif %}

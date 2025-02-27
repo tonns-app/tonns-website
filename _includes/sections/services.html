@@ -1,0 +1,7 @@
+<div class="grid1">
+    {% for feature in site.features %}
+    <div class="card">
+        <p><strong>{{ feature.title }}</strong> {{ feature.content | strip_html }}</p>
+    </div>
+    {% endfor %}
+</div>

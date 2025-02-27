@@ -1,0 +1,82 @@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // defining variable
+        const gaId = "{{ site.google_analytics }}";
+        const gtmId = "{{ site.gtm_id }}";
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", gaId);
+        gtag("consent", "default", {
+            ad_storage: "denied",
+            analytics_storage: "denied",
+        });
+
+        const shadow = document.querySelector(".shadow");
+        const outer = document.querySelector(".outer");
+        const banner = document.querySelector(".banner");
+        const essentialBtn = document.getElementById("essentialBtn");
+        const acceptAllBtn = document.getElementById("acceptAllBtn");
+        checkCookieConsent();
+
+        function checkCookieConsent() {
+            const consentCookie = document.cookie
+                .split("; ")
+                .find((row) => row.startsWith("consentGiven="));
+            if (!consentCookie) {
+                showBanner();
+            } else {
+                const consentValue = consentCookie.split("=")[1];
+                updateConsent(consentValue === "true");
+            }
+        }
+
+        function showBanner() {
+            shadow.classList.add("visible");
+            outer.classList.add("visible");
+            banner.classList.add("visible");
+        }
+
+        function hideBanner() {
+            shadow.classList.remove("visible");
+            outer.classList.remove("visible");
+            banner.classList.remove("visible");
+        }
+
+        function setConsent(consent) {
+            document.cookie = `consentGiven=${consent}`;
+            updateConsent(consent);
+            hideBanner();
+        }
+
+        function updateConsent(consentGiven) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            if (
+                consentGiven &&
+                !document.querySelector('script[src*="googletagmanager.com"]')
+            ) {
+                const script = document.createElement("script");
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${gtmId}`;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
+
+            gtag("consent", "update", {
+                ad_storage: consentGiven ? "granted" : "denied",
+                analytics_storage: consentGiven ? "granted" : "denied",
+            });
+        }
+
+        essentialBtn.addEventListener("click", () => setConsent(false));
+        acceptAllBtn.addEventListener("click", () => setConsent(true));
+    });
+
+</script>

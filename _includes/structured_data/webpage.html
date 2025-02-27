@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{{ page.title }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site.title }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ site.url }}/assets/images/512x512.png"
+            }
+        },
+        "url": "{{ site.url }}{{ page.url }}"
+    }
+</script>

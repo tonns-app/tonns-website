@@ -1,0 +1,26 @@
+---
+layout: page
+---
+
+<section>
+  <p>Published on {{ page.date | date: "%B %d, %Y" }}</p>
+  {% assign base_url = site.cloudflare_image_base | append:
+  ',width=1200,height=1000,quality=80,fit=scale-down/assets/images/' %}
+  {% assign updated_content = content | replace: '/assets/images/', base_url %}
+  <div class="card post">
+    {{ updated_content }}
+  </div>
+</section>
+<section>
+  <div class="button-row"></div>
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url }}" class="button small">Previous</a>
+  {% endif %}
+  <a href="/" class="button small">Home</a>
+  {% if page.next.url %}
+  <a href="{{ page.next.url }}" class="button small">Next</a>
+  {% endif %}
+  </div>
+</section>
+
+{% include structured_data/blogpost.html %}

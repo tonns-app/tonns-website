@@ -1,0 +1,53 @@
+{
+    "name": "Tonns",
+    "short_name": "Tonns",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "",
+    "background_color": "",
+    "lang": "de-DE",
+    "scope": "",
+    "orientation": "portrait-primary",
+    "description": "Tonns – Your Slogan",
+    "icons": [
+        {
+            "src": "/assets/images/57x57.png",
+            "sizes": "57x57",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/114x114.png",
+            "sizes": "114x114",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/196x196.png",
+            "sizes": "196x196",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "prefer_related_applications":
+        false,
+    "related_applications": [
+        
+        
+        {
+            "platform": "Web"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+$black: black;
+
+$primary: #3a415c;
+$accent: #FCFAF1;
+$white: #FCFAF1;
+$red: #77ea76;
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('/assets/Arimo-VariableFont_wght.ttf');
+}
+
+:root {
+    --primary: #3a415c;
+    --accent: #FCFAF1;
+    --black: black;
+    --red: #77ea76;
+    --white: #FCFAF1;
+    --heading-font: 'Arimo';
+    --body-font: 'Arimo';
+    --secondary: var(--accent);
+    --foreground: var(--black);
+    --background: var(--white);
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.red {
+    color: var(--red);
+}
+
+.body-font {
+    font-family: var(--body-font);
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+}

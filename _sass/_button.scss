@@ -1,0 +1,43 @@
+.button {
+    display: inline-block;
+    border-radius: 8px;
+
+    text-decoration: none;
+    transition: all 100ms linear;
+    cursor: pointer;
+    color: $white;
+    background: rgba($primary, 0.8);
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    
+    &:hover {
+        text-decoration: none;
+        background: rgba($primary, 0.5);
+        color: $white;
+    }
+
+    &.red {
+        background: $red;
+        color: $black;
+    }
+
+    &.small {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+    @include mobile {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }   
+}
+
+.button-row {
+    margin-top: 1rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
