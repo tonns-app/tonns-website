@@ -1,4 +1,6 @@
-@import "breakpoints";
+@use "breakpoints" as *;
+@use "variables" as *;
+
 
 h1,
 h2,

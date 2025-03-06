@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .animate-slide-up {
   transform: translateY(50px);
   opacity: 0;

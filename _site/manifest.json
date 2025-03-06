@@ -1,6 +1,6 @@
 {
-    "name": "Tonns",
-    "short_name": "Tonns",
+    "name": "tonns",
+    "short_name": "tonns",
     "start_url": "/",
     "display": "standalone",
     "theme_color": "",
@@ -8,7 +8,7 @@
     "lang": "de-DE",
     "scope": "",
     "orientation": "portrait-primary",
-    "description": "Tonns – Your Slogan",
+    "description": "tonns – Your Slogan",
     "icons": [
         {
             "src": "/assets/images/57x57.png",

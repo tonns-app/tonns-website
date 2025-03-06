@@ -1,23 +1,24 @@
+@use "breakpoints" as *;
+@use "variables" as *;
+
 .card {
     color: $black;
     background: rgba($red, 0.5);
     transition: all 100ms linear;
     border-radius: 8px;
-
+    position: relative;
     padding: 1rem;
+    display: flex;
 
     &:hover {
         background: rgba($red, 0.6);
     }
 
     @include mobile {
-        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
-    position: relative;
 
     video {
         position: absolute;
@@ -46,8 +47,10 @@
         }
 
         @include mobile {
-            padding: 10px;
-            border-radius: 48px;
+            & {
+                padding: 10px;
+                border-radius: 48px;
+            }
 
             video {
                 border-radius: calc(48px - 10px);
@@ -65,32 +68,7 @@
     padding-bottom: 300px;
 }
 
-
 .cities .card {
-
-    svg,
-    img {
-        height: 150px;
-        width: 150px;
-
-        @include mobile {
-            height: 100px;
-            width: 100px;
-        }
-    }
-
-    img {
-        width: auto;
-        max-width: 200px;
-        object-fit: contain;
-
-        @include mobile {
-            max-width: 150px;
-            height: 75px;
-            width: 100%;
-        }
-    }
-
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -99,8 +77,22 @@
     color: $primary;
     font-size: 1.2rem;
 
+    svg,
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
     @include mobile {
-        min-height: 100px;
+        & {
+            min-height: 100px;
+        }
+
+        svg,
+        img {
+            height: 100px;
+            width: 100px;
+        }
 
         p {
             font-size: .9rem;
@@ -112,6 +104,20 @@
             margin-bottom: 1rem;
         }
     }
+
+    img {
+        width: auto;
+        max-width: 200px;
+        object-fit: contain;
+    }
+
+    @include mobile {
+        & {
+            max-width: 150px;
+            height: 75px;
+            width: 100%;
+        }
+    }
 }
 
 .cities .card {
@@ -121,6 +127,8 @@
 
 .cities {
     @include mobile {
-        grid-template-columns: 1fr 1fr !important;
+        & { 
+            grid-template-columns: 1fr 1fr !important;
+        }
     }
 }
