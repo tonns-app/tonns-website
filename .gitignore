@@ -1,0 +1,37 @@
+# Jekyll generierte Dateien
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.cache/
+
+# Node.js / Yarn
+node_modules/
+package-lock.json
+yarn.lock
+
+# Bundler (Ruby Abhängigkeiten)
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+# Log-Dateien
+log/
+*.log
+
+# Systemdateien (Mac & Linux)
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor-spezifische Dateien
+.idea/
+.vscode/
+*.bak
+*.tmp
+
+# Lokale Umgebungsvariablen
+.env
+.env.local
