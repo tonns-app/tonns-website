@@ -1,5 +1,6 @@
 @use "breakpoints" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 
 nav {
@@ -12,11 +13,7 @@ nav {
     justify-content: space-between;
     z-index: 10;
 
-    #logo {
-        margin-top: 2rem;
-        margin-left: 2rem;
-        z-index: 0;
-    }
+
 
     ul {
         display: flex;
