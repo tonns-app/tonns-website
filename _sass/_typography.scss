@@ -36,7 +36,7 @@ h1 {
         }
     }
 
-    .red {
+    .green {
 
         @include mobile {
             padding-left: 0;
@@ -117,14 +117,13 @@ small {
 
 a {
     color: var(--primary);
-    font-family: var(--body-font);
     text-decoration: none;
     transition: all 100ms linear;
 
     &:hover,
     &:focus {
         color: var(--foreground);
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 

@@ -2,21 +2,64 @@ $black: black;
 $primary: #3a415c;
 $accent: #FCFAF1;
 $white: #FCFAF1;
-$red: #77ea76;
+$green: #77ea76;
+
+
 
 @font-face {
-    font-family: 'Arimo';
-    src: url('/assets/Arimo-VariableFont_wght.ttf');
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto/static/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto/static/Roboto-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto/static/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto/static/Roboto-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto/static/Roboto-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+
 
 :root {
     --primary: #3a415c;
     --accent: #FCFAF1;
-    --black: black;
-    --red: #77ea76;
+    --green: #77ea76;
     --white: #FCFAF1;
-    --heading-font: 'Arimo';
-    --body-font: 'Arimo';
+    --heading-font: 'Roboto';
+    --body-font: 'Roboto';
     --secondary: var(--accent);
     --foreground: var(--black);
     --background: var(--white);
@@ -30,8 +73,8 @@ $red: #77ea76;
     color: var(--secondary);
 }
 
-.red {
-    color: var(--red);
+.green {
+    color: var(--green);
 }
 
 .body-font {

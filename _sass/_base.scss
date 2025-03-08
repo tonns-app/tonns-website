@@ -1,5 +1,8 @@
 @use "variables" as *;
 @use "breakpoints" as *;
+* {
+  box-sizing: border-box;
+}
 
 body,
 html {
@@ -12,10 +15,7 @@ html {
 }
 
 main {
-  margin-top: 5rem;
-  @include mobile {
-    margin-top: 3.5rem;
-  }
+
 }
 
 .centered {
@@ -83,12 +83,8 @@ hr {
 .opener {
   object-fit: cover;
   width: 100%;
-  height: 350px;
-  border-radius: 8px;
-  border-top-right-radius: 6rem;
-  border-bottom-left-radius: 6rem;
+  max-height: 50vh;
   @include mobile {
     height: 250px;
-    border-radius: 1rem;
   }
 }

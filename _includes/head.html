@@ -4,51 +4,52 @@
 
 <title>{{ site.title }} – {{ page.meta_title | default: page.title }}</title>
 
-<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+<!-- Canonical Tag -->
+<link rel="canonical" href="{{ site.url | append: page.url | replace: '//', '/' }}">
 
-<meta name="description" content="{{ page.meta_description | default: page.excerpt | default: site.description | strip_html }}"><meta name="robots" content="index,follow">
+<!-- SEO Meta Tags -->
+<meta name="description" content="{{ page.meta_description | default: page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+<meta name="robots" content="index,follow">
 <meta name="author" content="{{ page.author | default: site.author }}">
 <meta itemprop="name" content="{{ site.title }}">
 <meta name="theme-color" content="{{ site.color }}">
 <meta name="google" content="notranslate">
-<meta name="keywords" content="{{ site.keywords | join:', ' }}" />
-<meta name="news_keywords" content="{{ site.keywords | join:', ' }}" />
-<link href="/rss.xml" type="application/rss+xml" rel="alternate" />
 
-{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
+<!-- RSS Feed -->
+<link href="/rss.xml" type="application/rss+xml" rel="alternate">
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/144x144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/114x114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/72x72.png">
-<link rel="apple-touch-icon-precomposed" href="/assets/images/57x57.png">
-<link rel="shortcut icon" sizes="196x196" href="/assets/images/196x196.png">
-<link rel="shortcut icon" href="/assets/images/favicon.png">
+<!-- Google Site Verification -->
+{% if site.google_site_verification %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{% endif %}
 
+<!-- Favicons -->
+<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/144x144.png">
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/images/144x144.png">
+
+<!-- Mobile Optimization -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 
-<meta name="msapplication-TileImage" content="/assets/images/144x144.png">
-<meta name="msapplication-TileColor" content="{{ site.color }}">
+<!-- Open Graph / Facebook -->
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html }}">
+<meta property="og:image" content="{{ page.image | default: site.image }}">
+<meta property="og:image:type" content="image/png">
 
-<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{{ page.title | default: site.title }}" />
-<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html }}" />
-<meta property="og:image" content="{{ page.image | default: site.image }}" />
-<meta property="og:image:type" content="image/png" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html }}">
+<meta name="twitter:image" content="{{ page.image | default: site.image }}">
+<meta name="twitter:site" content="@{{ site.twitter }}">
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ page.title | default: site.title }}" />
-<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html }}" />
-<meta name="twitter:image" content="{{ page.image | default: site.image }}" />
-<meta name="twitter:site" content="@{{ site.twitter }}" />
-
----
----
-
+<!-- Preload for Performance -->
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-
 
 {% include scripts/scroll_animation.html %}
 {% include scripts/cookie.html %}
