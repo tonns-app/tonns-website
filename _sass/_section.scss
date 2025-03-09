@@ -1,14 +1,7 @@
-@use "mixins" as *;
-
-
 section {
     width: 100%;
     * {
         z-index: 1;
-    }
-
-    .content{
-        @include center-content($padding: 0rem 2rem)
     }
 
     &>video {

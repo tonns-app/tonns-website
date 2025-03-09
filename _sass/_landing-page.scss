@@ -1,0 +1,45 @@
+@use "mixins" as *;
+@use "breakpoints" as *;
+
+#teaser-container {
+  height: 600px;
+  width: 100vw;
+  overflow: hidden;
+  @include dflex();
+  position: relative;
+  @include mobile {
+    height: 350px;
+  }
+  figure {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.8);
+    }
+
+    figcaption {
+      display: none;
+    }
+  }
+}
+
+.teaser-text-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  p {
+    font-weight: 400;
+    @include mobile {
+      font-size: 0.7rem;
+    }
+  }
+  @include center-content($padding: 60px 2rem 1rem);
+  @include dflex($g: 0.5rem, $ai: flex-start);
+}

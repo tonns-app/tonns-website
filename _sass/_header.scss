@@ -4,7 +4,7 @@
 
 header {
   width: 100vw;
-  height: 70px;
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@ nav {
     @include dflex();
   }
   img {
-    height: 50px;
+    height: 45px;
   }
   ul {
     display: flex;
@@ -36,7 +36,9 @@ nav {
       line-height: 1rem;
       margin: 0 1rem;
       color: var(--primary);
+      text-transform: uppercase;
       font-weight: 600;
+      font-size: 0.9rem;
       &:hover {
         color: green;
       }
