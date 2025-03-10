@@ -1,8 +1,0 @@
-{% capture image_url %}
-{% if site.serving %}
-    {{ include.url }}
-{% else %}
-    {{ site.cloudflare_image_base }},width={{ include.width | default: 1000 }},height={{ include.height | default: 1000 }},quality={{ include.quality | default: 80 }},fit={{ include.fit | default: 'scale-down' }}{% if include.fit == 'crop' or include.fit == 'cover' %},gravity=auto{% endif %}{{ include.url }}
-{% endif %}
-{% endcapture %}
-{{ image_url | strip_newlines | remove: ' ' }}
