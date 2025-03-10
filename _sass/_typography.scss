@@ -19,102 +19,25 @@ h6 {
 }
 
 h1 {
-    font-size: 2.8rem;
-    &.hero {
-        font-size: 3.3rem;
-    }
-
-    @include mobile {
-        font-size: 1.2rem;
-        &.hero {
-            font-size: 2.5rem;
-        }
-    }
-
-    .green {
-
-        @include mobile {
-            padding-left: 0;
-        }
-    }
+    font-size: clamp(1.2rem, 5vw, 2.8rem);
 }
 
 h2 {
-    font-size: 1rem;
-
-    @include mobile {
-        font-size: 1.4rem;
-
-        &.hero {
-            font-size: 1.5rem;
-        }
-    }
+    font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
 h3 {
-    font-size: 0.9rem;
-
-    @include mobile {
-        font-size: 1.5rem;
-    }
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
 }
 
 h4 {
-    font-size: 0.8rem;
-
-    @include mobile {
-        font-size: 1.3rem;
-    }
-}
-
-h5 {
-    font-size: 0.7rem;
-
-    @include mobile {
-        font-size: 1.1rem;
-    }
-}
-
-h6 {
-    font-size: 0.6rem;
-
-    @include mobile {
-        font-size: 1rem;
-    }
-}
-
-
-h3.top {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-
-    @include mobile {
-        font-size: 1.3rem;
-    }
-}
-
-h3.bottom {
-    background: rgba($primary, 0.3);
-    padding: 1rem;
-    display: inline;
-    font-size: 1.5rem;
-
-    @include mobile {
-        font-size: 1.3rem;
-        padding: 0.5rem;
-    }
-}
-
-small {
-    color: rgba($primary, 0.5);
-    font-family: var(--body-font);
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
 }
 
 a {
     color: var(--primary);
     text-decoration: none;
     transition: all 100ms linear;
-
     &:hover,
     &:focus {
         color: var(--foreground);
@@ -123,12 +46,11 @@ a {
 }
 
 p,
-li {
-    font-size: 1rem;
-    margin: 0 0 .8rem;
-    padding: 0;
+li, {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    font-weight: 400;
+    margin: 0 0 .5rem;
     line-height: 1.7;
-    font-weight: 300;
 }
 
 ul li {
@@ -167,7 +89,6 @@ p br {
 .post {
     text-align: left !important;
     align-items: start !important;
-
     h1,
     h2,
     h3,
@@ -178,7 +99,6 @@ p br {
         font-size: 1.6rem;
         margin-top: 2rem;
     }
-
     ul li {
         margin: 0 0 0.3rem;
         list-style: devanagari !important;
@@ -189,16 +109,4 @@ p br {
             margin-left: -1rem;
         }
     }
-}
-
-blockquote {
-    span.big {
-        font-size: 2.5rem;
-        color: $black;
-    }
-
-    line-height: 2rem;
-
-    font-size: 1.2rem;
-    color: $primary;
 }

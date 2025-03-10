@@ -1,26 +1,23 @@
-@use "mixins" as *;
+@use "variables" as *;
 @use "breakpoints" as *;
+@use "mixins" as *;
 
 #teaser-container {
-  height: 600px;
-  width: 100vw;
+  height: clamp(350px, 60vw, 600px);
   overflow: hidden;
-  @include dflex();
   position: relative;
+  @include dflex();
   @include mobile {
     height: 350px;
   }
   figure {
     margin: 0;
     height: 100%;
-    width: 100%;
     img {
       height: 100%;
-      width: 100%;
       object-fit: cover;
       filter: brightness(0.8);
     }
-
     figcaption {
       display: none;
     }
@@ -28,18 +25,136 @@
 }
 
 .teaser-text-container {
+  @include center-content($padding: 60px 2rem 1rem);
+  @include dflex($g: 0.5rem, $ai: flex-start);
   position: absolute;
   height: 100%;
   width: 100%;
   flex-direction: column;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-  color: #fff;
-  p {
-    font-weight: 400;
-    @include mobile {
-      font-size: 0.7rem;
+  color: $white;
+}
+
+#interest {
+  @include dflex();
+  flex-direction: column;
+}
+
+#action-dates-container {
+  @include dflex($g: 1rem);
+  @include center-content($padding: 0 2rem);
+  flex-direction: column;
+  margin: 3rem 0;
+
+  h2 {
+    margin: 0.5rem 0.3rem 0;
+  }
+
+  img {
+    width: 80px;
+  }
+
+  #action-dates-text {
+    @include dflex($g: 0px);
+    flex-direction: column;
+    color: $primary;
+  }
+
+  @include mobile();
+}
+
+#hubspotForm {
+  @include dflex($g: 10px);
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+
+  label {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+
+    &:focus {
+      border-color: #10b981;
+      outline: none;
     }
   }
-  @include center-content($padding: 60px 2rem 1rem);
-  @include dflex($g: 0.5rem, $ai: flex-start);
+
+  button {
+    background-color: $primary;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 12px;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}
+
+/* Autocomplete Container */
+.autocomplete-container {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Dropdown für Adressvorschläge */
+#address-suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1050;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  overflow-y: auto;
+  max-height: 200px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Dropdown-Einträge */
+#address-suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  background: white;
+}
+
+#address-suggestions li:hover {
+  background: #f0f0f0;
+}
+
+/* Entfernt den unteren Border-Radius, wenn Vorschläge sichtbar sind */
+.autocomplete-container.active input,
+#address.open {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom: none !important;
+}
+
+/* Button bleibt hinter dem Dropdown */
+button {
+  position: relative;
+  z-index: 100;
 }

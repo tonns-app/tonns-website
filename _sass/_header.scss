@@ -38,7 +38,7 @@ nav {
       color: var(--primary);
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: clamp(0.7rem, 1.4vw, 0.9rem);
       &:hover {
         color: green;
       }
@@ -47,7 +47,7 @@ nav {
         height: 1rem;
       }
 
-      @include mobile {
+      @include tablet {
         margin: 0 0.5rem;
       }
     }

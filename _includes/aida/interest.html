@@ -1,29 +1,31 @@
-<section id="cities">
-    <h2>Unsere Städte</h2>
-    <div class="grid cities">
-        <div class="card">
-            <p>
-            Fürth
-            </p>
-        </div>
-        <div class="card">
-            <p>
-            Nürnberg
-            </p>
-        </div>
+<section id="interest">
+  <div class="content" id="action-dates-container">
+    <img src="/assets/images/tonns-logo-small.png" alt="Tonns Logo" />
+    <div id="action-dates-text">
+      <h2>Müllabfuhr-Check!</h2>
+      <p>Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!</p>
     </div>
+
+    <form id="hubspotForm">
+      <div class="autocomplete-container">
+        <input type="text" id="address" name="address" placeholder="Adresse eingeben..." required autocomplete="off" />
+        <ul id="address-suggestions"></ul>
+      </div>
+      <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required />
+
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
 </section>
 <section>
-    <h2>Unsere Partner</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="" loading="lazy">
-            <p>Partner 1, Nürnberg</p>
-        </div>
-        <div class="card">
-            <p>
-                Entdecke mehr<br>in unserer App
-            </p>
-        </div>
+  <h2>Unsere Partner</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="" loading="lazy" />
+      <p>Partner 1, Nürnberg</p>
     </div>
+    <div class="card">
+      <p>Entdecke mehr<br />in unserer App</p>
+    </div>
+  </div>
 </section>

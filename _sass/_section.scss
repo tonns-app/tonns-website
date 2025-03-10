@@ -1,5 +1,6 @@
 section {
     width: 100%;
+
     * {
         z-index: 1;
     }
@@ -28,9 +29,5 @@ section {
         }
     }
 
-    &.wide {
-        max-width: 1600px;
-        padding: 2rem;
-    }
 }
 
