@@ -2,6 +2,26 @@
 @use "breakpoints" as *;
 @use "mixins" as *;
 
+.content {
+  @include dflex($g: 1rem);
+  @include center-content($padding: 0 2rem);
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+  .headline-subline {
+    @include dflex($g: 8px);
+    max-width: 60vw;
+    flex-direction: column;
+    color: $primary;
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+
+    h2 {
+    margin: 0.5rem 0.3rem 0.3rem;
+  }
+
 #teaser-container {
   height: clamp(350px, 60vw, 600px);
   overflow: hidden;
@@ -16,6 +36,7 @@
     width: 100%;
     img {
       height: 100%;
+      width: 100%;
       object-fit: cover;
       filter: brightness(0.8);
     }
@@ -36,29 +57,14 @@
   color: $white;
 }
 
-#interest {
+section {
   @include dflex();
   flex-direction: column;
 }
 
 #action-dates-container {
-  @include dflex($g: 1rem);
-  @include center-content($padding: 0 2rem);
-  flex-direction: column;
-  margin: 3rem 0;
-
-  h2 {
-    margin: 0.5rem 0.3rem 0;
-  }
-
   img {
-    width: 80px;
-  }
-
-  #action-dates-text {
-    @include dflex($g: 0px);
-    flex-direction: column;
-    color: $primary;
+    width: 90px;
   }
 
   @include mobile();
@@ -68,13 +74,13 @@
   @include dflex($g: 10px);
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
 
   label {
     display: none;
   }
 
-  input {
+  .hubspot-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -154,4 +160,87 @@
 button {
   position: relative;
   z-index: 100;
+}
+
+/* Checkbox */
+.agree-privacy-policy {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agree-privacy-policy span {
+  margin-left: 50px;
+  font-size: 14px;
+}
+
+.agree-privacy-policy a {
+  color: green;
+}
+
+.agree-privacy-policy a:visited {
+  color: green;
+}
+
+input[type="checkbox"] {
+  top: 2px;
+  left: 12px;
+  position: absolute;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+}
+
+input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #00d500;
+  border-radius: 20px;
+  transition: all 0.2s linear;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #00d500;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: solid #00d500;
+  border-width: 0 0px 0px 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  transition: all 0.2s linear;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 7px;
+  border: solid #00d500;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 4px;
+  left: 7px;
 }

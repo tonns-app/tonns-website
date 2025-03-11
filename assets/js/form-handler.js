@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let debounceTimer; // Timer für Debounce
 
   if (!addressInput || !suggestionsList || !container) {
-    console.error("❌ Fehler: Ein benötigtes Element wurde nicht gefunden!");
+    console.error("Fehler: Ein benötigtes Element wurde nicht gefunden!");
     return;
   }
 
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const query = addressInput.value.trim();
     if (query.length < 3) {
-      console.log("🔴 Weniger als 3 Zeichen – Dropdown wird versteckt.");
       suggestionsList.innerHTML = "";
       suggestionsList.style.display = "none";
       container.classList.remove("active");
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // 🚀 Debounce: API wird nur nach 150ms Inaktivität aufgerufen
+    // 🚀 Debounce: API wird nur nach 300ms Inaktivität aufgerufen
     debounceTimer = setTimeout(() => {
       fetchAddressSuggestions(query);
     }, 300);
@@ -32,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funktion für API-Anfrage
   async function fetchAddressSuggestions(query) {
     try {
-      console.log("🔵 API-Abfrage für:", query);
-
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?format=json&q=${query}, Deutschland&countrycodes=de&addressdetails=1&extratags=1`
       );
@@ -64,11 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const listItem = document.createElement("li");
             listItem.textContent = formattedAddress;
             listItem.addEventListener("click", () => {
-              if (houseNumber.trim() === "") {
-                alert("⚠️ Bitte eine gültige Adresse mit Hausnummer auswählen!");
-                return;
-              }
-
               addressInput.value = formattedAddress;
               suggestionsList.innerHTML = "";
               suggestionsList.style.display = "none";
@@ -81,28 +73,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (suggestionsList.children.length > 0) {
-        console.log("🟢 Adressen gefunden – Dropdown wird angezeigt.");
         suggestionsList.style.display = "block";
         container.classList.add("active");
         addressInput.classList.add("open");
       } else {
-        console.log("🔴 Keine passenden Adressen – Dropdown wird versteckt.");
         suggestionsList.style.display = "none";
         container.classList.remove("active");
         addressInput.classList.remove("open");
       }
     } catch (error) {
-      console.error("❌ Fehler bei der Adresssuche:", error);
+      console.error("Fehler bei der Adresssuche:", error);
     }
   }
 
   // Klick außerhalb des Input-Feldes schließt das Dropdown
   document.addEventListener("click", function (event) {
     if (!addressInput.contains(event.target) && !suggestionsList.contains(event.target)) {
-      console.log("🔴 Klick außerhalb – Dropdown wird geschlossen.");
       suggestionsList.style.display = "none";
       container.classList.remove("active");
       addressInput.classList.remove("open");
+    }
+  });
+});
+
+/* Checkbox */
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById("agree-checkbox");
+
+  checkbox.addEventListener("change", function (event) {
+    const isChecked = event.target.checked;
+
+    if (isChecked) {
+      console.log("Datenschutzbestimmungen wurden akzeptiert.");
+      // Du kannst hier auch eine andere Aktion durchführen,
+      // z.B. das Absenden eines Formulars oder Speichern des Zustands in einem Cookie.
+    } else {
+      console.log("Datenschutzbestimmungen wurden nicht akzeptiert.");
     }
   });
 });

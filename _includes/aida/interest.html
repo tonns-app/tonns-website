@@ -1,24 +1,38 @@
 <section id="interest">
   <div class="content" id="action-dates-container">
     <img src="/assets/images/tonns-logo-small.png" alt="Tonns Logo" />
-    <div id="action-dates-text">
+    <div class="headline-subline" id="action-dates-text">
       <h2>Müllabfuhr-Check!</h2>
       <p>Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!</p>
     </div>
 
     <form id="hubspotForm">
       <div class="autocomplete-container">
-        <input type="text" id="address" name="address" placeholder="Adresse eingeben..." required autocomplete="off" />
+        <input class="hubspot-input" type="text" id="address" name="address" placeholder="Adresse eingeben..." required autocomplete="off" />
         <ul id="address-suggestions"></ul>
       </div>
-      <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required />
+      <input class="hubspot-input" type="email" id="email" name="email" placeholder="E-Mail-Adresse" required />
 
-      <button type="submit">Absenden</button>
+      <div class="agree-privacy-policy">
+        <input type="checkbox" id="agree-checkbox" />
+        <span>Ich habe die <a href="/imprint">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+      </div>
+
+      <button type="submit">Kostenlose Abholtermine erhalten</button>
     </form>
   </div>
 </section>
 <section>
-  <h2>Unsere Partner</h2>
+  <div class="content">
+    <div class="headline-subline">
+      <h2>Wir kümmern uns um Ihre Mülltonnen!</h2>
+      <p>
+        Als führender Mülltonnendienst in Deutschland garantieren wir 100% Zuverlässigkeit und Pünktlichkeit. Unser Team übernimmt die Verantwortung und ist Ihr
+        persönlicher Ansprechpartner vor Ort
+      </p>
+    </div>
+  </div>
+
   <div class="grid">
     <div class="card">
       <img src="" loading="lazy" />

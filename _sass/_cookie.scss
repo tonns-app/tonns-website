@@ -8,9 +8,8 @@
         left: 0;
         right: 0;
         height: 30rem;
-        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+        background: rgba(0, 0, 0, 0.3);
         display: none;
-
         &.visible {
             display: block;
         }
@@ -18,7 +17,7 @@
 
     .outer {
         position: fixed;
-        top: 35vh;
+        top: 10vh;
         bottom: 0;
         left: 0;
         right: 0;
