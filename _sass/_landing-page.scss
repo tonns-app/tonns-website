@@ -1,26 +1,7 @@
 @use "variables" as *;
 @use "breakpoints" as *;
 @use "mixins" as *;
-
-.content {
-  @include dflex($g: 1rem);
-  @include center-content($padding: 0 2rem);
-  flex-direction: column;
-  margin: 3rem 0;
-}
-
-  .headline-subline {
-    @include dflex($g: 8px);
-    max-width: 60vw;
-    flex-direction: column;
-    color: $primary;
-    text-align: center;
-    margin-top: 0.8rem;
-  }
-
-    h2 {
-    margin: 0.5rem 0.3rem 0.3rem;
-  }
+@use "button" as *;
 
 #teaser-container {
   height: clamp(350px, 60vw, 600px);
@@ -57,17 +38,37 @@
   color: $white;
 }
 
-section {
+.section {
   @include dflex();
   flex-direction: column;
 }
 
-#action-dates-container {
-  img {
-    width: 90px;
+.content {
+  @include dflex($g: 1rem);
+  @include center-content($padding: 0 2rem);
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.headline-subline {
+  @include dflex($g: 0.5rem);
+  @include center-content($padding: 0 2rem);
+  flex-direction: column;
+  margin: 1rem 0;
+  flex-direction: column;
+  color: $primary;
+  text-align: center;
+  h2 {
+    margin: 0.5rem 0.3rem 0;
   }
 
   @include mobile();
+}
+
+#action-dates-container {
+  img {
+    width: 80px;
+  }
 }
 
 #hubspotForm {
@@ -93,17 +94,6 @@ section {
       border-color: #10b981;
       outline: none;
     }
-  }
-
-  button {
-    background-color: $primary;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 12px;
   }
 }
 
@@ -177,11 +167,11 @@ button {
 }
 
 .agree-privacy-policy a {
-  color: green;
+  color: $middle-green;
 }
 
 .agree-privacy-policy a:visited {
-  color: green;
+  color: $middle-green;
 }
 
 input[type="checkbox"] {
@@ -199,7 +189,7 @@ input[type="checkbox"]:checked:before {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 2px solid #00d500;
+  border: 2px solid $middle-green;
   border-radius: 20px;
   transition: all 0.2s linear;
 }
@@ -210,7 +200,7 @@ input[type="checkbox"]:before {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 2px solid #00d500;
+  border: 2px solid $middle-green;
   border-radius: 3px;
 }
 
@@ -219,7 +209,7 @@ input[type="checkbox"]:after {
   display: block;
   width: 0px;
   height: 0px;
-  border: solid #00d500;
+  border: solid $middle-green;
   border-width: 0 0px 0px 0;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -235,7 +225,7 @@ input[type="checkbox"]:checked:after {
   display: block;
   width: 2px;
   height: 7px;
-  border: solid #00d500;
+  border: solid $middle-green;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

@@ -1,48 +1,41 @@
-@use "breakpoints" as *;
 @use "variables" as *;
 
-
-
-.button {
-    display: inline-block;
-    border-radius: 8px;
-
-    text-decoration: none;
-    transition: all 100ms linear;
-    cursor: pointer;
-    color: $white;
-    background: rgba($primary, 0.8);
-    padding: 1rem 1.5rem;
-    font-size: 1.3rem;
-    
-    &:hover {
-        text-decoration: none;
-        background: rgba($primary, 0.5);
-        color: $white;
-    }
-
-    &.green {
-        background: $green;
-        color: $black;
-    }
-
-    &.small {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-radius: 8px;
-    }
-    @include mobile {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-radius: 8px;
-    }   
+button {
+  background-color: #3ca050;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 600;
+  margin-top: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.125s ease-in-out;
+  &:hover {
+    background-color: #3ca050e0;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Kleiner Schatten beim Klicken */
+  transform: translateY(1px); /* Kleiner "Druck"-Effekt */
+}
 }
 
-.button-row {
-    margin-top: 1rem;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
+
+
+
+.button-disable {
+  background-color: rgba(60, 160, 80, 0.1);
+  color: #3ca050cb;
+  border-color: rgba(60, 160, 80, 0.1);
+  padding: 0.6rem 1rem;
+  border-radius: 60;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 600;
+  margin-top: 12px;
+  &:hover{
+    background-color: rgba(60, 160, 80, 0.2);
+  }
 }

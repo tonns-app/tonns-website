@@ -11,7 +11,7 @@ header {
   right: 0;
   z-index: 10;
   @include dflex();
-  background-color: rgba($white, 0.6);
+  background-color: rgb(155 155 155 / 25%);;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -35,12 +35,15 @@ nav {
       list-style: none;
       line-height: 1rem;
       margin: 0 1rem;
-      color: var(--primary);
       text-transform: uppercase;
       font-weight: 600;
-      font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+      font-size: clamp(0.6rem, 1.5vw, 0.9rem);
       &:hover {
-        color: green;
+        color: #3ca050;
+      }
+      a{
+        color: var(--primary);
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.199);
       }
       a.button {
         line-height: 1rem;

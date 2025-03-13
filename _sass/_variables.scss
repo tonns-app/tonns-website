@@ -2,7 +2,10 @@ $black: black;
 $primary: #3a415c;
 $accent: #FCFAF1;
 $white: #FCFAF1;
-$green: #77ea76;
+$light-green: #77ea76;
+$middle-green: #3ca050;
+
+
 
 
 
@@ -56,7 +59,7 @@ body {
 :root {
     --primary: #3a415c;
     --accent: #FCFAF1;
-    --green: #77ea76;
+    --light-green: #77ea76;
     --white: #FCFAF1;
     --heading-font: 'Roboto';
     --body-font: 'Roboto';
@@ -73,8 +76,8 @@ body {
     color: var(--secondary);
 }
 
-.green {
-    color: var(--green);
+.light-green {
+    color: var(--light-green);
 }
 
 .body-font {
