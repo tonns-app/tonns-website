@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "breakpoints" as *;
 
 button {
   background-color: #3ca050;
@@ -10,32 +11,35 @@ button {
   font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 600;
   margin-top: 12px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.125s ease-in-out;
   &:hover {
     background-color: #3ca050e0;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
   }
   &:active {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Kleiner Schatten beim Klicken */
-  transform: translateY(1px); /* Kleiner "Druck"-Effekt */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+  }
+  @include mobile {
+    padding: 0.6rem 0.8rem;
+  }
 }
-}
-
-
-
 
 .button-disable {
   background-color: rgba(60, 160, 80, 0.1);
   color: #3ca050cb;
-  border-color: rgba(60, 160, 80, 0.1);
+  border: 1px solid rgba(60, 160, 80, 0.1);
   padding: 0.6rem 1rem;
-  border-radius: 60;
+  border-radius: 60px;
   cursor: pointer;
   font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 600;
   margin-top: 12px;
-  &:hover{
+  &:hover {
     background-color: rgba(60, 160, 80, 0.2);
+  }
+  @include mobile {
+    padding: 0.6rem 0.8rem;
   }
 }

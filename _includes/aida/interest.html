@@ -1,4 +1,4 @@
-<section class="section" id="interest">
+<section class="section" id="action-check">
   <div class="content" id="action-dates-container">
     <img src="/assets/images/tonns-logo-small.png" alt="Tonns Logo" />
     <div class="headline-subline" id="action-dates-text">
@@ -15,20 +15,32 @@
 
       <div class="agree-privacy-policy">
         <input type="checkbox" id="agree-checkbox" />
-        <span>Ich habe die <a href="/imprint"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+        <span
+          >Ich habe die <a href="/imprint"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben
+          zu.</span
+        >
       </div>
 
       <button type="submit">Kostenlose Abholtermine erhalten</button>
-      <button class="button-disable" type="submit">Kostenlose Abholtermine erhalten</button>
     </form>
   </div>
 </section>
 
-<section class="section">
+<section id="service" class="section" style="background-color: #f3f3f3">
   <div class="content">
     <div class="headline-subline">
-      <h2>Müllabfuhrtermine-Check!</h2>
-      <p>Als führender Mülltonnendienst in Deutschland garantieren wir 100% Zuverlässigkeit und Pünktlichkeit. Unser Team übernimmt die Verantwortung und ist Ihr persönlicher Ansprechpartner vor Ort.</p>
+      <h2>Die smarte Lösung für Ihre Mülltonnen.</h2>
+      <p>
+        Als führender Mülltonnendienst in Deutschland garantieren wir 100% Zuverlässigkeit und Pünktlichkeit. Unser Team übernimmt die Verantwortung und ist Ihr
+        persönlicher Ansprechpartner vor Ort.
+      </p>
+    </div>
+  </div>
+  <div id="service-descriptions">
+    <div id="service-descriptions-menu">
+      {% for button in site.data.buttons.buttons %}
+      <button class="{% if forloop.first == false %}button-disable{% endif %}" onclick="setActiveCard('{{ forloop.index0 }}')" aria-label="{{ button.title }}">{{ button.title }}</button>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -37,7 +49,7 @@
   <h2>Unsere Partner</h2>
   <div class="grid">
     <div class="card">
-      <img src="" loading="lazy" />
+      <img src="" loading="lazy" />e
       <p>Partner 1, Nürnberg</p>
     </div>
     <div class="card">

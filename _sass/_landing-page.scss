@@ -132,10 +132,9 @@
   font-size: 0.9rem;
   color: #333;
   background: white;
-}
-
-#address-suggestions li:hover {
-  background: #f0f0f0;
+  &:hover {
+    background: #f0f0f0;
+  }
 }
 
 /* Entfernt den unteren Border-Radius, wenn Vorschläge sichtbar sind */
@@ -146,11 +145,6 @@
   border-bottom: none !important;
 }
 
-/* Button bleibt hinter dem Dropdown */
-button {
-  position: relative;
-  z-index: 100;
-}
 
 /* Checkbox */
 .agree-privacy-policy {
@@ -233,4 +227,18 @@ input[type="checkbox"]:checked:after {
   position: absolute;
   top: 4px;
   left: 7px;
+}
+
+/* Service-Description */
+#service-descriptions{
+  @include dflex();
+  @include center-content();
+
+}
+
+#service-descriptions-menu{
+  @include dflex($jc: space-between, $g:12px);
+  button{
+    width: 190px;
+  }
 }
