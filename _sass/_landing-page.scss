@@ -48,6 +48,10 @@
   @include center-content($padding: 0 2rem);
   flex-direction: column;
   margin: 3rem 0;
+  @include mobile() {
+    margin: 1.5rem 0;
+    gap: 0;
+  }
 }
 
 .headline-subline {
@@ -145,7 +149,6 @@
   border-bottom: none !important;
 }
 
-
 /* Checkbox */
 .agree-privacy-policy {
   width: 100%;
@@ -230,15 +233,101 @@ input[type="checkbox"]:checked:after {
 }
 
 /* Service-Description */
-#service-descriptions{
-  @include dflex();
-  @include center-content();
-
+#service {
+  .content {
+    gap: 0;
+  }
 }
 
-#service-descriptions-menu{
-  @include dflex($jc: space-between, $g:12px);
-  button{
-    width: 190px;
+.hidden {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.active {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+#service-descriptions-container {
+  @include dflex($g: 1.5rem);
+  flex-direction: column;
+  width: 100%;
+  color: $primary;
+
+  h4 {
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin-top: clamp(0.5rem, 3vw, 1.2rem);
+    margin-bottom: clamp(0.5rem, 3vw, 2rem);
+  }
+
+  #service-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+  #service-descriptions-menu {
+    @include dflex($g: 12px);
+    button {
+      width: 190px;
+    }
+    @include mobile(){
+      display: none;
+    }
+  }
+
+  #service-descriptions {
+    @include dflex($g: 2rem);
+    width: 100%;
+    align-items: flex-start;
+
+    img {
+      flex: 3;
+      height: clamp(300px, 50vw, 600px);
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    #descriptions {
+      display: flex;
+      justify-content: flex-start;
+      height: 100%;
+      gap: 1rem;
+      flex: 4;
+
+      p {
+        font-size: clamp(0.7rem, 1.5vw, 1rem);
+        margin: 0;
+      }
+    }
+
+    .description-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .description {
+        margin-bottom: 1rem;
+
+        @include mobile() {
+          margin-bottom: 0rem;
+        }
+      }
+    }
   }
 }

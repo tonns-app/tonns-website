@@ -29,21 +29,55 @@
 <section id="service" class="section" style="background-color: #f3f3f3">
   <div class="content">
     <div class="headline-subline">
-      <h2>Die smarte Lösung für Ihre Mülltonnen.</h2>
+      <h2>Die smarte Lösung für Ihre Mülltonnen</h2>
       <p>
         Als führender Mülltonnendienst in Deutschland garantieren wir 100% Zuverlässigkeit und Pünktlichkeit. Unser Team übernimmt die Verantwortung und ist Ihr
         persönlicher Ansprechpartner vor Ort.
       </p>
     </div>
-  </div>
+
+<div id="service-descriptions-container">
+  <nav id="service-descriptions-menu">
+    {% for card in site.data.cards.cards %}
+    <button class="{% if forloop.first == false %}button-disable{% endif %}" 
+            onclick="setActiveCard('{{ forloop.index0 }}')">
+      {{ card.title }}
+    </button>
+    {% endfor %}
+  </nav>
+
   <div id="service-descriptions">
-    <div id="service-descriptions-menu">
-      {% for button in site.data.buttons.buttons %}
-      <button class="{% if forloop.first == false %}button-disable{% endif %}" onclick="setActiveCard('{{ forloop.index0 }}')" aria-label="{{ button.title }}">{{ button.title }}</button>
+    <!-- Standardmäßig erstes Bild setzen -->
+    <img id="service-image" src="{{ site.data.cards.cards[0].image }}" 
+         alt="{{ site.data.cards.cards[0].title }}" loading="lazy">
+
+    <div id="descriptions">
+      {% for card in site.data.cards.cards %}
+      <article class="description-container {% if forloop.first == false %}hidden{% endif %}" 
+               id="{{ card.id }}" 
+               data-image="{{ card.image }}" 
+               data-title="{{ card.title }}" 
+               aria-hidden="{% if forloop.first == false %}true{% else %}false{% endif %}">
+        <h3>{{ card.title }}</h3>
+        {% for item in card.content %}
+        <div class="description">
+          <h4>{{ item.subline }}</h4>
+          <p class="responsive-text" 
+             data-full="{{ item.description }}" 
+             data-short="{{ item.mobile_description }}">
+            {{ item.description }}
+          </p>
+        </div>
+        {% endfor %}
+      </article>
       {% endfor %}
     </div>
   </div>
+</div>
+
+  </div>
 </section>
+
 
 <!-- <section>
   <h2>Unsere Partner</h2>
