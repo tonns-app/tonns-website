@@ -1,10 +1,10 @@
 let currentIndex = 0;
 let autoSwitchInterval;
 const section = document.getElementById("service");
-const breakpoint = 700; // Grenze für den Auto-Switch
+const breakpoint = 700; // Grenze für Auto-Switch
 
 /**
- * Wechselt die aktive Card mit sanftem Wechsel.
+ * Aktiviert die richtige Card oder zeigt alle Cards unter 700px.
  * @param {number} index - Der Index der zu aktivierenden Card.
  */
 function setActiveCard(index) {
@@ -13,12 +13,23 @@ function setActiveCard(index) {
   const buttons = document.querySelectorAll("#service-descriptions-menu button");
   const image = document.getElementById("service-image");
 
+  // **Unter 700px: Alle Cards anzeigen & Auto-Switch stoppen**
+  if (window.innerWidth <= breakpoint) {
+    cards.forEach((card) => {
+      card.classList.remove("hidden");
+      card.classList.add("active");
+    });
+    buttons.forEach((button) => button.classList.add("button-disable"));
+    stopAutoSwitch();
+    return;
+  }
+
   if (!cards[index]) {
     console.error(`Fehler: Die Card mit Index ${index} existiert nicht.`);
     return;
   }
 
-  // **Alle Cards verstecken & Buttons zurücksetzen**
+  // **Über 700px: Alle Cards verstecken & Buttons zurücksetzen**
   cards.forEach((card) => {
     card.classList.remove("active");
     card.classList.add("hidden");
@@ -35,19 +46,17 @@ function setActiveCard(index) {
   const newImageSrc = newCard.dataset.image;
   const newImageAlt = newCard.dataset.title || "Service Bild";
 
-  if (newImageSrc) {
+  if (newImageSrc && image) {
     image.src = newImageSrc;
     image.alt = newImageAlt;
   }
 
-  // **Text für mobile Darstellung aktualisieren**
   updateTextForScreenSize();
-
   currentIndex = index;
 }
 
 /**
- * Startet den automatischen Wechsel der Cards, wenn die Bildschirmbreite > 700px ist.
+ * Startet den Auto-Switch, wenn die Bildschirmgröße > 700px ist.
  */
 function startAutoSwitch() {
   stopAutoSwitch();
@@ -56,12 +65,12 @@ function startAutoSwitch() {
     autoSwitchInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % document.querySelectorAll(".description-container").length;
       setActiveCard(currentIndex);
-    }, 1500);
+    }, 2000);
   }
 }
 
 /**
- * Stoppt den automatischen Wechsel.
+ * Stoppt den Auto-Switch.
  */
 function stopAutoSwitch() {
   clearInterval(autoSwitchInterval);
@@ -95,7 +104,10 @@ document.querySelectorAll("#service-descriptions-menu button").forEach((button, 
 });
 
 /**
- * Passt den Text je nach Bildschirmgröße an (normale vs. mobile Beschreibung).
+ * Passt den Text je nach Bildschirmgröße an:
+ * - `<= 700px`: Alle Cards werden untereinander angezeigt.
+ * - `700px - 850px`: Zeigt `shortText`.
+ * - `> 850px`: Zeigt `fullText`.
  */
 function updateTextForScreenSize() {
   const texts = document.querySelectorAll(".responsive-text");
@@ -104,9 +116,17 @@ function updateTextForScreenSize() {
     const shortText = text.getAttribute("data-short");
     const fullText = text.getAttribute("data-full");
 
-    // **Nur ändern, wenn beide Attribute vorhanden sind**
     if (shortText && fullText) {
-      text.textContent = window.innerWidth <= 800 ? shortText : fullText;
+      if (window.innerWidth <= 700) {
+        // **Unter 700px werden alle Cards gestapelt**
+        text.textContent = fullText;
+      } else if (window.innerWidth > 700 && window.innerWidth <= 850) {
+        // **Zwischen 700px und 850px wird der `shortText` verwendet**
+        text.textContent = shortText;
+      } else {
+        // **Über 850px wird `fullText` angezeigt**
+        text.textContent = fullText;
+      }
     } else {
       console.warn("Fehlendes `data-short` oder `data-full` Attribut bei:", text);
     }
@@ -121,12 +141,13 @@ function debounceResize() {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     updateTextForScreenSize();
-    stopAutoSwitch(); // Stoppe den Auto-Switch, wenn das Fenster verkleinert wird
-    startAutoSwitch(); // Überprüfe, ob der Auto-Switch neu gestartet werden kann
+    stopAutoSwitch(); // Auto-Switch stoppen, wenn das Fenster verkleinert wird
+    startAutoSwitch(); // Überprüfen, ob der Auto-Switch neu gestartet werden kann
+    setActiveCard(currentIndex); // Korrigiert die Anzeige der Cards nach Resize
   }, 200);
 }
 
-// **Text-Update beim Laden & bei Änderung der Fenstergröße mit Debounce**
+// **Initialisierung beim Laden & Resize**
 document.addEventListener("DOMContentLoaded", () => {
   setActiveCard(0);
   updateTextForScreenSize();

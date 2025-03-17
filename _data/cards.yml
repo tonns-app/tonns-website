@@ -1,7 +1,7 @@
 cards:
   - id: "card1"
     title: "Online buchen"
-    image: "/assets/images/online-buchen.png"
+    image: "/assets/images/online-buchen.jpg"
     content:
       - subline: "Einfach & komfortabel"
         description: "Hinterlegen Sie Ihre Objekte und Mülltonnen mit nur wenigen Klicks. Schnell, intuitiv und direkt über unsere Webseite. Starten Sie jetzt!"
