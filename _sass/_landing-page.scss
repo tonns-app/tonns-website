@@ -18,7 +18,7 @@
       width: 100%;
       object-fit: cover;
       filter: brightness(0.8);
-      object-position: 60% center
+      object-position: 60% center;
     }
     figcaption {
       display: none;
@@ -82,7 +82,6 @@
   flex-direction: column;
   width: 100%;
   max-width: 450px;
-
   label {
     display: none;
   }
@@ -95,7 +94,6 @@
     font-size: 1rem;
     background-color: #f9f9f9;
     transition: border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-
     &:focus {
       border-color: #10b981;
       outline: none;
@@ -346,5 +344,38 @@ input[type="checkbox"]:checked:after {
         flex-direction: column;
       }
     }
+  }
+}
+
+#professionell {
+  .content {
+    margin-bottom: 1rem;
+  }
+  .professionell-image-container {
+    height: clamp(350px, 60vw, 600px);
+    overflow: hidden;
+    position: relative;
+    @include dflex();
+    figure {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+      figcaption {
+        display: none;
+      }
+    }
+  }
+  .professionell-description-cards {
+    @include center-content();
+    @include dflex();
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
 }
