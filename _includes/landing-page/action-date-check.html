@@ -6,18 +6,27 @@
       <p>Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!</p>
     </div>
 
-    <form id="hubspotForm">
+    <form id="hubspotForm" action="#" method="POST">
       <div class="autocomplete-container">
-        <input class="hubspot-input" type="text" id="address" name="address" placeholder="Adresse eingeben..." required autocomplete="off" />
+        <input
+          class="hubspot-input"
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Adresse eingeben..."
+          required
+          autocomplete="off"
+          aria-label="Adresse eingeben"
+        />
         <ul id="address-suggestions"></ul>
       </div>
-      <input class="hubspot-input" type="email" id="email" name="email" placeholder="E-Mail-Adresse" required />
+
+      <input class="hubspot-input" type="email" id="email" name="email" placeholder="E-Mail-Adresse" required aria-label="E-Mail-Adresse eingeben" />
 
       <div class="agree-privacy-policy">
         <input type="checkbox" id="agree-checkbox" />
         <span
-          >Ich habe die <a href="/imprint"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben
-          zu.</span
+          >Ich habe die <a href="/imprint"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.</span
         >
       </div>
 
