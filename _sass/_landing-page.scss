@@ -353,6 +353,7 @@ input[type="checkbox"]:checked:after {
   }
   .professionell-image-container {
     height: clamp(350px, 60vw, 600px);
+    width: 100%;
     overflow: hidden;
     position: relative;
     @include dflex();
