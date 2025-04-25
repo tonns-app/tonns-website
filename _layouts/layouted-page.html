@@ -2,12 +2,10 @@
 layout: page
 ---
 
-<section>
-  <div class="card">{{ content }}</div>
+{% include sections/cookie_banner.html %}
+
+<section class="base">
+  <div>{{ content }}</div>
 </section>
-<section>
-  <div class="button-row"></div>
-  <a href="/" class="button">
-      Home
-  </a>
+
 </section>

@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   });
 
-
   // 📌 Adresseingabe mit API-Call für Vorschläge
   async function fetchAddressSuggestions(query) {
     try {
