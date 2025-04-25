@@ -4,13 +4,13 @@ description: >-
 baseurl: ""
 url: "https://tonns.app"
 company: tonns
-street: Lorenzer Str. 23
-city: 90402 Nürnberg
-hrb: folgt
+street: Badstraße 13-15
+city: 90762 Fürth
+hrb: HRB 21752
 court: folgt
 director: Markus Römer
-email: hey@tonns.app
-phone: hello world
+email: founder@tonns.app
+phone: 0911 47883546
 show_price: false
 
 collections:

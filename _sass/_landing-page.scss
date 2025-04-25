@@ -265,7 +265,7 @@ input[type="checkbox"]:checked:after {
   flex-direction: column;
   width: 100%;
   color: $primary;
-
+  margin-top: 1rem;
   h4 {
     margin: 0.5rem 0;
   }
@@ -294,20 +294,18 @@ input[type="checkbox"]:checked:after {
   }
 
   #service-descriptions {
-    @include dflex($g: 2rem);
+    @include dflex($g: 3rem);
+    flex-direction: column;
     width: 100%;
     align-items: flex-start;
     @include mobile() {
       flex-direction: column !important;
     }
     img {
-      flex: 3;
       height: clamp(300px, 50vw, 600px);
       object-fit: cover;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      border-radius: 20px;
       @include mobile() {
-        border-radius: 20px;
         width: 100%;
         height: auto;
       }
@@ -318,7 +316,6 @@ input[type="checkbox"]:checked:after {
       justify-content: flex-start;
       height: 100%;
       gap: 1rem;
-      flex: 4;
       @include mobile() {
         flex-direction: column !important;
       }
@@ -340,19 +337,20 @@ input[type="checkbox"]:checked:after {
           margin-bottom: 0rem;
         }
       }
-      @include mobile() {
+      @include tablet-or-smaller() {
         flex-direction: column;
       }
     }
   }
 }
 
-#professionell {
+#professional {
   .content {
     margin-bottom: 1rem;
   }
-  .professionell-image-container {
+  .professional-image-container {
     height: clamp(350px, 60vw, 600px);
+    width: 100%;
     overflow: hidden;
     position: relative;
     @include dflex();
@@ -371,7 +369,7 @@ input[type="checkbox"]:checked:after {
       }
     }
   }
-  .professionell-description-cards {
+  .professional-description-cards {
     @include center-content();
     @include dflex();
     position: absolute;

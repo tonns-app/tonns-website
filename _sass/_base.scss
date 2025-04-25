@@ -26,6 +26,10 @@ main {
   justify-content: center;
 }
 
+.base {
+@include center-content($padding: 0 2rem);
+}
+
 
 iframe {
   outline: 1px solid black;
@@ -81,4 +85,12 @@ hr {
       margin-top: -7.5px;
     }
   }
+}
+
+.row-reverse{
+  flex-direction: row-reverse;
+}
+
+.card {
+
 }

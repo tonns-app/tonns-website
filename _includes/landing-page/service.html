@@ -11,20 +11,16 @@
     </div>
 
     <div id="service-descriptions-container">
-      <nav id="service-descriptions-menu">
-        {% for card in site.data.cards.cards %}
-        <button class="{% if forloop.first == false %}button-disable{% endif %}" onclick="setActiveCard('{{ forloop.index0 }}')">{{ card.title }}</button>
-        {% endfor %}
-      </nav>
-
+  
       <div id="service-descriptions">
         {% for card in site.data.cards.cards %}
+        {% assign mod = forloop.index | modulo: 2 %}
         <article
-          class="description-container {% if forloop.first == false %}hidden{% endif %}"
+          class="description-container{% if mod == 0 %} row-reverse{% endif %}"
           id="{{ card.id }}"
           data-image="{{ card.image }}"
           data-title="{{ card.title }}"
-          aria-hidden="{% if forloop.first == false %}true{% else %}false{% endif %}"
+          aria-hidden="false"
         >
           <!-- Bild innerhalb der Card für mobile Ansicht -->
           <img src="{{ card.image }}" alt="{{ card.title }}" class="card-image" loading="lazy" />

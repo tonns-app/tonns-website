@@ -7,7 +7,12 @@
     {% include header.html %}
     <main>{{ content }}</main>
     {% include footer.html %}
-    <script src="{{ "/assets/js/form-handler.js" | relative_url }}"></script>
+
+    {%- if page.include_form_handler -%}
+      <script src="{{ "/assets/js/form-handler.js" | relative_url }}"></script>
+    {%- endif -%}
+
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   </body>
 </html>
+

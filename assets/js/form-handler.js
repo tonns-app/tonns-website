@@ -11,13 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // 📌 Eventlistener für Adresseingabe (mit Autocomplete)
+  let debounceTimer;
   addressInput.addEventListener("input", function () {
+    clearTimeout(debounceTimer);
     if (addressInput.value.trim().length < 3) {
       suggestionsList.innerHTML = "";
       suggestionsList.style.display = "none";
       return;
     }
-    fetchAddressSuggestions(addressInput.value.trim());
+    debounceTimer = setTimeout(() => {
+      fetchAddressSuggestions(addressInput.value.trim());
+    }, 500);
   });
 
   // 📌 Adresseingabe mit API-Call für Vorschläge
