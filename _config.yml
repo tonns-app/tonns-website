@@ -34,5 +34,8 @@ collections:
     output: true
     permalink: /cities/:title
 cloudflare_image_base: "/cdn-cgi/image/format=webp"
+include:
+  - ".well-known"
 exclude:
   - "jekyll_runner"
+  - "functions_firebase"
