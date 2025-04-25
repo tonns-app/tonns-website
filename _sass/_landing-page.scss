@@ -265,7 +265,7 @@ input[type="checkbox"]:checked:after {
   flex-direction: column;
   width: 100%;
   color: $primary;
-
+  margin-top: 1rem;
   h4 {
     margin: 0.5rem 0;
   }
@@ -294,7 +294,8 @@ input[type="checkbox"]:checked:after {
   }
 
   #service-descriptions {
-    @include dflex($g: 2rem);
+    @include dflex($g: 3rem);
+    flex-direction: column;
     width: 100%;
     align-items: flex-start;
     @include mobile() {
@@ -304,10 +305,8 @@ input[type="checkbox"]:checked:after {
       flex: 3;
       height: clamp(300px, 50vw, 600px);
       object-fit: cover;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      border-radius: 20px;
       @include mobile() {
-        border-radius: 20px;
         width: 100%;
         height: auto;
       }

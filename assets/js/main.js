@@ -20,7 +20,6 @@ function setActiveCard(index) {
       card.classList.add("active");
     });
     buttons.forEach((button) => button.classList.add("button-disable"));
-    stopAutoSwitch();
     return;
   }
 
@@ -55,53 +54,6 @@ function setActiveCard(index) {
   currentIndex = index;
 }
 
-/**
- * Startet den Auto-Switch, wenn die Bildschirmgröße > 700px ist.
- */
-function startAutoSwitch() {
-  stopAutoSwitch();
-
-  if (window.innerWidth > breakpoint) {
-    autoSwitchInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % document.querySelectorAll(".description-container").length;
-      setActiveCard(currentIndex);
-    }, 2000);
-  }
-}
-
-/**
- * Stoppt den Auto-Switch.
- */
-function stopAutoSwitch() {
-  clearInterval(autoSwitchInterval);
-}
-
-/**
- * Beobachtet, ob die Sektion sichtbar ist & ob die Bildschirmgröße groß genug ist.
- */
-function handleVisibility(entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting && window.innerWidth > breakpoint) {
-      startAutoSwitch();
-    } else {
-      stopAutoSwitch();
-    }
-  });
-}
-
-// **Intersection Observer für Sichtbarkeit**
-const observer = new IntersectionObserver(handleVisibility, { threshold: 0.5 });
-observer.observe(section);
-
-/**
- * Stoppt den Auto-Switch, wenn ein Nutzer eine Card anklickt.
- */
-document.querySelectorAll("#service-descriptions-menu button").forEach((button, index) => {
-  button.addEventListener("click", () => {
-    stopAutoSwitch();
-    setActiveCard(index);
-  });
-});
 
 /**
  * Passt den Text je nach Bildschirmgröße an:
@@ -133,24 +85,7 @@ function updateTextForScreenSize() {
   });
 }
 
-/**
- * Debounce-Funktion für `resize`, um unnötige Berechnungen zu vermeiden.
- */
-let resizeTimeout;
-function debounceResize() {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    updateTextForScreenSize();
-    stopAutoSwitch(); // Auto-Switch stoppen, wenn das Fenster verkleinert wird
-    startAutoSwitch(); // Überprüfen, ob der Auto-Switch neu gestartet werden kann
-    setActiveCard(currentIndex); // Korrigiert die Anzeige der Cards nach Resize
-  }, 200);
-}
-
 // **Initialisierung beim Laden & Resize**
 document.addEventListener("DOMContentLoaded", () => {
-  setActiveCard(0);
   updateTextForScreenSize();
-  startAutoSwitch();
 });
-window.addEventListener("resize", debounceResize);
