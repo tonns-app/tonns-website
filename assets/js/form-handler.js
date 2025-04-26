@@ -10,29 +10,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // 📌 Eventlistener für Adresseingabe (mit Autocomplete)
   let debounceTimer;
   addressInput.addEventListener("input", function () {
     clearTimeout(debounceTimer);
-    if (addressInput.value.trim().length < 3) {
+    if (addressInput.value.trim().length < 2) {
       suggestionsList.innerHTML = "";
       suggestionsList.style.display = "none";
       return;
     }
     debounceTimer = setTimeout(() => {
       fetchAddressSuggestions(addressInput.value.trim());
-    }, 500);
+    }, 200);
   });
 
-  // 📌 Adresseingabe mit API-Call für Vorschläge
   async function fetchAddressSuggestions(query) {
     try {
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&q=${query}, Deutschland&countrycodes=de&addressdetails=1&extratags=1`
+        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}, Deutschland&countrycodes=de&addressdetails=1&extratags=1`
       );
       const data = await response.json();
 
       suggestionsList.innerHTML = "";
+
+      const uniqueAddresses = new Set();
+
       data.slice(0, 10).forEach((place) => {
         if (place.address && place.address.road && place.address.postcode && place.address.city) {
           let street = place.address.road;
@@ -41,14 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
           let city = place.address.city || place.address.town || place.address.village;
 
           const formattedAddress = `${street} ${houseNumber}, ${postcode} ${city}`;
-          const listItem = document.createElement("li");
-          listItem.textContent = formattedAddress;
-          listItem.addEventListener("click", () => {
-            addressInput.value = formattedAddress;
-            suggestionsList.innerHTML = "";
-            suggestionsList.style.display = "none";
-          });
-          suggestionsList.appendChild(listItem);
+
+          if (!uniqueAddresses.has(formattedAddress)) {
+            uniqueAddresses.add(formattedAddress);
+
+            const listItem = document.createElement("li");
+            listItem.textContent = formattedAddress;
+            listItem.addEventListener("click", () => {
+              addressInput.value = formattedAddress;
+              suggestionsList.innerHTML = "";
+              suggestionsList.style.display = "none";
+            });
+            suggestionsList.appendChild(listItem);
+          }
         }
       });
 
@@ -58,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 📌 Formular absenden (Daten an Firebase schicken)
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -77,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // 📌 Adresse aufsplitten
     const addressParts = address.match(/^(.+?)\s(\d+),\s(\d{5})\s(.+)$/);
     if (!addressParts) {
       console.error("❌ Fehler: Adresse konnte nicht aufgeteilt werden.", address);
