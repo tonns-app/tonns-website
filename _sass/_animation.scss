@@ -8,11 +8,6 @@
     opacity 2s ease-out;
 }
 
-.animate-fade-in {
-  opacity: 0;
-  transition: opacity 2s;
-}
-
 .animate-progress-bar {
   width: 0;
   height: 4px;
@@ -20,11 +15,6 @@
   background-color: $white;
   position: relative;
   transition: width 1.5s ease-out;
-}
-
-.in-view {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .animate-progress-bar.in-view {
