@@ -3,9 +3,7 @@
 .animate-slide-up {
   transform: translateY(50px);
   opacity: 0;
-  transition:
-    transform 2s ease-out,
-    opacity 2s ease-out;
+  transition: transform 2s ease-out, opacity 2s ease-out;
 }
 
 .animate-progress-bar {
