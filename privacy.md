@@ -10,7 +10,7 @@ This privacy policy contains detailed information about what happens to your per
 ### Responsible entity
 
 Responsible under data protection law for the collection and processing of personal data on this website is:  
-Name: tonns  
+Name: tonns GmbH  
 Address: Badstraße 13-15  
 Postal code, city: 90762, Fürth  
 Country: Germany  
