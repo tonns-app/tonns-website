@@ -1,9 +1,18 @@
 <section>
   <div id="teaser-container">
-    <figure>
-      <img src="/assets/images/opener.avif" class="opener" alt="Person fotografiert tonns Mülltonnen" />
-      <figcaption>Ihr zuverlässiger Mülltonnen-Service im Abo</figcaption>
-    </figure>
+<figure>
+  <picture>
+    <source srcset="/assets/images/opener.avif" type="image/avif">
+    <img 
+      src="/assets/images-alternative/opener.jpg" 
+      alt="Person fotografiert tonns Mülltonnen" 
+      class="opener" 
+      fetchpriority="high"
+    >
+  </picture>
+  <figcaption>Ihr zuverlässiger Mülltonnen-Service im Abo</figcaption>
+</figure>
+
     <div class="teaser-text-container">
       <h1><span class="white">Der günstigste, zuverlässigste, CO2-neutralste </span><span class="light-green">Mülltonnendienst im Abo</span></h1>
       <p>
