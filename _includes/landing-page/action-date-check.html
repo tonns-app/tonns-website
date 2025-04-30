@@ -1,13 +1,18 @@
 <section class="section" id="action-check">
   <div class="content" id="action-dates-container">
     <img src="/assets/images/tonns-logo-small.webp" alt="Tonns Logo" />
+    
     <div class="headline-subline" id="action-dates-text">
       <h2>Müllabfuhr-Check!</h2>
-      <p>Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!</p>
+      <p>
+        Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!
+      </p>
     </div>
 
     <form id="hubspotForm" action="#" method="POST">
+      <!-- Adresseingabe -->
       <div class="autocomplete-container">
+        <label for="address" class="visually-hidden">Adresse eingeben</label>
         <input
           class="hubspot-input"
           type="text"
@@ -16,20 +21,32 @@
           placeholder="Adresse eingeben..."
           required
           autocomplete="off"
-          aria-label="Adresse eingeben"
         />
         <ul id="address-suggestions"></ul>
       </div>
 
-      <input class="hubspot-input" type="email" id="email" name="email" placeholder="E-Mail-Adresse" required aria-label="E-Mail-Adresse eingeben" />
+      <!-- E-Mail -->
+      <div class="input-container">
+        <label for="email" class="visually-hidden">E-Mail-Adresse</label>
+        <input
+          class="hubspot-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-Mail-Adresse"
+          required
+        />
+      </div>
 
-<div class="agree-privacy-policy">
-  <input type="checkbox" id="agree-checkbox" />
-  <label for="agree-checkbox">
-    Ich habe die <a href="/privacy" target="_blank"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.
-  </label>
-</div>
+      <!-- Datenschutz-Checkbox -->
+      <div class="agree-privacy-policy">
+        <input type="checkbox" id="agree-checkbox" name="agree" required />
+        <label for="agree-checkbox">
+          Ich habe die <a href="/privacy" target="_blank"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.
+        </label>
+      </div>
 
+      <!-- Submit -->
       <button type="submit">Kostenlose Abholtermine erhalten</button>
     </form>
   </div>
