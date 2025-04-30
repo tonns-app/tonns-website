@@ -1,7 +1,7 @@
 cards:
   - id: "card1"
     title: "Online buchen"
-    image: "/assets/images/online-buchen.jpg"
+    image: "/assets/images/online-buchen.avif"
     content:
       - subline: "Einfach & komfortabel"
         description: "Hinterlegen Sie Ihre Objekte und Mülltonnen mit nur wenigen Klicks. Schnell, intuitiv und direkt über unsere Webseite. Starten Sie jetzt!"
@@ -15,7 +15,7 @@ cards:
 
   - id: "card2"
     title: "Geld sparen"
-    image: "/assets/images/geld-sparen.jpg"
+    image: "/assets/images/geld-sparen.avif"
     content:
       - subline: "Bis zu 50% Kosten sparen"
         description: "Durch unser innovatives Modell können die Kosten für den Mülltonnendienst um bis zu 50% gesenkt werden. Kein teurer Hausmeisterservice mehr – wir sorgen für eine effiziente und kostengünstige Lösung."
@@ -29,7 +29,7 @@ cards:
 
   - id: "card3"
     title: "Umwelt schonen"
-    image: "/assets/images/umwelt-schonen.jpg"
+    image: "/assets/images/umwelt-schonen.avif"
     content:
       - subline: "Reduzierte CO₂-Emissionen"
         description: "Durch unser innovatives System verringern wir unnötige Fahrten drastisch, was zu einer erheblichen Reduzierung von CO₂-Emissionen führt. So helfen wir gemeinsam, die Umwelt zu schützen."
