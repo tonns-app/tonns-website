@@ -2,7 +2,7 @@
 @use "breakpoints" as *;
 
 button {
-  background-color: #3ca050;
+  background-color: $middle-green;
   color: white;
   padding: 0.6rem 1rem;
   border: none;
@@ -14,7 +14,7 @@ button {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.125s ease-in-out;
   &:hover {
-    background-color: #3ca050e0;
+    background-color: #2E7D32e0;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
   }
   &:active {
