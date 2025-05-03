@@ -1,25 +1,39 @@
 <section>
   <div id="teaser-container">
-<figure>
-  <picture>
-    <source srcset="/assets/images/opener.avif" type="image/avif">
-    <img 
-      src="/assets/images-alternative/opener.avif" 
-      alt="Person fotografiert tonns Mülltonnen" 
-      class="opener" 
-      fetchpriority="high"
-    >
-  </picture>
-  <figcaption>Ihr zuverlässiger Mülltonnen-Service im Abo</figcaption>
-</figure>
+    <figure>
+      <picture>
+        <!-- WebP first: bevorzugtes Format für moderne Browser -->
+        <source
+          type="image/webp"
+          srcset="
+            /assets/images/opener-520.webp   520w,
+            /assets/images/opener-768.webp   768w,
+            /assets/images/opener-1024.webp 1024w,
+            /assets/images/opener-1280.webp 1280w,
+            /assets/images/opener-1640.webp 1640w,
+            /assets/images/opener-2560.webp 2560w
+          "
+          sizes="100vw"
+        />
+
+        <!-- JPEG fallback for older browsers -->
+        <source type="image/jpeg" srcset="/assets/images/opener.jpg" />
+
+        <!-- Fallback image (required!) -->
+        <img
+          src="/assets/images-alternative/opener.jpg"
+          alt="Mülltonnen mit tonns QR-Code"
+          class="opener"
+          decoding="async"
+          fetchpriority="high"
+          style="width: 100%; object-fit: cover;"
+        />
+      </picture>
+      <figcaption>Ihr zuverlässiger Mülltonnen-Service im Abo</figcaption>
+    </figure>
 
     <div class="teaser-text-container">
       <h1><span class="white">Der günstigste, zuverlässigste, CO2-neutralste </span><span class="light-green">Mülltonnendienst im Abo</span></h1>
-      <p>
-        Wir kümmern uns professionell und zuverlässig um Ihre Mülltonnen, Sie konzentrieren sich auf Ihr Kerngeschäft. Entdecken Sie jetzt, wie
-        <span class="light-green"><strong>tonns</strong></span> Ihre Kosten senkt, unnötige Wege und viel Arbeits- und Fahrtzeit einspart und die Umwelt schont.<br />
-        Sparen Sie Zeit, Geld und Ressourcen!
-      </p>
     </div>
   </div>
 </section>

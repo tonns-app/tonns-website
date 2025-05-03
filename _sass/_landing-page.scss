@@ -4,21 +4,20 @@
 @use "button" as *;
 
 #teaser-container {
-  height: clamp(350px, 60vw, 600px);
   overflow: hidden;
   position: relative;
   @include dflex();
 
   figure {
     margin: 0;
-    height: 100%;
     width: 100%;
     img {
-      height: 100%;
+      height: 100vh;
       width: 100%;
       object-fit: cover;
-      filter: brightness(0.8);
       object-position: 60% center;
+      aspect-ratio: 16 / 9;
+      /* filter: brightness(0.8); */
     }
     figcaption {
       display: none;
@@ -33,8 +32,11 @@
   height: 100%;
   width: 100%;
   flex-direction: column;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 10px 8px rgba(0, 0, 0, 0.8);
   color: $white;
+  h1{
+    width: 60%
+  }
 }
 
 .section {

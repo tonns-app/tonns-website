@@ -11,9 +11,14 @@ header {
   right: 0;
   z-index: 10;
   @include dflex();
-  background-color: rgb(155 155 155 / 40%);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+
+  transition: top 0.3s ease-in-out;
+
+  &.hidden-navbar {
+    top: -70px;
+  }
 }
 
 nav {
