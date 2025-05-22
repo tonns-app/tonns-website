@@ -4,16 +4,16 @@
 
 header {
   width: 100vw;
-  height: 60px;
+  height: 112px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   @include dflex();
-  background-color: rgb(155 155 155 / 40%);
+/*   background-color: rgb(155 155 155 / 40%);
   -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); */
 }
 
 nav {
@@ -35,11 +35,9 @@ nav {
       list-style: none;
       line-height: 1rem;
       margin: 0 1rem;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+      font-size: 0.875rem;
       a {
-        color: var(--primary);
+        color: white;
         text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.2);
         &:hover {
           color: #3ca050;
