@@ -4,7 +4,7 @@
 @use "button" as *;
 
 #teaser-container {
-  height: clamp(350px, 60vw, 600px);
+  height: 100vh;
   overflow: hidden;
   position: relative;
   @include dflex();
@@ -13,17 +13,32 @@
     margin: 0;
     height: 100%;
     width: 100%;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      filter: brightness(0.8);
       object-position: 60% center;
+      display: block;
+      z-index: 0;
     }
     figcaption {
       display: none;
     }
   }
+  
 }
 
 .teaser-text-container {

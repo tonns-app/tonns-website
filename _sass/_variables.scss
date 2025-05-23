@@ -1,54 +1,13 @@
 $black: black;
 $primary: #3a415c;
 $accent: #FCFAF1;
-$white: #FCFAF1;
+$white: #fff;
 $light-green: #77ea76;
 $middle-green: #2E7D32;
 
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/roboto/static/Roboto-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/roboto/static/Roboto-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/roboto/static/Roboto-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/roboto/static/Roboto-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/roboto/static/Roboto-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 
@@ -57,9 +16,9 @@ body {
     --primary: #3a415c;
     --accent: #FCFAF1;
     --light-green: #77ea76;
-    --white: #FCFAF1;
-    --heading-font: 'Roboto';
-    --body-font: 'Roboto';
+    --white: #fff;
+    --heading-font: 'Poppins';
+    --body-font: 'Poppins';
     --secondary: var(--accent);
     --foreground: var(--black);
     --background: var(--white);
