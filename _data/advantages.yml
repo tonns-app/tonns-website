@@ -1,0 +1,17 @@
+- title: "100% zuverlässig und sicher!"
+  description: "Keine Ausfälle, garantierte Leistung.<br />Wir übernehmen die Haftung!"
+  link: "#"
+  image: "/assets/images/secure.svg"
+  alt: "Sicherheit Icon"
+
+- title: "Garantiert günstig!"
+  description: "Du zahlst pro Tonne und Bewegung nur 1,75€!"
+  link: "#"
+  image: "/assets/images/geld-sparen.avif"
+  alt: "Preis Icon"
+
+- title: "100% CO₂-neutral!"
+  description: "Wir gehen zu Fuß oder fahren elektrisch"
+  link: "#"
+  image: "/assets/images/umwelt-schonen.avif"
+  alt: "CO₂ Icon"

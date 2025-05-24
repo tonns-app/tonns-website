@@ -1,0 +1,21 @@
+{
+  "name": "tonns-website",
+  "version": "1.0.0",
+  "description": "Website of the tonns Project.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonns-app/tonns-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonns-app/tonns-website/issues"
+  },
+  "homepage": "https://github.com/tonns-app/tonns-website#readme"
+}
