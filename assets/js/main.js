@@ -42,11 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector("header");
   const trigger = document.querySelector("#opener");
 
-  if (!nav || !trigger) {
-    console.warn("Navigation oder #opener nicht gefunden.");
-    return;
-  }
-
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
