@@ -1,0 +1,24 @@
+- type: "Hausmeisterdienste"
+  text: "Reduzieren Sie Ihre Fahrten und Arbeitszeit, sparen Sie Kosten und steigern Sie Ihre Marge durch Sub-Beauftragung."
+  image: "/assets/images/zuverlässig.avif"
+
+  alt: "Hausmeister bei der Arbeit"
+  link: "/kunden/hausmeister"
+
+- type: "Hausverwaltungen"
+  text: "Maximale Transparenz und Zuverlässigkeit zum besten Preis und bei minimalem Aufwand, für Sie und Ihre Kunden."
+  image: "/assets/images/zuverlässig.avif"
+  alt: "Hausverwaltungsteam bei Besprechung"
+  link: "/kunden/hausverwaltungen"
+
+- type: "Eigentümer"
+  text: "Zuverlässig und gesetzeskonform zum besten Preis. Beauftragen Sie uns direkt mit dem Mülltonnendienst an Ihrem Objekt."
+  image: "/assets/images/zuverlässig.avif"
+  alt: "Eigentümer vor einem Mehrfamilienhaus"
+  link: "/kunden/eigentuemer"
+
+- type: "Stadtverwaltung"
+  text: "Wir senken die Gesamtkosten für die Müllentsorgung, schaffen lokale Arbeitsplätze und reduzieren den CO₂-Ausstoß."
+  image: "/assets/images/zuverlässig.avif"
+  alt: "Stadtverwaltung Gebäude mit Fahnen"
+  link: "/kunden/stadt"

@@ -4,6 +4,8 @@
       <img src="{{ card.image }}" alt="{{ card.alt | default: card.title }}" loading="lazy" />
     </div>
   </div>
-  <h4>{{ card.title }}</h4>
-  <span>{{ card.description | markdownify }}</span>
+  <div class="card-info">
+    <h4>{{ card.title }}</h4>
+    <span>{{ card.description }}</span>
+  </div>
 </a>
