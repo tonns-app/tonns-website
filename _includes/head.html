@@ -1,55 +1,62 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <title>Tonns – Mülltonnenservice deutschlandweit | Tonns GmbH</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Tonns bietet deutschlandweiten Service für das Bereitstellen und Zurückstellen von Mülltonnen. Ein zuverlässiger Service der Tonns GmbH.">
-<meta name="robots" content="index,follow">
-<meta name="author" content="Tonns GmbH">
-<meta itemprop="name" content="Tonns – Mülltonnenservice">
-<meta name="theme-color" content="{{ site.color }}">
-<meta name="google" content="notranslate">
+<meta
+  name="description"
+  content="Tonns bietet deutschlandweiten Service für das Bereitstellen und Zurückstellen von Mülltonnen. Ein zuverlässiger Service der Tonns GmbH."
+/>
+<meta name="robots" content="index,follow" />
+<meta name="author" content="Tonns GmbH" />
+<meta itemprop="name" content="Tonns – Mülltonnenservice" />
+<meta name="theme-color" content="{{ site.color }}" />
+<meta name="google" content="notranslate" />
 
 <!-- RSS Feed -->
-<link href="/rss.xml" type="application/rss+xml" rel="alternate">
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" />
 
 <!-- Google Site Verification -->
 {% if site.google_site_verification %}
-<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+<meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}
 
 <!-- Favicons -->
-<link rel="icon" href="{{ '/favicon.png' | relative_url }}" type="image/png">
-<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/144x144.png">
-<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/images/144x144.png">
+<link rel="icon" href="{{ '/favicon.png' | relative_url }}" type="image/png" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/144x144.png" />
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/images/144x144.png" />
 
 <!-- Mobile Optimization -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tonns – Mülltonnenservice deutschlandweit | Tonns GmbH">
-<meta property="og:description" content="Tonns bietet deutschlandweiten Service für das Bereitstellen und Zurückstellen von Mülltonnen.">
-<meta property="og:image" content="{{ page.image | default: site.image }}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tonns – Mülltonnenservice deutschlandweit | Tonns GmbH" />
+<meta property="og:description" content="Tonns bietet deutschlandweiten Service für das Bereitstellen und Zurückstellen von Mülltonnen." />
+<meta property="og:image" content="{{ page.image | default: site.image }}" />
+<meta property="og:image:type" content="image/png" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tonns – Mülltonnenservice deutschlandweit | Tonns GmbH">
-<meta name="twitter:description" content="Tonns stellt Mülltonnen pünktlich zur Abholung bereit und bringt sie zuverlässig zurück.">
-<meta name="twitter:image" content="{{ page.image | default: site.image }}">
-<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tonns – Mülltonnenservice deutschlandweit | Tonns GmbH" />
+<meta name="twitter:description" content="Tonns stellt Mülltonnen pünktlich zur Abholung bereit und bringt sie zuverlässig zurück." />
+<meta name="twitter:image" content="{{ page.image | default: site.image }}" />
+<meta name="twitter:site" content="@{{ site.twitter }}" />
 
 <!-- Preload for Performance -->
-<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- SwiperJs -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
 
 {% include scripts/cookie.html %}

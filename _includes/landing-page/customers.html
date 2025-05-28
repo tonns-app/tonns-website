@@ -5,7 +5,12 @@
       <h2>Die perfekte Lösung für deine Branche!</h2>
     </div>
   </div>
-      <div class="slide-container" id="customers-slide-container">
-      {% for card in site.data.customers %} {% include card.html card=card %} {% endfor %}
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for card in site.data.customers %}
+      <div class="swiper-slide">{% include card.html card=card %}</div>
+      {% endfor %}
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 </section>

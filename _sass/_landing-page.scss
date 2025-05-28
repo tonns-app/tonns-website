@@ -458,3 +458,21 @@ input[type="checkbox"]:checked:after {
     margin-bottom: 1rem;
   }
 }
+
+.swiper {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;  // optional schöner Abstand am Rand
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 400px!important;        // 👈 feste Card-Breite
+  flex-shrink: 0!important;      // 👈 Swiper braucht das bei 'auto'
+}
