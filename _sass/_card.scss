@@ -4,12 +4,13 @@
 .card {
   height: 470px;
   color: #000;
-  background-color: #eee;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
   min-width: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
 }
 
 .card-image-container {
@@ -27,11 +28,11 @@
   }
 }
 
-.card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 2.5rem 1.75rem;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2.5rem 1.75rem;
   h4,
   span {
     margin: 0;

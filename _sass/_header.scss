@@ -17,7 +17,7 @@ header {
   &.transparent {
     background-color: transparent;
     box-shadow: none;
-
+    padding: 0.0rem 2rem;
     .main-nav {
       ul li a {
         color: white;
@@ -40,7 +40,7 @@ header {
   &.scrolled {
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
+    padding: 0.0rem 2rem;
     .main-nav {
       ul li a {
         color: #222;
@@ -63,7 +63,7 @@ header {
 
 .main-nav {
   @include dflex($jc: space-between, $ai: center);
-  @include center-content($padding: 0.5rem 2rem);
+  @include center-content($padding: 0.5rem 0rem);
   height: 100%;
   width: 100%;
 
