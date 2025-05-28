@@ -4,9 +4,8 @@
       <p>Für wen ist tonns?</p>
       <h2>Die perfekte Lösung für deine Branche!</h2>
     </div>
-
-    <div class="slide-container" id="customers-slide-container">
-      
-    </div>
   </div>
+      <div class="slide-container" id="customers-slide-container">
+      {% for card in site.data.customers %} {% include card.html card=card %} {% endfor %}
+    </div>
 </section>

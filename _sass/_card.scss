@@ -2,15 +2,19 @@
 @use "mixins" as *;
 
 .card {
-  height: 470px;
   color: #000;
+  background-color: #fff;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
   min-width: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  min-width: 400px;
+}
+
+.card-border {
   border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
 }
 
 .card-image-container {
