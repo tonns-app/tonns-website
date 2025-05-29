@@ -16,8 +16,8 @@
   alt: "Anlegen Objekte"
   link: "/kunden/eigentuemer"
 
-- title: "4.Nachweis und Status"
-  description: "Alle Vorgänge werden protokolliert und können live im Dashboard eingesehen werden."
-  image: "/assets/images/stadtverwaltung.avif"
-  alt: "Anlegen Objekte"
-  link: "/kunden/stadt"
+#- title: "4.Nachweis und Status"
+#  description: "Alle Vorgänge werden protokolliert und können live im Dashboard eingesehen werden."
+#  image: "/assets/images/stadtverwaltung.avif"
+#  alt: "Anlegen Objekte"
+#  link: "/kunden/stadt"
