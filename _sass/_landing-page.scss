@@ -451,10 +451,13 @@ input[type="checkbox"]:checked:after {
   }
 }
 
+#workflow{
+  padding-bottom: 5rem!important;
+}
+
 #customers {
   padding: 0 0 4rem 0;
   .content {
-
     margin-bottom: 1rem;
   }
 }
@@ -462,17 +465,27 @@ input[type="checkbox"]:checked:after {
 .swiper {
   width: 100%;
   margin: 0 auto;
-  padding-left: 1rem;  // optional schöner Abstand am Rand
+  padding-left: 1rem;
   padding-right: 1rem;
   overflow: hidden;
 }
-
 
 .swiper-wrapper {
   display: flex;
 }
 
+
 .swiper-slide {
-  width: 400px!important;        // 👈 feste Card-Breite
-  flex-shrink: 0!important;      // 👈 Swiper braucht das bei 'auto'
+  width: 400px !important;
+  flex-shrink: 0 !important;
+
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 0.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--light-green) !important;
 }
