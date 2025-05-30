@@ -1,0 +1,29 @@
+- title: "Fürth"
+  link: "#"
+  image: "/assets/images/fürth.avif"
+  alt: "Stadt Fürth"
+
+- title: "Nürnberg"
+  link: "#"
+  image: "/assets/images/nürnberg.avif"
+  alt: "Stadt Nürnberg"
+
+- title: Erlangen"
+  link: "#"
+  image: "/assets/images/erlangen.avif"
+  alt: "Stadt Erlangen"
+
+- title: München"
+  link: "#"
+  image: "/assets/images/fürth.avif"
+  alt: "Stadt München"
+
+- title: "Berlin"
+  link: "#"
+  image: "/assets/images/berlin.avif"
+  alt: "Stadt Berlin"
+
+- title: "Köln"
+  link: "#"
+  image: "/assets/images/köln.avif"
+  alt: "Stadt Köln"

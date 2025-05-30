@@ -26,7 +26,7 @@
 
 }
 
-.free-card {
+.card-borderless {
   color: #000;
   background-color: transparent;
   border-radius: 1.25rem;
@@ -48,6 +48,7 @@
       }
     }
   }
+
   .card-content{
     align-items: flex-start;
     text-align: left;
@@ -59,8 +60,6 @@
   border: 1px solid #e5e7eb;
 }
 
-
-
 .card-content {
   display: flex;
   flex-direction: column;
@@ -70,4 +69,8 @@
   span {
     margin: 0;
   }
+}
+
+#city {
+  padding-bottom: 5rem;
 }

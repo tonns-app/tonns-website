@@ -69,7 +69,8 @@ function initAllSwipers() {
 
   // Initialisiere Swiper für alle Sektionen individuell
   initSwiperForSection("#customers", screenStartIndex);
-  initSwiperForSection("#workflow", screenStartIndex);
+  initSwiperForSection("#workflow", screenStartIndex)
+  initSwiperForSection("#city", screenStartIndex);
 
 }
 

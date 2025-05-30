@@ -1,0 +1,18 @@
+<section id="city" class="section" style="background-color: #f3f3f3">
+    <div class="content">
+      <div class="headline-subline">
+        <p>Für wen ist tonns?</p>
+        <h2>Die perfekte Lösung für deine Branche!</h2>
+      </div>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for card in site.data.city %}
+        <div class="swiper-slide">{% include card-no-description.html card=card %}</div>
+        {% endfor %}
+      </div>
+      
+    </div>
+    <div class="swiper-pagination"></div>
+    <a href="#" class="btn btn-green" style="margin-top: 1rem;">Jetzt kostenlos testen</a>
+  </section>
