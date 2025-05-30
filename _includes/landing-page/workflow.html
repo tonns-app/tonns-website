@@ -25,7 +25,6 @@
         <h2>Jetzt 1 Monat gratis testen, danach nur 1,75€ pro Tonne!</h2>
       </div>
   
-      <div class="slide-container">{% for card in site.data.workflow %} {% include card.html card=card %} {% endfor %}</div>
+      <div class="slide-container">{% for card in site.data.workflow %} {% include free-card.html card=card card_classes="free-card"%} {% endfor %}</div>
     </div>
   </section>
-  

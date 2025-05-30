@@ -1,0 +1,36 @@
+<section id="comparison" class="section comparison">
+  <div class="content">
+    <div class="headline-subline">
+      <p>{{ site.data.comparison.title }}</p>
+      <h2 class="headline-02">{{ site.data.comparison.subtitle }}</h2>
+      
+    </div>
+
+    <div class="comparison-table">
+      <div class="table-row table-header">
+        {% for column in site.data.comparison.columns %}
+        <div>{{ column }}</div>
+        {% endfor %}
+      </div>
+
+      {% for row in site.data.comparison.rows %}
+      <div class="table-row">
+        <div>{{ row.label }}</div>
+        <div>{{ row.old }}</div>
+        <div><strong>{{ row.new }}</strong></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="content">
+    <div class="headline-subline">
+      <p>Der effizienteste, günstigste & CO₂-neutralste Mülltonnendienst</p>
+      <h2 class="headline-02">Für Hausmeisterdienste, Hausverwaltungen und Eigentümer.</h2>
+    </div>
+
+    <div class="slide-container">{% for card in site.data.advantages %} {% include card.html card=card card_classes="card-border" %} {% endfor %}</div>
+  </div>
+</section>

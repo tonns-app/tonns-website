@@ -1,0 +1,24 @@
+title: "Der direkte Vergleich!"
+subtitle: "Überzeugen Sie sich selbst."
+
+columns:
+  - ""
+  - "Herkömmlicher Dienst"
+  - "tonns.app"
+
+rows:
+  - label: "Preis pro Rein- oder Raus"
+    old: "2,25 – 5,85 €"
+    new: "1,75 €"
+  - label: "Preis pro Abholung"
+    old: "5,50 – 11,70 €"
+    new: "3,50 €"
+  - label: "CO₂-Ausstoß"
+    old: "69.000 t/Jahr"
+    new: "0 t/Jahr"
+  - label: "Geschwindigkeit"
+    old: "8 – 36 Stunden"
+    new: "1 – 3 Stunden"
+  - label: "Transparenz"
+    old: "Gering"
+    new: "Volle Kontrolle"
