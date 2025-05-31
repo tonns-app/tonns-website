@@ -8,7 +8,7 @@
 - id: "2"
   title: "Arbeitsplätze"
   description: "Unsere Lösung ist mehrsprachig! Wir schaffen gemeinsam lokale, barrierefreie Arbeitsplätze."
-  image: "/assets/images/arbeitsplätze.avif"
+  image: "/assets/images/arbeitsplaetze.avif"
   alt: "Anlegen Objekte"
   link: "/kunden/hausverwaltungen"
 

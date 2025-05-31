@@ -1,11 +1,11 @@
 - title: "Fürth"
   link: "#"
-  image: "/assets/images/fürth.avif"
+  image: "/assets/images/fuerth.avif"
   alt: "Stadt Fürth"
 
 - title: "Nürnberg"
   link: "#"
-  image: "/assets/images/nürnberg.avif"
+  image: "/assets/images/nuernberg.avif"
   alt: "Stadt Nürnberg"
 
 - title: "Erlangen"
@@ -15,7 +15,7 @@
 
 - title: "München"
   link: "#"
-  image: "/assets/images/fürth.avif"
+  image: "/assets/images/muenchen.avif"
   alt: "Stadt München"
 
 - title: "Berlin"
@@ -25,5 +25,5 @@
 
 - title: "Köln"
   link: "#"
-  image: "/assets/images/köln.avif"
+  image: "/assets/images/koeln.avif"
   alt: "Stadt Köln"
