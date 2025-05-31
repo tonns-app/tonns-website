@@ -1,42 +1,26 @@
 <section class="section" id="action-check">
   <div class="content" id="action-dates-container">
     <img src="/assets/images/tonns-logo-small.webp" alt="Tonns Logo" />
-    
-    <div class="headline-subline" id="action-dates-text">
-      <h2>Müllabfuhr-Check!</h2>
-      <p>
-        Wann wird meine Mülltonne geleert? Einfach Adresse eingeben und keinen Abfuhrtermin verpassen!
-      </p>
+
+    <div class="headline-subline">
+      <p>Müllabfuhr-Abholtermine Check!</p>
+      <h2 class="headline-02">
+        Wann wird meine Mülltonne geleert? 100% Kostenlos und unverbindlich!
+      </h2>
     </div>
 
     <form id="hubspotForm" action="#" method="POST">
-
       <!-- Adresseingabe -->
       <div class="autocomplete-container">
         <label for="address" class="visually-hidden">Adresse eingeben</label>
-        <input
-          class="hubspot-input"
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Adresse eingeben..."
-          required
-          autocomplete="off"
-        />
+        <input class="hubspot-input" type="text" id="address" name="address" placeholder="Adresse eingeben..." required autocomplete="off" />
         <ul id="address-suggestions"></ul>
       </div>
 
       <!-- E-Mail -->
       <div class="input-container">
         <label for="email" class="visually-hidden">E-Mail-Adresse</label>
-        <input
-          class="hubspot-input"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="E-Mail-Adresse"
-          required
-        />
+        <input class="hubspot-input" type="email" id="email" name="email" placeholder="E-Mail-Adresse" required />
       </div>
 
       <!-- Datenschutz-Checkbox -->

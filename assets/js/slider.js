@@ -46,22 +46,13 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
     swiperInstances[scopeSelector].destroy(true, true);
   }
 
-  const isCity = scopeSelector === "#city";
-
-  const instance = new window.Swiper(container, {
+    const instance = new window.Swiper(container, {
     slidesPerView: "auto",
     spaceBetween: 24,
     centeredSlides: true,
     parallax: true,
     speed: 2000,
     initialSlide: initialSlideIndex,
-    loop: isCity,
-    autoplay: isCity
-      ? {
-          delay: 0,
-          disableOnInteraction: false,
-        }
-      : false,
     pagination: {
       el: pagination,
       clickable: true,

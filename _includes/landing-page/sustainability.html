@@ -1,41 +1,33 @@
 <section id="sustainability" class="section">
-    <div class="content">
-      <div class="headline-subline">
-        <p>Verbessern wir gemeinsam die Welt!</p>
-        <h2 class="headline-02">Innovativ. Nachhaltig. Digital. Sicher.</h2>
-      </div>
-  
-      <div id="sustainability-descriptions-container">
-        <div id="sustainability-descriptions">
-          {% for card in site.data.sustainability %}
-          {% assign mod = forloop.index | modulo: 2 %}
-          <article
-            class="sustainability-container{% if mod == 0 %} row-reverse{% endif %}"
-            id="{{ card.id }}"
-            data-image="{{ card.image }}"
-            data-title="{{ card.title }}"
-            aria-hidden="false"
-          >
-            <!-- Bild innerhalb der Card für mobile Ansicht -->
-            <picture>
-              <source srcset="{{ card.image }}" type="image/avif" />
-              <img
-                src="{{ card.image | replace: '.avif', '.jpg' }}"
-                alt="{{ card.alt }}"
-                class="card-image"
-                loading="lazy"
-              />
-            </picture>
-  
-            <div class="sustainability-content-text">
-              <h3>{{ card.title }}</h3>
-              <p>{{ card.description }}</p>
-              <a href="#" class="btn btn-green" style="margin-top: 1rem;">Jetzt kostenlos testen</a>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
+  <div class="content">
+    <div class="headline-subline">
+      <p>Verbessern wir gemeinsam die Welt!</p>
+      <h2 class="headline-02">Innovativ. Nachhaltig. Digital. Sicher.</h2>
+    </div>
+
+    <div id="sustainability-descriptions-container">
+      <div id="sustainability-descriptions">
+        {% for card in site.data.sustainability %} {% assign mod = forloop.index | modulo: 2 %}
+        <article
+          class="sustainability-container{% if mod == 0 %} row-reverse{% endif %}"
+          id="{{ card.id }}"
+          data-image="{{ card.image }}"
+          data-title="{{ card.title }}"
+          aria-hidden="false"
+        >
+          <picture>
+            <source srcset="{{ card.image }}" type="image/avif" />
+            <img src="{{ card.image | replace: '.avif', '.jpg' }}" alt="{{ card.alt }}" class="card-image" loading="lazy" />
+          </picture>
+
+          <div class="sustainability-content-text">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+            <!-- <a href="#" class="btn btn-green" style="margin-top: 1rem;">Jetzt kostenlos testen</a> -->
+          </div>
+        </article>
+        {% endfor %}
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
