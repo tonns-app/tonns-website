@@ -1,3 +1,5 @@
+const swiperInstances = {};
+
 function equalizeCardHeights(scopeSelector) {
   const cards = document.querySelectorAll(`${scopeSelector} .swiper-slide .card`);
   if (!cards.length) return;
@@ -37,15 +39,29 @@ function observeCardVisibility(scopeSelector) {
 function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
   const container = document.querySelector(`${scopeSelector} .swiper`);
   const pagination = document.querySelector(`${scopeSelector} .swiper-pagination`);
-
   if (!container || !pagination) return;
 
-  const swiperInstance = new window.Swiper(container, {
+  // Vorherige Instanz zerstören
+  if (swiperInstances[scopeSelector]) {
+    swiperInstances[scopeSelector].destroy(true, true);
+  }
+
+  const isCity = scopeSelector === "#city";
+
+  const instance = new window.Swiper(container, {
     slidesPerView: "auto",
     spaceBetween: 24,
     centeredSlides: true,
     parallax: true,
+    speed: 2000,
     initialSlide: initialSlideIndex,
+    loop: isCity,
+    autoplay: isCity
+      ? {
+          delay: 0,
+          disableOnInteraction: false,
+        }
+      : false,
     pagination: {
       el: pagination,
       clickable: true,
@@ -61,18 +77,25 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
     },
   });
 
-  return swiperInstance;
+  swiperInstances[scopeSelector] = instance;
 }
 
 function initAllSwipers() {
   const screenStartIndex = window.innerWidth < 1280 ? 0 : 1;
 
-  // Initialisiere Swiper für alle Sektionen individuell
   initSwiperForSection("#customers", screenStartIndex);
-  initSwiperForSection("#workflow", screenStartIndex)
+  initSwiperForSection("#workflow", screenStartIndex);
   initSwiperForSection("#city", screenStartIndex);
+}
 
+// Debounce für Resize-Event
+function debounce(fn, delay) {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(fn, delay);
+  };
 }
 
 window.addEventListener("load", initAllSwipers);
-window.addEventListener("resize", initAllSwipers);
+window.addEventListener("resize", debounce(initAllSwipers, 200));

@@ -8,12 +8,12 @@
   image: "/assets/images/nürnberg.avif"
   alt: "Stadt Nürnberg"
 
-- title: Erlangen"
+- title: "Erlangen"
   link: "#"
   image: "/assets/images/erlangen.avif"
   alt: "Stadt Erlangen"
 
-- title: München"
+- title: "München"
   link: "#"
   image: "/assets/images/fürth.avif"
   alt: "Stadt München"

@@ -8,11 +8,10 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         {% for card in site.data.city %}
-        <div class="swiper-slide">{% include card-no-description.html card=card %}</div>
+        <div class="swiper-slide">{% include card-no-description.html card=card card_classes="card-borderless"%}</div>
         {% endfor %}
       </div>
       
     </div>
     <div class="swiper-pagination"></div>
-    <a href="#" class="btn btn-green" style="margin-top: 1rem;">Jetzt kostenlos testen</a>
   </section>

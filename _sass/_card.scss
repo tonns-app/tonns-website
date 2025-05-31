@@ -72,5 +72,22 @@
 }
 
 #city {
+  .card-content{
+    padding-bottom: 1rem!important;
+  }
   padding-bottom: 5rem;
+  h4{
+    font-weight: 400;
+  }
+  .card-image{
+    width: 488px;
+    img{
+      width: 488px;
+    }
+  }
+
+  .swiper-slide {
+    width: 488px !important;
+    flex-shrink: 0 !important;
+  }
 }
