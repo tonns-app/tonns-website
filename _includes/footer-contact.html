@@ -1,0 +1,58 @@
+<div id="contact">
+  <div class="content">
+    <div class="left-container">
+      <div class="headline-subline">
+        <p>Noch Fragen?</p>
+        <span>Noch Fragen? Hier findest du Antworten auf die häufisgten Themen und Fragen:</span>
+      </div>
+      <div id="faq">
+        {% for item in site.data.faq %}
+        <div class="faq-item">
+          <button class="faq-question" data-index="{{ forloop.index0 }}">{{ item.question }}</button>
+          <div class="faq-answer">{{ item.answer }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="mid-container">
+      <div class="headline-subline">
+        <p>Möchtest du mehr wissen?</p>
+        <span>Kontaktiere uns!</span>
+      </div>
+
+      <form class="input-container" id="contact-form" method="POST" novalidate>
+  
+        <label for="contact-email" class="visually-hidden">E-Mail-Adresse</label>
+        <input class="input" type="email" id="contact-email" name="contact-email" placeholder="E-Mail-Adresse" required />
+        <label class="error-label" for="contact-email">Bitte eine gültige E-Mail-Adresse eingeben.</label>
+      
+        <label for="contact-text" class="visually-hidden">Deine Nachricht...</label>
+        <textarea class="input" id="contact-text" name="contact-text" placeholder="Deine Nachricht..." required></textarea>
+        <label class="error-label" for="contact-text">Bitte eine Nachricht eingeben.</label>
+      
+        <div class="agree-privacy-policy">
+          <input type="checkbox" id="agree-checkbox" name="agree" required />
+          <label for="agree-checkbox">
+            Ich habe die <a href="/privacy" target="_blank"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.
+          </label>
+        </div>
+        <button class="btn btn-green" type="submit">Senden</button>
+      </form>
+      
+    </div>
+
+    <div class="right-container">
+      <div class="headline-subline">
+        <p>Wir sind tonns</p>
+        <span>Lernen Sie uns kennen! </span>
+      </div>
+      <div>
+        <span class="description"
+          >Wir kümmern uns professionell und zuverlässig um Ihre Mülltonnen, Sie konzentrieren sich auf Ihr Kerngeschäft. Entdecken Sie, wie tonns Ihre Kosten
+          senkt, unnötige Wege und viel Arbeits- und Fahrtzeit einspart und die Umwelt schont.</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

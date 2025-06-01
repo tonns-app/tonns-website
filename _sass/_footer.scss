@@ -1,5 +1,132 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+@use "mixins" as *;
+@use "button" as *;
+
 footer {
-    height: 5rem;
-    margin-top: 5rem;
-    text-align: center;
+  @include dflex();
+  flex-direction: column;
+  color: #fff;
+  width: 100%;
+}
+
+/*footer download app */
+#download-app {
+  @include dflex($g: 10rem);
+  padding: 6rem 0;
+  background-color: rgb(26 26 26);
+  width: 100%;
+  .download-app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    #apple-store {
+      height: 50px;
+    }
+    #android-store {
+      height: 65px;
+    }
+  }
+}
+
+/*footer contact */
+#contact {
+  @include dflex($g: 1rem);
+  align-items: flex-start;
+  padding: 6rem 0 4rem 0;
+  background-color: #000;
+  width: 100%;
+  padding: 0 1rem;
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .left-container,
+  .mid-container,
+  .right-container {
+    flex: 1 1 0%;
+    min-width: 0;
+    padding: 0 1rem; // optionaler Abstand
+    span {
+      color: #fff;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+#faq {
+  .faq-item {
+    border-bottom: 1px solid #444;
+    padding: 0.5rem 0;
+
+    .faq-question {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 400;
+    }
+
+    .faq-answer {
+      font-size: 0.875rem;
+      color: #ccc;
+      padding: 3px 6px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      will-change: max-height;
+    }
+
+    &.active .faq-answer {
+      max-height: 200px;
+    }
+  }
+}
+
+.mid-container {
+  form {
+    @include dflex($g: 0.5rem);
+    flex-direction: column;
+  }
+  textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: none;
+  }
+  .input.invalid {
+    border-color: #E53935;
+  }
+  
+  .input.valid {
+    border-color: #4CAF50;
+  }
+  
+  .error-label {
+    display: none;
+    color: #E53935;
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }  
+}
+
+.right-container {
+  .description {
+    display: block;
+    font-size: 1rem !important;
+    text-align: justify;
+  }
+}
+
+.btn-green:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: rgb(255 255 255 / 0.3);
 }

@@ -23,7 +23,9 @@
       }
     }
   }
-
+  @media (max-width: 1279px) {
+    width: 360px!important;
+  }
 }
 
 .card-borderless {
@@ -48,6 +50,7 @@
       }
     }
   }
+
 
   .card-content{
     align-items: flex-start;

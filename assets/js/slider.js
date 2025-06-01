@@ -51,7 +51,7 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
     spaceBetween: 24,
     centeredSlides: true,
     parallax: true,
-    speed: 2000,
+    speed: 1000,
     initialSlide: initialSlideIndex,
     pagination: {
       el: pagination,
@@ -72,7 +72,7 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
 }
 
 function initAllSwipers() {
-  const screenStartIndex = window.innerWidth < 1280 ? 0 : 1;
+  const screenStartIndex = window.innerWidth < 1180 ? 0 : 1;
 
   initSwiperForSection("#customers", screenStartIndex);
   initSwiperForSection("#workflow", screenStartIndex);

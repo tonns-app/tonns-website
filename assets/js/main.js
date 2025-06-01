@@ -63,4 +63,77 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/* Accordion-Funktionalität */
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll("#faq .faq-item");
+
+  items.forEach((item, index) => {
+    const question = item.querySelector(".faq-question");
+    question.addEventListener("click", () => {
+      items.forEach((el, i) => {
+        if (i === index) {
+          el.classList.toggle("active");
+        } else {
+          el.classList.remove("active");
+        }
+      });
+    });
+  });
+});
+
+/* Kontakt Email */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const inputs = form.querySelectorAll(".input");
+
+  // pro Feld merken, ob es benutzt wurde
+  const touchedMap = new WeakMap();
+
+  inputs.forEach((input) => {
+    touchedMap.set(input, false);
+
+    input.addEventListener("input", () => {
+      touchedMap.set(input, true);
+      validateInput(input);
+    });
+
+    input.addEventListener("blur", () => {
+      touchedMap.set(input, true);
+      validateInput(input);
+    });
+  });
+
+  function validateInput(input) {
+    const isTouched = touchedMap.get(input);
+    input.classList.remove("valid", "invalid");
+
+    if (isTouched && input.value.trim() !== "") {
+      if (input.checkValidity()) {
+        input.classList.add("valid");
+      } else {
+        input.classList.add("invalid");
+      }
+    }
+  }
+
+  form.addEventListener("submit", (e) => {
+    let valid = true;
+
+    inputs.forEach((input) => {
+      touchedMap.set(input, true);
+      validateInput(input);
+
+      if (!input.checkValidity()) {
+        valid = false;
+      }
+    });
+
+    if (!valid) e.preventDefault();
+  });
+});
+
+
+
 
