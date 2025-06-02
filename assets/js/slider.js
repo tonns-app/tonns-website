@@ -51,7 +51,7 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
     spaceBetween: 24,
     centeredSlides: true,
     parallax: true,
-    speed: 2000,
+    speed: 1000,
     initialSlide: initialSlideIndex,
     pagination: {
       el: pagination,

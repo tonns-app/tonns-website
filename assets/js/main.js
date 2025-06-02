@@ -2,7 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector("header");
   const trigger = document.querySelector("#opener");
+  const checkbox = document.getElementById("openSidebarMenu");
+  const mobileLinks = document.querySelectorAll("#sidebarMenu a");
 
+  // Navbar Transparent / Scrolled je nach Scrollposition
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
@@ -16,12 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       root: null,
       threshold: 0,
-      rootMargin: "-80px 0px 0px 0px" // frühzeitiges Auslösen oberhalb der Navbar
+      rootMargin: "-80px 0px 0px 0px",
     }
   );
-
   observer.observe(trigger);
+
+  // Mobile-Menü automatisch schließen bei Klick auf einen Link
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      checkbox.checked = false;
+    });
+  });
 });
+
 
 
 /* Accordion-Funktionalität */

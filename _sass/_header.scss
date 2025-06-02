@@ -10,6 +10,15 @@ header {
   left: 0;
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  @include mobile(){
+    height: 80px;
+  }
+  img{
+    height: 45px;
+    @include mobile(){
+      height: 35px;
+    }
+  }
   span {
     height: 45px;
   }
@@ -65,10 +74,13 @@ header {
   width: 100%;
   height: 100%;
   padding: 0.5rem 2rem;
+  @include mobile(){
+    padding: 0.5rem 0rem;
+  }
 
   .main-nav-content {
     display: flex;
-    align-items: center;  // vertikal mittig
+    align-items: center;
     justify-content: space-between;
     height: 100%;
     width: 100%;
@@ -127,7 +139,7 @@ header {
       width: 100%;
       background-color: #ffffff;
       margin: 4px 0;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.125s ease-in-out;
     }
 
     input[type="checkbox"] {
@@ -143,7 +155,7 @@ header {
       height: 100vh;
       background-color: #ffffff;
       transform: translateX(100%);
-      transition: transform 0.3s ease;
+      transition: transform 0.125s ease;
       z-index: 998;
     }
 
