@@ -1,18 +1,41 @@
 <header class="transparent">
   <nav class="main-nav">
-    <a href="/" class="logo">
-      <span class="logo-light">{% include logo/logo-light.html %}</span>
-      <span class="logo-dark">{% include logo/logo-dark.html %}</span>
-    </a>
-    <ul>
-      <li><a href="#sustainability">Über uns</a></li>
+    <div class="main-nav-content">
+      <a href="/" class="logo">
+        <span class="logo-light">{% include logo/logo-light.html %}</span>
+        <span class="logo-dark">{% include logo/logo-dark.html %}</span>
+      </a>
 
-      <!-- <li><a href="/mitarbeiter">Mitarbeiter</a></li> -->
-      <li><a href="#customers">Hausmeister</a></li>
-      <li><a href="#customers">Hausverwaltungen</a></li>
-      <li><a href="#city">Standorte</a></li>
-      <li><a href="#action-check">Müllabfuhr-Termine</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-    </ul>
+      <ul class="desktop-nav">
+        <li><a href="#sustainability">Über uns</a></li>
+        <li><a href="#customers">Hausmeister</a></li>
+        <li><a href="#customers">Hausverwaltungen</a></li>
+        <li><a href="#city">Standorte</a></li>
+        <li><a href="#action-check">Müllabfuhr-Termine</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+
+      <div class="mobile-nav">
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+        <label for="openSidebarMenu" class="sidebarIconToggle burger-icon">
+          <div class="spinner diagonal part-1"></div>
+          <div class="spinner horizontal"></div>
+          <div class="spinner diagonal part-2"></div>
+        </label>        
+        <div id="sidebarMenu">
+          <div class="mobile-logo">
+            <span class="logo-dark">{% include logo/logo-dark.html %}</span>
+          </div>
+          <ul class="sidebarMenuInner">
+            <li><a href="#sustainability">Über uns</a></li>
+            <li><a href="#customers">Hausmeister</a></li>
+            <li><a href="#customers">Hausverwaltungen</a></li>
+            <li><a href="#city">Standorte</a></li>
+            <li><a href="#action-check">Müllabfuhr-Termine</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>

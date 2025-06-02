@@ -62,21 +62,28 @@ header {
 }
 
 .main-nav {
-  @include dflex($jc: space-between, $ai: center);
-  @include center-content($padding: 0.5rem 0rem);
-  height: 100%;
   width: 100%;
+  height: 100%;
+  padding: 0.5rem 2rem;
 
-  a {
-    @include dflex();
-    transition: color 0.2s ease;
+  .main-nav-content {
+    display: flex;
+    align-items: center;  // vertikal mittig
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
   }
 
-  img {
-    height: 45px;
+  .logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      height: 45px;
+    }
   }
 
-  ul {
+  .desktop-nav {
     display: flex;
     list-style: none;
     margin: 0;
@@ -87,22 +94,114 @@ header {
       font-size: 0.875rem;
       font-weight: 500;
 
-      @include tablet {
-        margin: 0 0.5rem;
-      }
-
       a {
         transition: color 0.2s ease;
       }
     }
 
-    @include mobile {
+    @include tablet-or-smaller {
       display: none;
     }
   }
+}
 
-  .logo {
+.mobile-nav {
+  display: none;
+
+  @include tablet-or-smaller {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 999;
+
+    .sidebarIconToggle {
+      position: relative;
+      height: 22px;
+      width: 22px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .spinner {
+      height: 3px;
+      width: 100%;
+      background-color: #ffffff;
+      margin: 4px 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    #sidebarMenu {
+      position: fixed;
+      color: #000;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 998;
+    }
+
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+      transform: translateX(0%);
+      color: #000;
+    }
+
+    .sidebarMenuInner {
+      list-style: none;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          color: #000!important;
+          width: 50%;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          display: block;
+          padding: 1rem;
+          border-bottom: 1px solid var(--light-green);
+          &:hover {
+            color: var(--light-green)!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger-icon .spinner {
+  background-color: #fff;
+}
+
+header.scrolled .burger-icon .spinner {
+  background-color: #000;
+}
+
+input[type="checkbox"]:checked ~ .burger-icon .spinner {
+  background-color: #000 !important;
+}
+
+.mobile-logo {
+  padding: 2rem 1.5rem 1rem;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  .logo-dark {
+    display: block!important;
+    height: 45px;
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
 }

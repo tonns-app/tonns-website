@@ -13,7 +13,7 @@ footer {
 /*footer download app */
 #download-app {
   @include dflex($g: 10rem);
-  padding: 6rem 0;
+  padding: 6rem 2rem;
   background-color: rgb(26 26 26);
   width: 100%;
   .download-app-content {
@@ -51,7 +51,6 @@ footer {
   .right-container {
     flex: 1 1 0%;
     min-width: 0;
-    padding: 0 1rem; // optionaler Abstand
     span {
       color: #fff;
       font-size: 0.875rem;
@@ -95,6 +94,18 @@ footer {
   form {
     @include dflex($g: 0.5rem);
     flex-direction: column;
+  }
+  .contact-mail-phone{
+    @include dflex();
+    flex-direction: column;
+    a{
+      color: #fff;
+      &:hover{
+        color:var(--primary);
+      }
+    }
+
+    padding-bottom: 1rem;
   }
   textarea {
     width: 100%;

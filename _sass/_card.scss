@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "breakpoints" as *;
 
 .card {
   color: #000;
@@ -23,8 +24,14 @@
       }
     }
   }
-  @media (max-width: 1279px) {
-    width: 360px!important;
+  @include desktop {
+    width: 360px !important;
+  }
+  @include tablet {
+    width: 650px !important;
+  }
+  @include mobile {
+    width: 400px !important;
   }
 }
 
@@ -36,6 +43,7 @@
   flex-direction: column;
   width: 400px;
   box-shadow: none;
+
   .card-image-container {
     display: flex;
     .card-image {
@@ -51,11 +59,13 @@
     }
   }
 
-
-  .card-content{
+  .card-content {
     align-items: flex-start;
     text-align: left;
     padding-left: 0;
+    @include tablet-or-smaller {
+      padding-top: 1rem !important;
+    }
   }
 }
 
@@ -72,19 +82,31 @@
   span {
     margin: 0;
   }
+  @include tablet-or-smaller {
+    align-items: center;
+  }
+}
+
+#customers {
+  .card {
+    width: 400px !important;
+    @media (max-width: 1279px) {
+      width: 360px !important;
+    }
+  }
 }
 
 #city {
-  .card-content{
-    padding-bottom: 1rem!important;
+  .card-content {
+    padding-bottom: 1rem !important;
   }
   padding-bottom: 5rem;
-  h4{
+  h4 {
     font-weight: 400;
   }
-  .card-image{
+  .card-image {
     width: 488px;
-    img{
+    img {
       width: 488px;
     }
   }
