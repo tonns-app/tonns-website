@@ -1,5 +1,5 @@
 <?php
-$recipient = 'contact@ricki-weigel.com';
+$recipient = 'info@tonns.app'; // Deine Zieladresse
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sender = isset($_POST['sender']) ? trim($_POST['sender']) : '';
@@ -18,8 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $subject = "Kontaktanfrage von tonns.app";
-    $headers = "From: $sender\r\nReply-To: $sender\r\n";
-    $body = "Nachricht von: $sender\n\n" . htmlspecialchars($message);
+    $body = "Neue Nachricht über das Kontaktformular:\n\n";
+    $body .= "Absender-E-Mail: $sender\n\n";
+    $body .= "Nachricht:\n$message";
+
+    $headers = "From: kontaktformular\r\n";
+    $headers .= "Reply-To: $sender\r\n";
+    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
     if (mail($recipient, $subject, $body, $headers)) {
         echo "E-Mail erfolgreich gesendet.";
