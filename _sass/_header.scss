@@ -3,6 +3,8 @@
 @use "mixins" as *;
 
 header {
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 112px;
   position: fixed;
@@ -10,12 +12,12 @@ header {
   left: 0;
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  @include mobile(){
+  @include mobile() {
     height: 80px;
   }
-  img{
+  img {
     height: 45px;
-    @include mobile(){
+    @include mobile() {
       height: 35px;
     }
   }
@@ -26,7 +28,7 @@ header {
   &.transparent {
     background-color: transparent;
     box-shadow: none;
-    padding: 0.0rem 2rem;
+    padding: 0rem 2rem;
     .main-nav {
       ul li a {
         color: white;
@@ -49,7 +51,7 @@ header {
   &.scrolled {
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    padding: 0.0rem 2rem;
+    padding: 0rem 2rem;
     .main-nav {
       ul li a {
         color: #222;
@@ -71,10 +73,11 @@ header {
 }
 
 .main-nav {
+  max-width: 1280px;
   width: 100%;
   height: 100%;
   padding: 0.5rem 2rem;
-  @include mobile(){
+  @include mobile() {
     padding: 0.5rem 0rem;
   }
 
@@ -174,7 +177,7 @@ header {
         margin-bottom: 1rem;
 
         a {
-          color: #000!important;
+          color: #000 !important;
           width: 50%;
           text-transform: uppercase;
           font-weight: bold;
@@ -183,7 +186,7 @@ header {
           padding: 1rem;
           border-bottom: 1px solid var(--light-green);
           &:hover {
-            color: var(--light-green)!important;
+            color: var(--light-green) !important;
           }
         }
       }
@@ -209,7 +212,7 @@ input[type="checkbox"]:checked ~ .burger-icon .spinner {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
   .logo-dark {
-    display: block!important;
+    display: block !important;
     height: 45px;
     img {
       height: 100%;
