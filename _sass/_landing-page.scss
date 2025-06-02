@@ -282,7 +282,7 @@ textarea {
   align-items: center;
   gap: 12px;
   margin: 1rem 0;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 
   label {
     display: block !important;
@@ -491,6 +491,9 @@ input[type="checkbox"] {
   .content {
     margin-bottom: 1rem;
   }
+  a{
+    margin-top: 2rem!important;
+  }
 }
 
 .swiper {
@@ -564,7 +567,6 @@ input[type="checkbox"] {
 
         &:nth-child(3) {
           color: var(--light-green);
-          font-weight: bold;
         }
       }
 
