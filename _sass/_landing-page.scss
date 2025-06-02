@@ -575,3 +575,17 @@ input[type="checkbox"] {
     }
   }
 }
+
+#contact{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .impressum{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  a{
+    color: white;
+  }
+}

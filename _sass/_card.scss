@@ -106,13 +106,22 @@
   }
   .card-image {
     width: 488px;
+    @include mobile(){
+      width: 360px!important;
+    }
     img {
       width: 488px;
+      @include mobile(){
+        width: 360px!important;
+      }
     }
   }
 
   .swiper-slide {
     width: 488px !important;
     flex-shrink: 0 !important;
+    @include mobile(){
+      width: 360px!important;
+    }
   }
 }
