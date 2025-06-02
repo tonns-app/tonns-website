@@ -586,6 +586,10 @@ input[type="checkbox"] {
     width: 100%;
     display: flex;
     justify-content: center;
+    @include mobile(){
+      flex-direction: column;
+      font-size: 0.875rem;
+    }
   }
   a{
     color: white;

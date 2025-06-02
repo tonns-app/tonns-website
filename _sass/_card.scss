@@ -34,7 +34,7 @@
     width: 650px !important;
   }
   @include mobile {
-    width: 400px !important;
+    width: 360px !important;
   }
 }
 
@@ -95,6 +95,9 @@
     width: 400px !important;
     @media (max-width: 1279px) {
       width: 360px !important;
+    }
+    @include mobile(){
+      width: 360px!important;
     }
   }
 }
