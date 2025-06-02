@@ -82,28 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Kontakt Email */
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const inputs = form.querySelectorAll(".input");
+  const checkbox = document.getElementById("agree-checkbox");
+  const statusBox = document.getElementById("form-status");
 
-  // pro Feld merken, ob es benutzt wurde
   const touchedMap = new WeakMap();
-
-  inputs.forEach((input) => {
-    touchedMap.set(input, false);
-
-    input.addEventListener("input", () => {
-      touchedMap.set(input, true);
-      validateInput(input);
-    });
-
-    input.addEventListener("blur", () => {
-      touchedMap.set(input, true);
-      validateInput(input);
-    });
-  });
 
   function validateInput(input) {
     const isTouched = touchedMap.get(input);
@@ -118,21 +103,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  form.addEventListener("submit", (e) => {
+  inputs.forEach((input) => {
+    touchedMap.set(input, false);
+    input.addEventListener("input", () => {
+      touchedMap.set(input, true);
+      validateInput(input);
+    });
+    input.addEventListener("blur", () => {
+      touchedMap.set(input, true);
+      validateInput(input);
+    });
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
     let valid = true;
 
     inputs.forEach((input) => {
       touchedMap.set(input, true);
       validateInput(input);
-
       if (!input.checkValidity()) {
         valid = false;
       }
     });
 
-    if (!valid) e.preventDefault();
+    if (!checkbox.checked) {
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://www.tonns.app/send_mail.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const text = await response.text();
+      statusBox.style.color = response.ok ? "#4CAF50" : "#E53935";
+      statusBox.textContent = text;
+
+      if (response.ok) {
+        form.reset();
+        inputs.forEach((i) => i.classList.remove("valid", "invalid"));
+      }
+    } catch (err) {
+      statusBox.style.color = "#E53935";
+      statusBox.textContent = "Fehler beim Absenden. Bitte später erneut versuchen.";
+    }
   });
 });
+
 
 
 
