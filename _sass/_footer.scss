@@ -16,10 +16,31 @@ footer {
   padding: 6rem 2rem;
   background-color: rgb(26 26 26);
   width: 100%;
+  .left img {
+    @include mobile() {
+      width: 350px;
+    }
+  }
+  @include tablet-or-smaller() {
+    flex-direction: column;
+  }
+  @include mobile() {
+    gap: 5rem;
+  }
   .download-app-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-or-smaller() {
+      align-items: center;
+      gap: 1rem;
+    }
+    .headline-02 {
+      @include mobile() {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
     div {
       display: flex;
       align-items: center;
@@ -45,6 +66,11 @@ footer {
   .content {
     flex-direction: row;
     align-items: flex-start;
+    @include tablet-or-smaller() {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
   }
   .left-container,
   .mid-container,
@@ -90,18 +116,22 @@ footer {
   }
 }
 
+.left-container {
+  order: 1;
+}
+
 .mid-container {
   form {
     @include dflex($g: 0.5rem);
     flex-direction: column;
   }
-  .contact-mail-phone{
+  .contact-mail-phone {
     @include dflex();
     flex-direction: column;
-    a{
+    a {
       color: #fff;
-      &:hover{
-        color:var(--primary);
+      &:hover {
+        color: var(--primary);
       }
     }
 
@@ -113,19 +143,22 @@ footer {
     resize: none;
   }
   .input.invalid {
-    border-color: #E53935;
+    border-color: #e53935;
   }
-  
+
   .input.valid {
-    border-color: #4CAF50;
+    border-color: #4caf50;
   }
-  
+
   .error-label {
     display: none;
-    color: #E53935;
+    color: #e53935;
     font-size: 0.75rem;
     margin-top: 4px;
-  }  
+  }
+  @include tablet-or-smaller() {
+    order: 3;
+  }
 }
 
 .right-container {
@@ -134,10 +167,13 @@ footer {
     font-size: 1rem !important;
     text-align: justify;
   }
+  @include tablet-or-smaller() {
+    order: 2;
+  }
 }
 
-.btn-green:hover{
-    background-color: #000;
-    color: #fff;
-    border-color: rgb(255 255 255 / 0.3);
+.btn-green:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: rgb(255 255 255 / 0.3);
 }

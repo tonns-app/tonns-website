@@ -141,6 +141,9 @@
     letter-spacing: -0.005em;
     font-size: 2.3rem;
     margin: 0.25rem 0 0;
+    @include mobile {
+      font-size: 1.5rem;
+    }
   }
 
   @include mobile() {
