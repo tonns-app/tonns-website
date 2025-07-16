@@ -180,3 +180,7 @@ footer {
   color: #fff;
   border-color: rgb(255 255 255 / 0.3);
 }
+
+.impressum{
+  @include dflex($g: 0.5rem);
+}
