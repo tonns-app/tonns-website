@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("📌 [LOG] Aufgesplitte Adresse:", { street, houseNumber, zip, city });
 
     try {
-      const response = await fetch("https://europe-west3-tonns-a06e3.cloudfunctions.net/createHubSpotTicket", {
+      const response = await fetch("https://api.tonns.app/ticket", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, street, houseNumber, zip, city }),

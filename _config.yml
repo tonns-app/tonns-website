@@ -39,7 +39,6 @@ include:
   - ".well-known"
 exclude:
   - "jekyll_runner"
-  - "functions_firebase"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
