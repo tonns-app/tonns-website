@@ -21,7 +21,7 @@ opener:
     href: "#action-check"
   secondary_cta:
     label: "So funktioniert’s"
-    href: "#hook"
+    href: "#workflow"
 
 hook:
   kicker: "Der Alltag ohne tonns"
