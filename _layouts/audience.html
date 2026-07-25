@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign copy = site.data.site_copy.audience %}
 
-<section class="audience-hero{% unless page.image %} audience-hero--plain{% endunless %}"{% if page.image %} style="--audience-image: url('{{ page.image }}')"{% endif %}>
+<section class="audience-hero audience-hero--centered{% unless page.image %} audience-hero--plain{% endunless %}"{% if page.image %} style="--audience-image: url('{{ page.image }}')"{% endif %}>
   <div class="audience-hero-overlay"></div>
   <div class="audience-hero-content reveal-in">
     <p class="audience-kicker">{{ page.audience }}</p>
@@ -11,7 +11,9 @@ layout: default
     <p class="audience-lead">{{ page.description }}</p>
     <div class="audience-hero-actions">
       <a href="#audience-cta" class="btn btn-green">{{ page.primary_cta_label | default: copy.primary_cta_label }}</a>
-      <a href="/#action-check" class="btn btn-outline-white">{{ page.secondary_cta_label | default: copy.secondary_cta_label }}</a>
+      {% unless page.hide_secondary_cta %}
+      <a href="{{ page.secondary_cta_href | default: copy.secondary_cta_href | default: '/#action-check' }}" class="btn btn-outline-white">{{ page.secondary_cta_label | default: copy.secondary_cta_label }}</a>
+      {% endunless %}
     </div>
   </div>
 </section>
@@ -82,12 +84,15 @@ layout: default
     <h2>{{ page.cta_title | default: copy.cta_title_default }}</h2>
     <p>{{ page.cta_text | default: copy.cta_text_default }}</p>
     <div class="closing-actions">
-      <a href="{{ copy.cta_primary_href }}" class="btn btn-green">{{ copy.cta_primary_label }}</a>
-      <a href="{{ copy.cta_secondary_href }}" class="btn btn-outline-green">{{ copy.cta_secondary_label }}</a>
+      <a href="{{ page.cta_primary_href | default: copy.cta_primary_href }}" class="btn btn-green">{{ page.cta_primary_label | default: copy.cta_primary_label }}</a>
+      {% unless page.hide_cta_secondary %}
+      <a href="{{ page.cta_secondary_href | default: copy.cta_secondary_href }}" class="btn btn-outline-green">{{ page.cta_secondary_label | default: copy.cta_secondary_label }}</a>
+      {% endunless %}
     </div>
   </div>
 </section>
 
+{% unless page.hide_related %}
 <section class="section section-muted audience-section">
   <div class="content audience-related">
     <div class="headline-subline">
@@ -103,7 +108,10 @@ layout: default
     </div>
   </div>
 </section>
+{% endunless %}
 
+{% unless page.hide_date_check %}
 {% include landing-page/action-date-check.html %}
+{% endunless %}
 {% include structured_data/webpage.html %}
 {% include structured_data/faq.html %}

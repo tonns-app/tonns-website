@@ -64,7 +64,7 @@ sections:
   city:
     kicker: "Standorte"
     title: "tonns in Ihrer Stadt"
-    support: "Fürth, Nürnberg, Erlangen, München, Berlin, Köln – und wir wachsen weiter."
+    support: "Nordbayern und mehr – von Nürnberg / Fürth über Bayreuth und Würzburg bis München, Berlin und Köln."
     note: "Ihre Stadt fehlt? Schreiben Sie uns – wir prüfen, ob und wann wir starten."
     cta_label: "Kontakt aufnehmen"
     cta_href: "#contact"

@@ -33,3 +33,81 @@
   link: "/cities/koeln/"
   image: "/assets/images/koeln.avif"
   alt: "Mülltonnenservice tonns in Köln"
+
+- title: "Regensburg"
+  name: regensburg
+  link: "/cities/regensburg/"
+  image: "/assets/images/regensburg.jpg"
+  alt: "Steinerne Brücke und Dom in Regensburg – Mülltonnenservice tonns"
+
+- title: "Bamberg"
+  name: bamberg
+  link: "/cities/bamberg/"
+  image: "/assets/images/bamberg.jpg"
+  alt: "Altes Rathaus Bamberg – Mülltonnenservice tonns"
+
+- title: "Bayreuth"
+  name: bayreuth
+  link: "/cities/bayreuth/"
+  image: "/assets/images/bayreuth.jpg"
+  alt: "Festspielhaus Bayreuth – Mülltonnenservice tonns"
+
+- title: "Würzburg"
+  name: wuerzburg
+  link: "/cities/wuerzburg/"
+  image: "/assets/images/wuerzburg.jpg"
+  alt: "Würzburger Residenz – Mülltonnenservice tonns"
+
+- title: "Aschaffenburg"
+  name: aschaffenburg
+  link: "/cities/aschaffenburg/"
+  image: "/assets/images/aschaffenburg.jpg"
+  alt: "Schloss Johannisburg Aschaffenburg – Mülltonnenservice tonns"
+
+- title: "Ansbach"
+  name: ansbach
+  link: "/cities/ansbach/"
+  image: "/assets/images/ansbach.jpg"
+  alt: "Residenz Ansbach – Mülltonnenservice tonns"
+
+- title: "Forchheim"
+  name: forchheim
+  link: "/cities/forchheim/"
+  image: "/assets/images/forchheim.jpg"
+  alt: "Kaiserpfalz Forchheim – Mülltonnenservice tonns"
+
+- title: "Schwabach"
+  name: schwabach
+  link: "/cities/schwabach/"
+  image: "/assets/images/schwabach.jpg"
+  alt: "Marktplatz Schwabach – Mülltonnenservice tonns"
+
+- title: "Coburg"
+  name: coburg
+  link: "/cities/coburg/"
+  image: "/assets/images/coburg.jpg"
+  alt: "Veste Coburg – Mülltonnenservice tonns"
+
+- title: "Hof"
+  name: hof
+  link: "/cities/hof/"
+  image: "/assets/images/hof.jpg"
+  alt: "Rathaus Hof – Mülltonnenservice tonns"
+
+- title: "Amberg"
+  name: amberg
+  link: "/cities/amberg/"
+  image: "/assets/images/amberg.jpg"
+  alt: "Stadtbrille Amberg – Mülltonnenservice tonns"
+
+- title: "Weiden"
+  name: weiden
+  link: "/cities/weiden/"
+  image: "/assets/images/weiden.jpg"
+  alt: "Altes Rathaus Weiden – Mülltonnenservice tonns"
+
+- title: "Neumarkt"
+  name: neumarkt
+  link: "/cities/neumarkt/"
+  image: "/assets/images/neumarkt.jpg"
+  alt: "Altstadt Neumarkt i.d.OPf. – Mülltonnenservice tonns"

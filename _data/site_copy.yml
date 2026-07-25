@@ -49,6 +49,7 @@ cookie:
 audience:
   primary_cta_label: "Jetzt starten"
   secondary_cta_label: "Termine prüfen"
+  secondary_cta_href: "/#action-check"
   benefits_kicker: "Ihre Vorteile"
   benefits_title_default: "Warum Partner mit tonns arbeiten"
   steps_kicker: "Ablauf"

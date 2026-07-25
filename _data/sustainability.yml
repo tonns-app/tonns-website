@@ -10,7 +10,7 @@
   description: "Mit unserem Mülltonnenservice schaffen wir nicht nur Ordnung, sondern auch Chancen: lokale, barrierefreie und mehrsprachige Arbeitsplätze. Unser Team besteht aus Menschen verschiedenster Herkunft und Fähigkeiten – und wird Teil einer starken Gemeinschaft."
   image: "/assets/images/arbeitsplaetze.avif"
   alt: "Lokale Arbeitsplätze bei tonns"
-  link: "/kunden/hausverwaltungen/"
+  link: "/beweger/"
 
 - id: "3"
   title: "Fahrtkosten"

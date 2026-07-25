@@ -6,13 +6,20 @@
       <p class="section-support">{{ page.sections.city.support }}</p>
     </div>
 
-    <div class="city-grid reveal">
-      {% for card in site.data.city %}
-      <a class="city-tile" href="{{ card.link }}">
-        <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="480" height="320" />
-        <span>{{ card.title }}</span>
-      </a>
-      {% endfor %}
+    <div class="city-carousel-wrap">
+      <div class="swiper city-carousel" id="city-carousel">
+        <div class="swiper-wrapper">
+          {% for card in site.data.city %}
+          <div class="swiper-slide">
+            <a class="city-tile" href="{{ card.link }}">
+              <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="480" height="320" />
+              <span>{{ card.title }}</span>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination city-carousel-pagination"></div>
+      </div>
     </div>
 
     <p class="city-note reveal">{{ page.sections.city.note }}</p>

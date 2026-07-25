@@ -25,7 +25,7 @@ header {
     }
   }
 
-  span {
+  .logo span {
     height: 45px;
   }
 
@@ -35,14 +35,14 @@ header {
     padding: 0rem 2rem;
 
     .main-nav {
-      ul li a,
-      ul li a:link,
-      ul li a:visited {
+      .desktop-nav > .nav-item > .nav-link,
+      .desktop-nav > .nav-item > .nav-link:link,
+      .desktop-nav > .nav-item > .nav-link:visited {
         color: #fff;
       }
 
-      ul li a:hover,
-      ul li a:focus {
+      .desktop-nav > .nav-item > .nav-link:hover,
+      .desktop-nav > .nav-item > .nav-link:focus {
         color: var(--light-green);
       }
 
@@ -63,14 +63,14 @@ header {
     padding: 0rem 2rem;
 
     .main-nav {
-      ul li a,
-      ul li a:link,
-      ul li a:visited {
+      .desktop-nav > .nav-item > .nav-link,
+      .desktop-nav > .nav-item > .nav-link:link,
+      .desktop-nav > .nav-item > .nav-link:visited {
         color: var(--ink);
       }
 
-      ul li a:hover,
-      ul li a:focus {
+      .desktop-nav > .nav-item > .nav-link:hover,
+      .desktop-nav > .nav-item > .nav-link:focus {
         color: var(--middle-green);
       }
 
@@ -106,10 +106,6 @@ header {
   .logo {
     display: flex;
     align-items: center;
-
-    span {
-      height: 45px;
-    }
   }
 
   .desktop-nav {
@@ -117,19 +113,24 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem 1rem;
 
-    li {
-      margin: 0 1rem;
+    > .nav-item {
+      margin: 0;
       font-size: 0.9375rem;
       font-weight: 500;
       line-height: 1.2;
+      white-space: nowrap;
+    }
 
-      a {
-        font-size: inherit;
-        font-weight: inherit;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
+    > .nav-item > .nav-link {
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
     @include tablet-or-smaller {

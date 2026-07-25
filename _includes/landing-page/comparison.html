@@ -5,18 +5,23 @@
       <h2>{{ site.data.comparison.subtitle }}</h2>
     </div>
 
-    <div class="comparison-table reveal" role="table" aria-label="Vergleich tonns">
+    <div class="comparison-table reveal" role="table" aria-label="Vergleich klassisch gegen tonns">
       <div class="table-row table-header" role="row">
-        {% for column in site.data.comparison.columns %}
-        <div role="columnheader">{{ column }}</div>
-        {% endfor %}
+        <div class="cell-label" role="columnheader"><span class="visually-hidden">Kriterium</span></div>
+        <div class="cell-old" role="columnheader">{{ site.data.comparison.columns[1] }}</div>
+        <div class="cell-new" role="columnheader">
+          <span class="comparison-winner-label">{{ site.data.comparison.columns[2] }}</span>
+        </div>
       </div>
 
       {% for row in site.data.comparison.rows %}
       <div class="table-row" role="row">
-        <div role="cell">{{ row.label }}</div>
-        <div role="cell">{{ row.old }}</div>
-        <div role="cell">{{ row.new }}</div>
+        <div class="cell-label" role="cell">{{ row.label }}</div>
+        <div class="cell-old" role="cell">{{ row.old }}</div>
+        <div class="cell-new" role="cell">
+          <span class="comparison-check" aria-hidden="true"></span>
+          <span>{{ row.new }}</span>
+        </div>
       </div>
       {% endfor %}
     </div>

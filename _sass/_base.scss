@@ -17,6 +17,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  // Offset für fixe Navbar bei Anker-Links (#city, #action-check, …)
+  scroll-padding-top: 6.85rem; // Header 112px + etwas Luft
+
+  @include mobile {
+    scroll-padding-top: 5.25rem; // Header 80px + etwas Luft
+  }
+}
+
 main {
   position: relative;
 }

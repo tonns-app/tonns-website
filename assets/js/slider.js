@@ -41,12 +41,11 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
   const pagination = document.querySelector(`${scopeSelector} .swiper-pagination`);
   if (!container || !pagination) return;
 
-  // Vorherige Instanz zerstören
   if (swiperInstances[scopeSelector]) {
     swiperInstances[scopeSelector].destroy(true, true);
   }
 
-    const instance = new window.Swiper(container, {
+  const instance = new window.Swiper(container, {
     slidesPerView: "auto",
     spaceBetween: 24,
     centeredSlides: true,
@@ -71,15 +70,69 @@ function initSwiperForSection(scopeSelector, initialSlideIndex = 0) {
   swiperInstances[scopeSelector] = instance;
 }
 
+function initCityCarousel() {
+  const container = document.querySelector("#city-carousel");
+  if (!container || typeof window.Swiper !== "function") return;
+
+  const pagination = container.querySelector(".swiper-pagination");
+  const key = "#city-carousel";
+
+  if (swiperInstances[key]) {
+    swiperInstances[key].destroy(true, true);
+  }
+
+  const instance = new window.Swiper(container, {
+    slidesPerView: 1.15,
+    spaceBetween: 14,
+    centeredSlides: false,
+    loop: true,
+    loopAdditionalSlides: 3,
+    speed: 900,
+    grabCursor: true,
+    watchOverflow: false,
+    autoplay: {
+      delay: 2600,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: pagination
+      ? {
+          el: pagination,
+          clickable: true,
+        }
+      : undefined,
+    breakpoints: {
+      640: {
+        slidesPerView: 2.1,
+        spaceBetween: 16,
+      },
+      960: {
+        slidesPerView: 3.1,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 3.4,
+        spaceBetween: 22,
+      },
+    },
+  });
+
+  swiperInstances[key] = instance;
+
+  // Autoplay nach Init aktiv erzwingen (hilft bei Lazy-Reveal / späten Layouts)
+  if (instance.autoplay) {
+    instance.autoplay.start();
+  }
+}
+
 function initAllSwipers() {
   const screenStartIndex = window.innerWidth < 1280 ? 0 : 1;
 
   initSwiperForSection("#customers", screenStartIndex);
   initSwiperForSection("#workflow", screenStartIndex);
-  initSwiperForSection("#city", screenStartIndex);
+  initCityCarousel();
 }
 
-// Debounce für Resize-Event
 function debounce(fn, delay) {
   let timeout;
   return function () {
@@ -89,4 +142,9 @@ function debounce(fn, delay) {
 }
 
 window.addEventListener("load", initAllSwipers);
-window.addEventListener("resize", debounce(initAllSwipers, 200));
+window.addEventListener("resize", debounce(() => {
+  // City-Carousel nicht bei jedem Resize neu bauen (unterbricht Autoplay)
+  const screenStartIndex = window.innerWidth < 1280 ? 0 : 1;
+  initSwiperForSection("#customers", screenStartIndex);
+  initSwiperForSection("#workflow", screenStartIndex);
+}, 200));
