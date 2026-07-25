@@ -1,0 +1,27 @@
+<section id="about" class="section section-about">
+  <div class="content about-grid">
+    <div class="about-copy reveal">
+      <p class="section-kicker">{{ page.about.kicker }}</p>
+      <h2>{{ page.about.title }}</h2>
+      {% for paragraph in page.about.lead %}
+      <p class="about-lead">{{ paragraph }}</p>
+      {% endfor %}
+      {% if page.about.note %}
+      <p class="about-note">{{ page.about.note }}</p>
+      {% endif %}
+      <div class="about-actions">
+        <a href="{{ page.about.primary_cta.href }}" class="btn btn-green">{{ page.about.primary_cta.label }}</a>
+        <a href="{{ page.about.secondary_cta.href }}" class="btn btn-outline-green">{{ page.about.secondary_cta.label }}</a>
+      </div>
+    </div>
+
+    <ul class="about-points reveal">
+      {% for point in page.about.points %}
+      <li>
+        <strong>{{ point.title }}</strong>
+        <span>{{ point.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

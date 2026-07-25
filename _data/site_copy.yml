@@ -24,7 +24,7 @@ footer:
       title: "Unternehmen"
       links:
         - label: "Über uns"
-          href: "/#sustainability"
+          href: "/#about"
         - label: "Beweger werden"
           href: "/beweger/"
         - label: "App laden"

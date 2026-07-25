@@ -69,6 +69,33 @@ sections:
     cta_label: "Kontakt aufnehmen"
     cta_href: "#contact"
 
+about:
+  kicker: "Über uns"
+  title: "Wir übernehmen die Tonnen – damit andere ihren Job machen können."
+  lead:
+    - >-
+      tonns ist aus einem einfachen Ärgernis entstanden: Am Abfuhrtag fehlt oft die Klarheit,
+      wer die Mülltonnen rausstellt. Hausmeister fahren Extra-Runden, Verwaltungen bekommen Beschwerden,
+      Eigentümer haben den Stress – und niemand hat den Überblick.
+    - >-
+      Deshalb bauen wir einen digitalen Mülltonnendienst: Objekte einmal anlegen, Abfuhrtermine laufen mit,
+      Bereitstellung und Rückstellung werden dokumentiert. Sitz in Fürth, Einsatz vor Ort –
+      möglichst zu Fuß oder elektrisch.
+  note: "tonns GmbH · Fürth · Mülltonnenservice im Abo"
+  points:
+    - title: "Aus der Praxis"
+      text: "Gebaut für Hausmeister, Hausverwaltungen und Eigentümer – als echter Service, nicht als weiteres Tool."
+    - title: "Digital organisiert"
+      text: "Termine, Status und Nachweise an einem Ort. Feiertage und Verschiebungen laufen automatisch mit."
+    - title: "Lokal ausgeführt"
+      text: "Beweger in der Nachbarschaft stellen Tonnen bereit und zurück – statt unnötiger Fahrten quer durch die Stadt."
+  primary_cta:
+    label: "Unsere Wirkung"
+    href: "#sustainability"
+  secondary_cta:
+    label: "Beweger werden"
+    href: "/beweger/"
+
 closing:
   brand: "tonns"
   title: "Bereit, den Abfuhr-Stress abzugeben?"
