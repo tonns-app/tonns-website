@@ -1,26 +1,78 @@
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "{{ site.title }}",
-        "description": "{{ site.description }}",
-        "url": "{{ site.url }}",
-        "publisher": {
-            "@type": "Organization",
-            "name": "{{ site.title }}",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ site.url }}/assets/images/favicon.png"
-            }
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "alternateName": "tonns GmbH",
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "inLanguage": "de-DE",
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.company | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.url | append: site.logo | jsonify }}
     }
+  }
+}
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}/assets/images/favicon.png"
+  "@type": "LocalBusiness",
+  "@id": {{ site.url | append: "/#organization" | jsonify }},
+  "name": {{ site.company | jsonify }},
+  "alternateName": "tonns",
+  "url": {{ site.url | jsonify }},
+  "logo": {{ site.url | append: site.logo | jsonify }},
+  "image": {{ site.url | append: site.image | jsonify }},
+  "email": {{ site.email | jsonify }},
+  "telephone": {{ site.phone_international | jsonify }},
+  "priceRange": "ab 30€ / Objekt",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.street | jsonify }},
+    "addressLocality": {{ site.city_name | jsonify }},
+    "postalCode": {{ site.postal_code | jsonify }},
+    "addressCountry": "DE"
+  },
+  "areaServed": [
+    {% for city in site.data.city %}
+    {
+      "@type": "City",
+      "name": {{ city.title | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "sameAs": [
+    {{ site.url | jsonify }}
+  ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mülltonnenservice im Abo",
+  "serviceType": "Mülltonnen bereitstellen und zurückstellen",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": {{ site.company | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "areaServed": {
+    "@type": "Country",
+    "name": "Deutschland"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "30",
+    "description": "pro Objekt",
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
+{% include structured_data/faq.html %}

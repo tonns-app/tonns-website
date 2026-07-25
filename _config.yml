@@ -1,10 +1,19 @@
 title: tonns
+tagline: Mülltonnenservice im Abo
 description: >-
-  Mülltonnendienst im Abo – zuverlässig, digital, CO₂-neutral. Schon ab 10€ € pro Objekt, abhängig von Standort & Häufigkeit.
+  Mülltonnen raus- und reinstellen lassen – digital, zuverlässig und CO₂-neutral.
+  Für Hausmeister, Hausverwaltungen und Eigentümer. Ab 30 € pro Objekt.
+lang: de
+locale: de_DE
+title_separator: "|"
 baseurl: ""
 url: "https://tonns.app"
+logo: /favicon.png
+image: /favicon.png
 company: tonns GmbH
 street: Badstraße 13-15
+postal_code: "90762"
+city_name: Fürth
 city: 90762 Fürth
 hrb: HRB 21752
 court: Amtsgericht Fürth
@@ -12,7 +21,14 @@ vat: DE370037946
 director: Markus Römer
 email: founder@tonns.app
 phone: 0911 47883546
+phone_international: "+4991147883546"
 show_price: false
+price_from: "30"
+price_unit: "pro Objekt"
+social:
+  name: tonns GmbH
+  links:
+    - https://tonns.app
 
 collections:
   authors:
@@ -33,12 +49,31 @@ collections:
   cities:
     title: Cities
     output: true
-    permalink: /cities/:title
+    permalink: /cities/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /favicon.png
+  - scope:
+      path: ""
+      type: cities
+    values:
+      layout: city
+      image: /favicon.png
+
 cloudflare_image_base: "/cdn-cgi/image/format=webp"
 include:
   - ".well-known"
 exclude:
   - "jekyll_runner"
+  - "hubspot-worker"
+  - "node_modules"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "package.json"
+  - "wrangler.toml"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

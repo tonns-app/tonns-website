@@ -1,23 +1,22 @@
-<section id="comparison" class="section comparison">
+<section id="comparison" class="section section-muted comparison">
   <div class="content">
-    <div class="headline-subline">
-      <p>{{ site.data.comparison.title }}</p>
-      <h2 class="headline-02">{{ site.data.comparison.subtitle }}</h2>
-      
+    <div class="headline-subline reveal">
+      <p class="section-kicker">{{ site.data.comparison.title }}</p>
+      <h2>{{ site.data.comparison.subtitle }}</h2>
     </div>
 
-    <div class="comparison-table">
-      <div class="table-row table-header">
+    <div class="comparison-table reveal" role="table" aria-label="Vergleich tonns">
+      <div class="table-row table-header" role="row">
         {% for column in site.data.comparison.columns %}
-        <div>{{ column }}</div>
+        <div role="columnheader">{{ column }}</div>
         {% endfor %}
       </div>
 
       {% for row in site.data.comparison.rows %}
-      <div class="table-row">
-        <div>{{ row.label }}</div>
-        <div>{{ row.old }}</div>
-        <div>{{ row.new }}</div>
+      <div class="table-row" role="row">
+        <div role="cell">{{ row.label }}</div>
+        <div role="cell">{{ row.old }}</div>
+        <div role="cell">{{ row.new }}</div>
       </div>
       {% endfor %}
     </div>

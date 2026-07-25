@@ -1,26 +1,17 @@
 - question: "Wie funktioniert die Beauftragung?"
-  answer: "Einfach online registrieren, Standorte und Tonnen eintragen, den Rest übernehmen wir. Unser System erkennt automatisch alle Abholtermine."
+  answer: "Online registrieren, Standorte und Tonnen anlegen – den Rest übernehmen wir. Abholtermine erkennt das System automatisch."
 
 - question: "Was kostet der Service?"
-  answer: "Die kosten für die Bereitstellungen beginnen bei 1,75 € pro Tonne. Der genaue Preis hängt von Standort und Häufigkeit ab, transparent im Dashboard einsehbar."
+  answer: "Ab 30 € pro Objekt, abhängig von Standort und Häufigkeit. Den Tarif sehen Sie vor der Buchung im Dashboard."
 
 - question: "Wie erfolgt die Abrechnung?"
-  answer: "Du erhältst monatlich eine digitale Rechnung per E-Mail. Alle Vorgänge sind auch im Dashboard jederzeit einsehbar."
+  answer: "Monatlich per digitaler Rechnung. Alle Vorgänge bleiben im Dashboard einsehbar."
 
-- question: "Wer bewegt die Tonnen?"
-  answer: "Unsere geschulten Mitarbeitenden stellen die Tonnen pünktlich zur Abholung bereit und bringen sie anschließend zuverlässig zurück"
+- question: "Wer stellt die Tonnen bereit?"
+  answer: "Geschulte Mitarbeitende stellen die Tonnen pünktlich raus und nach der Leerung wieder rein."
 
-- question: "Was passiert bei Feiertagen oder geänderten Abholzeiten?"
-  answer: "Unser System prüft automatisch lokale Feiertage und verschobene Abholtermine. Du musst dich um nichts kümmern."
+- question: "Was ist mit Feiertagen?"
+  answer: "Feiertage und Verschiebungen werden automatisch berücksichtigt. Sie müssen nichts nachhalten."
 
-- question: "Welche Tonnenarten übernimmt tonns?"
-  answer: "Wir kümmern uns um Restmüll-, Bio-, Papier- und Plastiktonnen. Egal ob privat oder gewerblich."
-
-- question: "Ist der Service wirklich CO₂-neutral?"
-  answer: "Ja. Wir sind zu Fuß oder elektrisch unterwegs."
-
-- question: "Gibt es eine Vertragsbindung oder Mindestlaufzeit?"
-  answer: "Nein. Du buchst flexibel nach Bedarf – ganz ohne Laufzeit oder versteckte Gebühren."
-
-- question: "Wie kann ich tonns kündigen oder pausieren?"
-  answer: "Einfach per Klick im Dashboard. Es gibt keine Fristen. Du hast jederzeit die volle Kontrolle."
+- question: "Gibt es eine Vertragsbindung?"
+  answer: "Nein. Flexibel buchen, pausieren oder beenden – ohne Mindestlaufzeit."

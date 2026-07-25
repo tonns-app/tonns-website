@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<section class="audience-hero{% unless page.image %} audience-hero--plain{% endunless %}"{% if page.image %} style="--audience-image: url('{{ page.image }}')"{% endif %}>
+  <div class="audience-hero-overlay"></div>
+  <div class="audience-hero-content reveal-in">
+    <p class="audience-kicker">{{ page.audience }}</p>
+    <h1>{{ page.headline | default: page.title }}</h1>
+    <p class="audience-lead">{{ page.description }}</p>
+    <div class="audience-hero-actions">
+      <a href="#audience-cta" class="btn btn-green">Jetzt starten</a>
+      <a href="/#action-check" class="btn btn-outline-white">Termine prüfen</a>
+    </div>
+  </div>
+</section>
+
+<section class="section audience-section">
+  <div class="content audience-intro reveal">
+    <div class="audience-intro-copy">
+      {{ content }}
+    </div>
+    {% if page.stats %}
+    <ul class="audience-stats">
+      {% for stat in page.stats %}
+      <li>
+        <span class="audience-stat-value">{{ stat.value }}</span>
+        <span class="audience-stat-label">{{ stat.label }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+{% if page.benefits %}
+<section class="section section-muted audience-section">
+  <div class="content">
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Ihre Vorteile</p>
+      <h2>{{ page.benefits_title | default: "Warum Partner mit tonns arbeiten" }}</h2>
+    </div>
+    <div class="audience-benefit-grid">
+      {% for item in page.benefits %}
+      <article class="audience-benefit reveal">
+        <span class="audience-benefit-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.steps %}
+<section class="section audience-section">
+  <div class="content">
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Ablauf</p>
+      <h2>{{ page.steps_title | default: "So einfach starten Sie" }}</h2>
+    </div>
+    <ol class="audience-steps">
+      {% for step in page.steps %}
+      <li class="reveal">
+        <span>{{ forloop.index }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
+<section class="section audience-section" id="audience-cta">
+  <div class="content audience-cta-panel reveal">
+    <p class="brand-mark brand-mark--dark">tonns</p>
+    <h2>{{ page.cta_title | default: "Bereit für weniger Aufwand?" }}</h2>
+    <p>{{ page.cta_text | default: "Wir prüfen unverbindlich, wie tonns zu Ihren Objekten passt." }}</p>
+    <div class="closing-actions">
+      <a href="/#contact" class="btn btn-green">Unverbindlich anfragen</a>
+      <a href="/#action-check" class="btn btn-outline-green">Termine prüfen</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted audience-section">
+  <div class="content audience-related">
+    <div class="headline-subline">
+      <p class="section-kicker">Weiter entdecken</p>
+      <h2>Weitere Zielgruppen</h2>
+    </div>
+    <div class="audience-related-links">
+      {% for card in site.data.customers %}
+        {% unless card.link == page.url %}
+        <a href="{{ card.link }}">{{ card.title }}</a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include landing-page/action-date-check.html %}
+{% include structured_data/webpage.html %}
+{% include structured_data/faq.html %}

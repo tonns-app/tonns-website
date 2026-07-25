@@ -1,13 +1,11 @@
-  <article class="card {{ include.card_classes }}" href="{{ card.link }} ">
+<article class="card {{ include.card_classes }}">
   <div class="card-image-container">
     <div class="card-image">
-      <img src="{{ card.image }}" alt="{{ card.alt | default: card.title }}" loading="lazy" />
+      <img src="{{ include.card.image }}" alt="{{ include.card.alt | default: include.card.title }}" loading="lazy" width="400" height="290" />
     </div>
   </div>
   <div class="card-content">
-    <h4>{{ card.title }}</h4>
-    <span>{{ card.description }}</span>
+    <h3 class="card-title">{{ include.card.title }}</h3>
+    <span>{{ include.card.description }}</span>
   </div>
 </article>
-
-

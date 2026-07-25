@@ -1,16 +1,23 @@
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "{{ page.title }}",
-        "publisher": {
-            "@type": "Organization",
-            "name": "{{ site.title }}",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ site.url }}/assets/images/favicon.png"
-            }
-        },
-        "url": "{{ site.url }}{{ page.url }}"
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": "de-DE",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.company | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.url | append: site.logo | jsonify }}
     }
+  }
+}
 </script>

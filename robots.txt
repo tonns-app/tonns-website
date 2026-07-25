@@ -2,8 +2,7 @@
 layout: none
 permalink: "robots.txt"
 ---
-
 User-agent: *
-Disallow:
+Allow: /
+
 Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
-Sitemap: {{ site.url }}{{ site.baseurl }}/google-news.xml

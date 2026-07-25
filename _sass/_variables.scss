@@ -1,45 +1,62 @@
-$black: black;
-$primary: #3a415c;
-$accent: #FCFAF1;
+$black: #121812;
+$primary: #163528;
+$accent: #e8f0eb;
 $white: #fff;
-$light-green: #00B200;
-$middle-green: #2E7D32;
-
+$light-green: #1aad45;
+$middle-green: #0f7a38;
+$ink: #121812;
+$muted: #5c6b62;
+$surface: #f3f7f4;
+$surface-2: #e7efe9;
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+  font-family: var(--body-font), system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(26, 173, 69, 0.1), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(15, 122, 56, 0.07), transparent 50%),
+    var(--background);
 }
 
-
-
 :root {
-    --primary: #3a415c;
-    --accent: #FCFAF1;
-    --light-green: #00B200;
-    --white: #fff;
-    --heading-font: 'Poppins';
-    --body-font: 'Poppins';
-    --secondary: var(--accent);
-    --foreground: var(--black);
-    --background: var(--white);
+  --primary: #163528;
+  --accent: #e8f0eb;
+  --light-green: #1aad45;
+  --middle-green: #0f7a38;
+  --white: #fff;
+  --ink: #121812;
+  --muted: #5c6b62;
+  --surface: #f3f7f4;
+  --surface-2: #e7efe9;
+  --heading-font: "Sora", system-ui, sans-serif;
+  --body-font: "Source Sans 3", system-ui, sans-serif;
+  --secondary: var(--accent);
+  --foreground: var(--ink);
+  --background: #f7faf8;
+  --radius: 0.75rem;
+  --shadow-soft: 0 12px 40px rgba(18, 24, 18, 0.08);
+  --border-subtle: rgba(18, 24, 18, 0.08);
+  --border-green: rgba(15, 122, 56, 0.14);
+  --content-width: 1100px;
+  --section-pad-y: 4.5rem;
 }
 
 .primary {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .secondary {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .light-green {
-    color: var(--light-green);
+  color: var(--light-green);
 }
 
 .body-font {
-    font-family: var(--body-font);
+  font-family: var(--body-font);
 }
 
 .heading-font {
-    font-family: var(--heading-font);
+  font-family: var(--heading-font);
 }

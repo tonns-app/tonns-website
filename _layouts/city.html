@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+<section class="audience-hero{% unless page.image %} audience-hero--plain{% endunless %}"{% if page.image %} style="--audience-image: url('{{ page.image }}')"{% endif %}>
+  <div class="audience-hero-overlay"></div>
+  <div class="audience-hero-content reveal-in">
+    <p class="audience-kicker">Standort {{ page.city }}</p>
+    <h1>{{ page.headline | default: page.title }}</h1>
+    <p class="audience-lead">{{ page.description }}</p>
+    <div class="audience-hero-actions">
+      <a href="#city-cta" class="btn btn-green">In {{ page.city }} starten</a>
+      <a href="/#action-check" class="btn btn-outline-white">Termine prüfen</a>
+    </div>
+  </div>
+</section>
+
+<section class="section audience-section">
+  <div class="content audience-intro reveal">
+    <div class="audience-intro-copy">
+      {{ content }}
+    </div>
+    <ul class="audience-stats">
+      {% if page.stats %}
+        {% for stat in page.stats %}
+        <li>
+          <span class="audience-stat-value">{{ stat.value }}</span>
+          <span class="audience-stat-label">{{ stat.label }}</span>
+        </li>
+        {% endfor %}
+      {% else %}
+        <li>
+          <span class="audience-stat-value">Digital</span>
+          <span class="audience-stat-label">Termine automatisch im Blick</span>
+        </li>
+        <li>
+          <span class="audience-stat-value">CO₂-neutral</span>
+          <span class="audience-stat-label">Zu Fuß oder elektrisch unterwegs</span>
+        </li>
+        <li>
+          <span class="audience-stat-value">Flexibel</span>
+          <span class="audience-stat-label">Ohne Mindestlaufzeit pausieren</span>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-muted audience-section">
+  <div class="content">
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Vor Ort</p>
+      <h2>Ihre Vorteile in {{ page.city }}</h2>
+    </div>
+    <div class="audience-benefit-grid">
+      {% assign benefits = page.benefits %}
+      {% unless benefits %}
+        {% assign benefits = site.data.city_benefits %}
+      {% endunless %}
+      {% for item in benefits %}
+      <article class="audience-benefit reveal">
+        <span class="audience-benefit-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section audience-section">
+  <div class="content">
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Für wen?</p>
+      <h2>tonns in {{ page.city }} – für die, die Objekte managen</h2>
+    </div>
+    <div class="city-audience-row reveal">
+      {% for card in site.data.customers %}
+      <a class="city-audience-chip" href="{{ card.link }}">
+        <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="320" height="200" />
+        <span>{{ card.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section audience-section" id="city-cta">
+  <div class="content audience-cta-panel reveal">
+    <p class="brand-mark brand-mark--dark">tonns</p>
+    <h2>{{ page.cta_title | default: "Bereit für weniger Abfuhr-Stress?" }}</h2>
+    <p>
+      {% if page.cta_text %}
+        {{ page.cta_text }}
+      {% else %}
+        Prüfen Sie kostenlos Ihre Termine oder fragen Sie uns direkt für Objekte in {{ page.city }} an.
+      {% endif %}
+    </p>
+    <div class="closing-actions">
+      <a href="/#action-check" class="btn btn-green">Termine prüfen</a>
+      <a href="/#contact" class="btn btn-outline-green">Anfragen</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted audience-section">
+  <div class="content">
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Weitere Städte</p>
+      <h2>Auch hier für Sie da</h2>
+    </div>
+    <div class="city-grid city-grid--compact reveal">
+      {% for card in site.data.city %}
+        {% unless card.title == page.city %}
+        <a class="city-tile" href="{{ card.link }}">
+          <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="480" height="320" />
+          <span>{{ card.title }}</span>
+        </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include landing-page/action-date-check.html %}
+{% include structured_data/webpage.html %}
+{% include structured_data/faq.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ page.title | jsonify }},
+  "serviceType": "Mülltonnenservice",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": {{ site.company | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "telephone": {{ site.phone_international | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ site.street | jsonify }},
+      "addressLocality": {{ site.city_name | jsonify }},
+      "postalCode": {{ site.postal_code | jsonify }},
+      "addressCountry": "DE"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": {{ page.city | jsonify }}
+  },
+  "description": {{ page.description | jsonify }},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": {{ site.price_from | jsonify }},
+    "description": {{ site.price_unit | jsonify }}
+  }
+}
+</script>

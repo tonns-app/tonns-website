@@ -1,29 +1,35 @@
 - title: "Fürth"
-  link: "#"
+  name: fuerth
+  link: "/cities/fuerth/"
   image: "/assets/images/fuerth.avif"
-  alt: "Stadt Fürth"
+  alt: "Mülltonnenservice tonns in Fürth"
 
 - title: "Nürnberg"
-  link: "#"
+  name: nuernberg
+  link: "/cities/nuernberg/"
   image: "/assets/images/nuernberg.avif"
-  alt: "Stadt Nürnberg"
+  alt: "Mülltonnenservice tonns in Nürnberg"
 
 - title: "Erlangen"
-  link: "#"
+  name: erlangen
+  link: "/cities/erlangen/"
   image: "/assets/images/erlangen.avif"
-  alt: "Stadt Erlangen"
+  alt: "Mülltonnenservice tonns in Erlangen"
 
 - title: "München"
-  link: "#"
+  name: muenchen
+  link: "/cities/muenchen/"
   image: "/assets/images/muenchen.avif"
-  alt: "Stadt München"
+  alt: "Mülltonnenservice tonns in München"
 
 - title: "Berlin"
-  link: "#"
+  name: berlin
+  link: "/cities/berlin/"
   image: "/assets/images/berlin.avif"
-  alt: "Stadt Berlin"
+  alt: "Mülltonnenservice tonns in Berlin"
 
 - title: "Köln"
-  link: "#"
+  name: koeln
+  link: "/cities/koeln/"
   image: "/assets/images/koeln.avif"
-  alt: "Stadt Köln"
+  alt: "Mülltonnenservice tonns in Köln"

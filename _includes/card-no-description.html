@@ -1,11 +1,10 @@
-<article class="card {{ include.card_classes }}" href="{{ card.link }} ">
+<a class="card {{ include.card_classes }}" href="{{ include.card.link }}">
   <div class="card-image-container">
     <div class="card-image">
-      <img src="{{ card.image }}" alt="{{ card.alt | default: card.title }}" loading="lazy" />
+      <img src="{{ include.card.image }}" alt="{{ include.card.alt | default: include.card.title }}" loading="lazy" width="488" height="290" />
     </div>
   </div>
   <div class="card-content" style="flex-direction: row; align-items: center;">
-    <h4>{{ card.title }}</h4>
-    <!-- <img src="/assets/icons/arrow-right.svg" alt="Icon Beschreibung" width="24" height="24" />
-  </div> -->
-</article>
+    <h3 class="card-title">{{ include.card.title }}</h3>
+  </div>
+</a>

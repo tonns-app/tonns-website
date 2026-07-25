@@ -1,6 +1,8 @@
 ---
 layout: layouted-page
-title: Datenschutz-Erklärung
+title: Datenschutzerklärung
+eyebrow: Rechtliches
+description: "Datenschutzerklärung der tonns GmbH – Informationen zur Verarbeitung personenbezogener Daten auf tonns.app."
 ---
 
 ### General notes

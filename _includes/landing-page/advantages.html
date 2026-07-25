@@ -1,11 +1,24 @@
-<section class="section">
+<section class="section section-advantages">
   <div class="content">
-    <div class="headline-subline">
-      <p>Der effizienteste, günstigste & CO₂-neutralste Mülltonnendienst</p>
-      <h2 class="headline-02">Für Hausmeisterdienste, Hausverwaltungen und Eigentümer.</h2>
+    <div class="headline-subline reveal">
+      <p class="section-kicker">Ihre Vorteile</p>
+      <h2>Weniger Chaos. Mehr Ruhe im Objekt.</h2>
     </div>
 
-    <div class="slide-container">{% for card in site.data.advantages %} {% include card.html card=card card_classes="card-border" %} {% endfor %}</div>
-      <a href="#contact" class="btn btn-green" style="margin-top: 1rem;">Jetzt kostenlos testen</a>
+    <div class="feature-rows">
+      {% for card in site.data.advantages %}
+      {% assign mod = forloop.index | modulo: 2 %}
+      <article class="feature-row reveal{% if mod == 0 %} feature-row--flip{% endif %}">
+        <div class="feature-row-media">
+          <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="560" height="400" />
+        </div>
+        <div class="feature-row-text">
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+          <a href="{{ card.link }}" class="text-link">Mehr erfahren</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </div>
 </section>

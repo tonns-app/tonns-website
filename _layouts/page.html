@@ -2,10 +2,15 @@
 layout: default
 ---
 
-<section class="top base">
-  <h1 >{{ page.title }}</h1>
+<section class="section legal-page">
+  <div class="content legal-page-content">
+    <p class="section-kicker">{{ page.eyebrow | default: "tonns" }}</p>
+    <h1>{{ page.title }}</h1>
+    <div class="legal-prose">
+      {{ content }}
+    </div>
+    <p class="seo-back"><a href="/">Zur Startseite</a></p>
+  </div>
 </section>
-
-{{ content }}
 
 {% include structured_data/webpage.html %}

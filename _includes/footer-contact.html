@@ -1,67 +1,48 @@
 <div id="contact">
-  <div class="content">
-    <div class="left-container">
-      <div class="headline-subline">
-        <p>Noch Fragen?</p>
-        <span>Noch Fragen? Hier findest du Antworten auf die häufisgten Themen und Fragen:</span>
+  <div class="footer-shell">
+    <section class="footer-faq" aria-labelledby="footer-faq-title">
+      <div class="footer-faq-intro">
+        <p class="footer-kicker">FAQ</p>
+        <h2 id="footer-faq-title">Häufige Fragen</h2>
+        <p class="footer-lead">Kurz und klar – die wichtigsten Antworten auf einen Blick.</p>
       </div>
-      <div id="faq">
+
+      <div id="faq" class="footer-faq-list">
         {% for item in site.data.faq %}
-        <div class="faq-item">
-          <button class="faq-question" data-index="{{ forloop.index0 }}">{{ item.question }}</button>
-          <div class="faq-answer">{{ item.answer }}</div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-question">{{ item.question }}</summary>
+          <p class="faq-answer">{{ item.answer }}</p>
+        </details>
         {% endfor %}
       </div>
-    </div>
+    </section>
 
-    <div class="mid-container">
-      <div class="headline-subline">
-        <p>Möchtest du mehr wissen?</p>
-        <span>Kontaktiere uns!</span>
-      </div>
-
-      <div class="contact-mail-phone">
-        <a href="mailto:info@tonns.app">info@tonns.app</a>
-        <a href="tel:+4991147883546">0911 / 47 88 35 46</a>
-      </div>
-
-      <!--       <form class="input-container" id="contact-form" method="POST" novalidate>
-        <label for="contact-email" class="visually-hidden">E-Mail-Adresse</label>
-        <input class="input" type="email" id="contact-email" name="sender" placeholder="E-Mail-Adresse" required />
-        <label class="error-label" for="contact-email">Bitte eine gültige E-Mail-Adresse eingeben.</label>
-
-        <label for="contact-text" class="visually-hidden">Deine Nachricht...</label>
-        <textarea class="input" id="contact-text" name="message" placeholder="Deine Nachricht..." required></textarea>
-        <label class="error-label" for="contact-text">Bitte eine Nachricht eingeben.</label>
-
-        <div class="agree-privacy-policy">
-          <input type="checkbox" id="agree-checkbox-contact" name="agree" required />
-          <label for="agree-checkbox-contact">
-            Ich habe die <a href="/privacy" target="_blank"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.
-          </label>
+    <div class="footer-meta">
+      <div class="footer-meta-card">
+        <p class="footer-kicker">Kontakt</p>
+        <h3>Schreiben oder anrufen</h3>
+        <div class="contact-mail-phone">
+          <a href="mailto:info@tonns.app">info@tonns.app</a>
+          <a href="tel:+4991147883546">0911 / 47 88 35 46</a>
         </div>
-
-        <div id="form-status" style="margin-top: 1rem; font-size: 0.9rem"></div>
-
-        <button class="btn btn-green" type="submit">Senden</button>
-      </form> -->
-    </div>
-
-    <div class="right-container">
-      <div class="headline-subline">
-        <p>Wir sind tonns</p>
-        <span>Lernen Sie uns kennen! </span>
       </div>
-      <div>
-        <span class="description"
-          >Wir kümmern uns professionell und zuverlässig um Ihre Mülltonnen, Sie konzentrieren sich auf Ihr Kerngeschäft. Entdecken Sie, wie tonns Ihre Kosten
-          senkt, unnötige Wege und viel Arbeits- und Fahrtzeit einspart und die Umwelt schont.</span
-        >
+
+      <div class="footer-meta-card">
+        <p class="footer-kicker">Über tonns</p>
+        <h3>Wir übernehmen die Tonnen</h3>
+        <p class="description">
+          Professionell und zuverlässig um Ihre Mülltonnen – Sie konzentrieren sich auf Ihr Kerngeschäft.
+          tonns senkt Kosten, spart Wege und schont die Umwelt.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="impressum">
-    <a href="/impressum/" target="_blank"> Impressum</a>/<a href="/privacy/" target="_blank"> Privacy policy</a>&copy; {{ site.time | date: "%Y" }} {{ site.company }}
+
+    <div class="impressum">
+      <a href="/impressum/">Impressum</a>
+      <span aria-hidden="true">·</span>
+      <a href="/privacy/">Datenschutz</a>
+      <span aria-hidden="true">·</span>
+      <span>&copy; {{ site.time | date: "%Y" }} {{ site.company }}</span>
+    </div>
   </div>
 </div>

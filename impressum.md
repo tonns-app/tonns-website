@@ -1,6 +1,8 @@
 ---
 layout: layouted-page
-title: Impressum / Imprint
+title: Impressum
+eyebrow: Rechtliches
+description: "Impressum der tonns GmbH – Anbieterkennzeichnung gemäß § 5 TMG."
 ---
 
 ## Angaben gem. §5 TMG
