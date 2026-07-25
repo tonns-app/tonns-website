@@ -1,8 +1,8 @@
 <section class="section section-advantages">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">Ihre Vorteile</p>
-      <h2>Weniger Chaos. Mehr Ruhe im Objekt.</h2>
+      <p class="section-kicker">{{ page.sections.advantages.kicker }}</p>
+      <h2>{{ page.sections.advantages.title }}</h2>
     </div>
 
     <div class="feature-rows">
@@ -15,7 +15,7 @@
         <div class="feature-row-text">
           <h3>{{ card.title }}</h3>
           <p>{{ card.description }}</p>
-          <a href="{{ card.link }}" class="text-link">Mehr erfahren</a>
+          <a href="{{ card.link }}" class="text-link">{{ page.sections.advantages.link_label }}</a>
         </div>
       </article>
       {% endfor %}

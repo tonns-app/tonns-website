@@ -1,0 +1,92 @@
+footer:
+  faq:
+    kicker: "FAQ"
+    title: "Häufige Fragen"
+    lead: "Kurz und klar – die wichtigsten Antworten auf einen Blick."
+  contact:
+    kicker: "Kontakt"
+    title: "Schreiben oder anrufen"
+    email: "info@tonns.app"
+    phone_display: "0911 / 47 88 35 46"
+  about:
+    kicker: "Über tonns"
+    title: "Wir übernehmen die Tonnen"
+    text: >-
+      Professionell und zuverlässig um Ihre Mülltonnen – Sie konzentrieren sich auf Ihr Kerngeschäft.
+      tonns senkt Kosten, spart Wege und schont die Umwelt.
+  legal:
+    impressum_label: "Impressum"
+    privacy_label: "Datenschutz"
+
+app:
+  title: "Lade die App herunter"
+  screens_alt: "Screenshots der App"
+  ios:
+    url: "https://apps.apple.com/de/app/tonns/id6738647974"
+    alt: "Apple App Store"
+  android:
+    url: "https://play.google.com/store/apps/details?id=app.tonns.trashcanfinder"
+    alt: "Android App Store"
+
+action_check:
+  kicker: "Kostenloser Einstieg"
+  title: "Wann wird bei Ihnen geleert?"
+  lead: "Adresse eingeben – und Sie sehen Ihre Abholtermine. Kostenlos, unverbindlich, in Sekunden."
+  address_placeholder: "Straße, Hausnummer, Ort…"
+  email_placeholder: "E-Mail für die Termine"
+  address_label: "Adresse eingeben"
+  email_label: "E-Mail-Adresse"
+  privacy_html: 'Ich habe die <a href="/privacy/" target="_blank" rel="noopener"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.'
+  submit_label: "Termine prüfen"
+
+cookie:
+  text: >-
+    Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während andere uns
+    helfen, diese Website und Ihre Erfahrung zu verbessern.
+  essential_label: "Nur Essenzielle"
+  accept_all_label: "Alle akzeptieren"
+
+audience:
+  primary_cta_label: "Jetzt starten"
+  secondary_cta_label: "Termine prüfen"
+  benefits_kicker: "Ihre Vorteile"
+  benefits_title_default: "Warum Partner mit tonns arbeiten"
+  steps_kicker: "Ablauf"
+  steps_title_default: "So einfach starten Sie"
+  cta_brand: "tonns"
+  cta_title_default: "Bereit für weniger Aufwand?"
+  cta_text_default: "Wir prüfen unverbindlich, wie tonns zu Ihren Objekten passt."
+  cta_primary_label: "Unverbindlich anfragen"
+  cta_primary_href: "/#contact"
+  cta_secondary_label: "Termine prüfen"
+  cta_secondary_href: "/#action-check"
+  related_kicker: "Weiter entdecken"
+  related_title: "Weitere Zielgruppen"
+
+city_page:
+  kicker_prefix: "Standort"
+  primary_cta_prefix: "In"
+  primary_cta_suffix: "starten"
+  secondary_cta_label: "Termine prüfen"
+  benefits_kicker: "Vor Ort"
+  benefits_title_prefix: "Ihre Vorteile in"
+  audiences_kicker: "Für wen?"
+  audiences_title_prefix: "tonns in"
+  audiences_title_suffix: "– für die, die Objekte managen"
+  cta_brand: "tonns"
+  cta_title_default: "Bereit für weniger Abfuhr-Stress?"
+  cta_text_fallback_prefix: "Prüfen Sie kostenlos Ihre Termine oder fragen Sie uns direkt für Objekte in"
+  cta_text_fallback_suffix: "an."
+  cta_primary_label: "Termine prüfen"
+  cta_primary_href: "/#action-check"
+  cta_secondary_label: "Anfragen"
+  cta_secondary_href: "/#contact"
+  related_kicker: "Weitere Städte"
+  related_title: "Auch hier für Sie da"
+  default_stats:
+    - value: "Digital"
+      label: "Termine automatisch im Blick"
+    - value: "CO₂-neutral"
+      label: "Zu Fuß oder elektrisch unterwegs"
+    - value: "Flexibel"
+      label: "Ohne Mindestlaufzeit pausieren"

@@ -7,12 +7,9 @@
       </a>
 
       <ul class="desktop-nav">
-        <li><a href="/#sustainability">Über uns</a></li>
-        <li><a href="/kunden/hausmeister/">Hausmeister</a></li>
-        <li><a href="/kunden/hausverwaltungen/">Hausverwaltungen</a></li>
-        <li><a href="/#city">Standorte</a></li>
-        <li><a href="/#action-check">Müllabfuhr-Termine</a></li>
-        <li><a href="/#contact">Kontakt</a></li>
+        {% for item in site.data.navigation %}
+        <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+        {% endfor %}
       </ul>
 
       <div class="mobile-nav">
@@ -21,22 +18,19 @@
           <div class="spinner diagonal part-1"></div>
           <div class="spinner horizontal"></div>
           <div class="spinner diagonal part-2"></div>
-        </label>        
+        </label>
         <div id="sidebarMenu">
           <div class="mobile-logo">
             <span class="logo-dark">{% include logo/logo-dark.html %}</span>
           </div>
           <div class="sidebar-scroll-area">
             <ul class="sidebarMenuInner">
-              <li><a href="/#sustainability">Über uns</a></li>
-              <li><a href="/kunden/hausmeister/">Hausmeister</a></li>
-              <li><a href="/kunden/hausverwaltungen/">Hausverwaltungen</a></li>
-              <li><a href="/#city">Standorte</a></li>
-              <li><a href="/#action-check">Müllabfuhr-Termine</a></li>
-              <li><a href="/#contact">Kontakt</a></li>
+              {% for item in site.data.navigation %}
+              <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+              {% endfor %}
             </ul>
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   </nav>

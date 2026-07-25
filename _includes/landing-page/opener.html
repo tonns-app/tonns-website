@@ -2,28 +2,28 @@
   <div id="teaser-container">
     <figure>
       <img
-        src="/assets/images/opener-1920.avif"
-        srcset="/assets/images/opener-768.avif 768w, /assets/images/opener-1280.avif 1280w, /assets/images/opener-1920.avif 1920w"
+        src="{{ page.opener.image }}"
+        srcset="{{ page.opener.image_768 }} 768w, {{ page.opener.image_1280 }} 1280w, {{ page.opener.image }} 1920w"
         sizes="100vw"
-        alt="Mülltonnenservice von tonns: bereitgestellte Mülltonnen vor Ort"
+        alt="{{ page.opener.alt }}"
         width="1920"
         height="1080"
         fetchpriority="high"
         decoding="async"
         class="opener"
       />
-      <figcaption>tonns – Mülltonnenservice im Abo</figcaption>
+      <figcaption>{{ page.opener.caption }}</figcaption>
     </figure>
     <div class="teaser-text-container reveal-in">
-      <p class="brand-mark">tonns</p>
+      <p class="brand-mark">{{ page.opener.brand }}</p>
       <h1 class="teaser-headline">
-        Mülltonnen rausstellen?<br />
-        Wir übernehmen.
+        {{ page.opener.headline_line1 }}<br />
+        {{ page.opener.headline_line2 }}
       </h1>
-      <p class="teaser-subline">Digitaler Mülltonnenservice im Abo – zuverlässig, flexibel und CO₂-neutral.</p>
+      <p class="teaser-subline">{{ page.opener.subline }}</p>
       <div class="teaser-btn-container">
-        <a href="#action-check" class="btn btn-green">Abholtermine prüfen</a>
-        <a href="#hook" class="btn btn-outline-white">So funktioniert’s</a>
+        <a href="{{ page.opener.primary_cta.href }}" class="btn btn-green">{{ page.opener.primary_cta.label }}</a>
+        <a href="{{ page.opener.secondary_cta.href }}" class="btn btn-outline-white">{{ page.opener.secondary_cta.label }}</a>
       </div>
     </div>
   </div>

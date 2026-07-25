@@ -1,14 +1,11 @@
 <section id="closing" class="section section-closing">
   <div class="content closing-panel reveal">
-    <p class="brand-mark brand-mark--dark">tonns</p>
-    <h2>Bereit, den Abfuhr-Stress abzugeben?</h2>
-    <p>
-      Starten Sie mit dem kostenlosen Termin-Check – oder fragen Sie uns direkt zu Ihrem Objekt.
-      Klarer Objekttarif ab 30 € pro Objekt.
-    </p>
+    <p class="brand-mark brand-mark--dark">{{ page.closing.brand }}</p>
+    <h2>{{ page.closing.title }}</h2>
+    <p>{{ page.closing.text }}</p>
     <div class="closing-actions">
-      <a href="#action-check" class="btn btn-green">Termine prüfen</a>
-      <a href="#contact" class="btn btn-outline-green">Kontakt</a>
+      <a href="{{ page.closing.primary_cta.href }}" class="btn btn-green">{{ page.closing.primary_cta.label }}</a>
+      <a href="{{ page.closing.secondary_cta.href }}" class="btn btn-outline-green">{{ page.closing.secondary_cta.label }}</a>
     </div>
   </div>
 </section>

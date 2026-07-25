@@ -1,9 +1,9 @@
 <section id="city" class="section section-muted">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">Standorte</p>
-      <h2>tonns in Ihrer Stadt</h2>
-      <p class="section-support">Fürth, Nürnberg, Erlangen, München, Berlin, Köln – und wir wachsen weiter.</p>
+      <p class="section-kicker">{{ page.sections.city.kicker }}</p>
+      <h2>{{ page.sections.city.title }}</h2>
+      <p class="section-support">{{ page.sections.city.support }}</p>
     </div>
 
     <div class="city-grid reveal">
@@ -15,9 +15,7 @@
       {% endfor %}
     </div>
 
-    <p class="city-note reveal">
-      Ihre Stadt fehlt? Schreiben Sie uns – wir prüfen, ob und wann wir starten.
-    </p>
-    <a href="#contact" class="btn btn-green reveal">Kontakt aufnehmen</a>
+    <p class="city-note reveal">{{ page.sections.city.note }}</p>
+    <a href="{{ page.sections.city.cta_href }}" class="btn btn-green reveal">{{ page.sections.city.cta_label }}</a>
   </div>
 </section>

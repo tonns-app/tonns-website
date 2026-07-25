@@ -1,8 +1,8 @@
 <section id="customers" class="section">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">Für wen?</p>
-      <h2>Gemacht für die, die Objekte am Laufen halten.</h2>
+      <p class="section-kicker">{{ page.sections.customers.kicker }}</p>
+      <h2>{{ page.sections.customers.title }}</h2>
     </div>
 
     <div class="audience-grid reveal">
@@ -12,7 +12,7 @@
         <div class="audience-tile-body">
           <h3>{{ card.title }}</h3>
           <p>{{ card.description }}</p>
-          <span class="text-link">Zur Zielseite</span>
+          <span class="text-link">{{ page.sections.customers.link_label }}</span>
         </div>
       </a>
       {% endfor %}

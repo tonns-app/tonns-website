@@ -1,15 +1,13 @@
+{% assign cookie = site.data.site_copy.cookie %}
 <div class="cookie">
     <div class="shadow"></div>
     <div class="outer">
         <div class="banner">
-            <p>
-                Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während andere uns
-                helfen, diese Website und Ihre Erfahrung zu verbessern.
-            </p>
+            <p>{{ cookie.text }}</p>
             <div class="row">
                 <div class="button-bar">
-                    <button class="btn btn-outline-green" id="essentialBtn" type="button">Nur Essenzielle</button>
-                    <button class="btn btn-green" id="acceptAllBtn" type="button">Alle akzeptieren</button>
+                    <button class="btn btn-outline-green" id="essentialBtn" type="button">{{ cookie.essential_label }}</button>
+                    <button class="btn btn-green" id="acceptAllBtn" type="button">{{ cookie.accept_all_label }}</button>
                 </div>
             </div>
         </div>

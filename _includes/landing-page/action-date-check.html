@@ -1,33 +1,29 @@
+{% assign o = page.sections.action_check %}
+{% assign d = site.data.site_copy.action_check %}
 <section class="section" id="action-check">
   <div class="content action-check-panel reveal" id="action-dates-container">
-    <p class="section-kicker">Kostenloser Einstieg</p>
-    <h2 class="headline-02">
-      Wann wird bei Ihnen geleert?
-    </h2>
-    <p class="action-check-lead">
-      Adresse eingeben – und Sie sehen Ihre Abholtermine. Kostenlos, unverbindlich, in Sekunden.
-    </p>
+    <p class="section-kicker">{{ o.kicker | default: d.kicker }}</p>
+    <h2 class="headline-02">{{ o.title | default: d.title }}</h2>
+    <p class="action-check-lead">{{ o.lead | default: d.lead }}</p>
 
     <form id="hubspotForm" action="#" method="POST">
       <div class="autocomplete-container">
-        <label for="address" class="visually-hidden">Adresse eingeben</label>
-        <input class="input" type="text" id="address" name="address" placeholder="Straße, Hausnummer, Ort…" required autocomplete="off" />
+        <label for="address" class="visually-hidden">{{ o.address_label | default: d.address_label }}</label>
+        <input class="input" type="text" id="address" name="address" placeholder="{{ o.address_placeholder | default: d.address_placeholder }}" required autocomplete="off" />
         <ul id="address-suggestions"></ul>
       </div>
 
       <div class="input-container">
-        <label for="email" class="visually-hidden">E-Mail-Adresse</label>
-        <input class="input" type="email" id="email" name="email" placeholder="E-Mail für die Termine" required />
+        <label for="email" class="visually-hidden">{{ o.email_label | default: d.email_label }}</label>
+        <input class="input" type="email" id="email" name="email" placeholder="{{ o.email_placeholder | default: d.email_placeholder }}" required />
       </div>
 
       <div class="agree-privacy-policy">
         <input type="checkbox" id="agree-checkbox" name="agree" required />
-        <label for="agree-checkbox">
-          Ich habe die <a href="/privacy/" target="_blank" rel="noopener"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.
-        </label>
+        <label for="agree-checkbox">{{ o.privacy_html | default: d.privacy_html | raw }}</label>
       </div>
 
-      <button class="btn btn-green" type="submit">Termine prüfen</button>
+      <button class="btn btn-green" type="submit">{{ o.submit_label | default: d.submit_label }}</button>
     </form>
   </div>
 </section>

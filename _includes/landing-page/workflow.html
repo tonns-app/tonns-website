@@ -1,8 +1,8 @@
 <section id="workflow" class="section section-muted">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">In drei Schritten</p>
-      <h2>Anlegen. Laufen lassen. Entspannen.</h2>
+      <p class="section-kicker">{{ page.sections.workflow.kicker }}</p>
+      <h2>{{ page.sections.workflow.title }}</h2>
     </div>
 
     <ol class="steps-grid reveal">
@@ -18,6 +18,6 @@
       {% endfor %}
     </ol>
 
-    <a href="#action-check" class="btn btn-green reveal">Termine prüfen</a>
+    <a href="{{ page.sections.workflow.cta_href }}" class="btn btn-green reveal">{{ page.sections.workflow.cta_label }}</a>
   </div>
 </section>

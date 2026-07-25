@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign copy = site.data.site_copy.audience %}
 
 <section class="audience-hero{% unless page.image %} audience-hero--plain{% endunless %}"{% if page.image %} style="--audience-image: url('{{ page.image }}')"{% endif %}>
   <div class="audience-hero-overlay"></div>
@@ -9,8 +10,8 @@ layout: default
     <h1>{{ page.headline | default: page.title }}</h1>
     <p class="audience-lead">{{ page.description }}</p>
     <div class="audience-hero-actions">
-      <a href="#audience-cta" class="btn btn-green">Jetzt starten</a>
-      <a href="/#action-check" class="btn btn-outline-white">Termine prüfen</a>
+      <a href="#audience-cta" class="btn btn-green">{{ page.primary_cta_label | default: copy.primary_cta_label }}</a>
+      <a href="/#action-check" class="btn btn-outline-white">{{ page.secondary_cta_label | default: copy.secondary_cta_label }}</a>
     </div>
   </div>
 </section>
@@ -37,8 +38,8 @@ layout: default
 <section class="section section-muted audience-section">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">Ihre Vorteile</p>
-      <h2>{{ page.benefits_title | default: "Warum Partner mit tonns arbeiten" }}</h2>
+      <p class="section-kicker">{{ page.benefits_kicker | default: copy.benefits_kicker }}</p>
+      <h2>{{ page.benefits_title | default: copy.benefits_title_default }}</h2>
     </div>
     <div class="audience-benefit-grid">
       {% for item in page.benefits %}
@@ -57,8 +58,8 @@ layout: default
 <section class="section audience-section">
   <div class="content">
     <div class="headline-subline reveal">
-      <p class="section-kicker">Ablauf</p>
-      <h2>{{ page.steps_title | default: "So einfach starten Sie" }}</h2>
+      <p class="section-kicker">{{ page.steps_kicker | default: copy.steps_kicker }}</p>
+      <h2>{{ page.steps_title | default: copy.steps_title_default }}</h2>
     </div>
     <ol class="audience-steps">
       {% for step in page.steps %}
@@ -77,12 +78,12 @@ layout: default
 
 <section class="section audience-section" id="audience-cta">
   <div class="content audience-cta-panel reveal">
-    <p class="brand-mark brand-mark--dark">tonns</p>
-    <h2>{{ page.cta_title | default: "Bereit für weniger Aufwand?" }}</h2>
-    <p>{{ page.cta_text | default: "Wir prüfen unverbindlich, wie tonns zu Ihren Objekten passt." }}</p>
+    <p class="brand-mark brand-mark--dark">{{ copy.cta_brand }}</p>
+    <h2>{{ page.cta_title | default: copy.cta_title_default }}</h2>
+    <p>{{ page.cta_text | default: copy.cta_text_default }}</p>
     <div class="closing-actions">
-      <a href="/#contact" class="btn btn-green">Unverbindlich anfragen</a>
-      <a href="/#action-check" class="btn btn-outline-green">Termine prüfen</a>
+      <a href="{{ copy.cta_primary_href }}" class="btn btn-green">{{ copy.cta_primary_label }}</a>
+      <a href="{{ copy.cta_secondary_href }}" class="btn btn-outline-green">{{ copy.cta_secondary_label }}</a>
     </div>
   </div>
 </section>
@@ -90,8 +91,8 @@ layout: default
 <section class="section section-muted audience-section">
   <div class="content audience-related">
     <div class="headline-subline">
-      <p class="section-kicker">Weiter entdecken</p>
-      <h2>Weitere Zielgruppen</h2>
+      <p class="section-kicker">{{ copy.related_kicker }}</p>
+      <h2>{{ copy.related_title }}</h2>
     </div>
     <div class="audience-related-links">
       {% for card in site.data.customers %}
