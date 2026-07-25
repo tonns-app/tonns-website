@@ -69,11 +69,15 @@ footer {
 }
 
 /* Footer Kontakt + FAQ */
-#contact {
+.footer-contact {
   width: 100%;
   padding: 5rem 1.5rem 2rem;
   background-color: #0b0f0c;
   color: #fff;
+}
+
+#contact {
+  scroll-margin-top: 5.25rem;
 }
 
 .footer-shell {
@@ -305,6 +309,10 @@ footer {
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.9875rem;
   line-height: 1.5;
+}
+
+.footer-support-line {
+  display: block;
 }
 
 .footer-bottom {

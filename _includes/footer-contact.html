@@ -1,5 +1,5 @@
 {% assign f = site.data.site_copy.footer %}
-<div id="contact">
+<div class="footer-contact">
   <div class="footer-shell">
     <section class="footer-faq" aria-labelledby="footer-faq-title">
       <div class="footer-faq-intro">
@@ -52,7 +52,7 @@
           </ul>
         </div>
 
-        <div class="footer-col footer-col--support">
+        <div class="footer-col footer-col--support" id="contact">
           <p class="footer-col-title">{{ f.contact.title }}</p>
           <ul class="footer-support">
             <li>
@@ -65,7 +65,10 @@
             </li>
             <li>
               <span class="footer-support-label">{{ f.contact.address_label }}</span>
-              <span class="footer-support-text">{{ site.street }}<br>{{ site.city }}</span>
+              <span class="footer-support-text">
+                <span class="footer-support-line">{{ site.street }}</span>
+                <span class="footer-support-line">{{ site.postal_code }} {{ site.city_name }}</span>
+              </span>
             </li>
           </ul>
         </div>
