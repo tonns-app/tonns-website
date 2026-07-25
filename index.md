@@ -59,7 +59,7 @@ sections:
     title: "Gemacht für die, die Objekte am Laufen halten."
     link_label: "Zur Zielseite"
   sustainability:
-    kicker: "Wirkung"
+    kicker: "Nachhaltigkeit"
     title: "Besser für Objekte. Besser fürs Klima."
   city:
     kicker: "Standorte"
@@ -90,7 +90,7 @@ about:
     - title: "Lokal ausgeführt"
       text: "Beweger in der Nachbarschaft stellen Tonnen bereit und zurück – statt unnötiger Fahrten quer durch die Stadt."
   primary_cta:
-    label: "Unsere Wirkung"
+    label: "Mehr erfahren"
     href: "#sustainability"
   secondary_cta:
     label: "Beweger werden"
