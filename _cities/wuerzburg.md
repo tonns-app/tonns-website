@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Würzburg"
 headline: "Mülltonnenservice in Würzburg – weniger Fahrten, mehr Ruhe"
 city: Würzburg
-description: "Mülltonnen in Würzburg raus- und reinstellen lassen. Digitaler Mülltonnenservice mit automatischen Terminen und klaren Nachweisen."
+description: "In Würzburg Mülltonnen raus- und reinstellen lassen – mit automatischen Terminen und klaren Nachweisen."
 image: /assets/images/wuerzburg.jpg
 include_form_handler: true
 cta_title: "Würzburg läuft ruhiger mit tonns."

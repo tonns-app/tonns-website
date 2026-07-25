@@ -3,7 +3,7 @@ layout: audience
 title: "Mülltonnenservice für Stadtverwaltungen"
 headline: "Bessere Services. Weniger Emissionen. Lokale Jobs."
 audience: Für Kommunen
-description: "Lokaler Mülltonnenservice für Kommunen: Kosten senken, Arbeitsplätze schaffen, CO₂ reduzieren – digital organisiert."
+description: "Mülltonnendienst für Kommunen: Kosten senken, lokale Arbeitsplätze schaffen, CO₂ reduzieren – digital organisiert."
 image: /assets/images/stadtverwaltung.avif
 permalink: /kunden/stadt/
 include_form_handler: true
@@ -36,6 +36,6 @@ steps:
     text: "Weniger Fahrten, bessere Nachweise, lokale Wertschöpfung."
 ---
 
-Für **Stadtverwaltungen** und kommunale Partner verbindet tonns Entsorgungsqualität mit Nachhaltigkeit: weniger Fahrzeugkilometer, lokale Einsatzkräfte und digitale Nachvollziehbarkeit.
+Für **Stadtverwaltungen** und kommunale Partner verbindet tonns Entsorgungsqualität mit Nachhaltigkeit: weniger Fahrzeugkilometer, lokale Einsatzkräfte und ein digitaler **Mülltonnenservice** mit klaren Nachweisen.
 
 So lassen sich Gesamtkosten der Mülltonnenbereitstellung senken und gleichzeitig lokale Beschäftigung und Klimaziele unterstützen.

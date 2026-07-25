@@ -5,11 +5,13 @@ footer:
     lead: "Kurz und klar – die wichtigsten Antworten auf einen Blick."
   brand:
     name: "tonns"
-    tagline: "Mülltonnen raus und rein – digital, zuverlässig und CO₂-neutral."
+    tagline: "Mülltonnen raus- und reinstellen lassen – digitaler Mülltonnendienst, zuverlässig und CO₂-neutral."
   columns:
     product:
       title: "Produkt"
       links:
+        - label: "Mülltonnendienst"
+          href: "/muelltonnendienst/"
         - label: "Für wen?"
           href: "/#customers"
         - label: "So funktioniert’s"

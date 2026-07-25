@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Forchheim"
 headline: "Mülltonnenservice in Forchheim – zuverlässig zur Leerung"
 city: Forchheim
-description: "Tonnendienst Forchheim: Mülltonnen bereitstellen und zurückstellen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
+description: "In Forchheim Mülltonnen bereitstellen und zurückstellen lassen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
 image: /assets/images/forchheim.jpg
 include_form_handler: true
 cta_title: "Forchheim: Abfuhrtag ohne Chaos."

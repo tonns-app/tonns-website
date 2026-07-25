@@ -3,7 +3,7 @@ layout: audience
 title: "Mülltonnenservice für Eigentümer"
 headline: "Mülltonnen, ohne dass Sie daran denken müssen."
 audience: Für Eigentümer
-description: "Mülltonnen an Ihrem Objekt raus- und reinstellen lassen – flexibel im Abo, ohne Vertragsbindung."
+description: "Mülltonnen raus- und reinstellen lassen – flexibler Mülltonnenservice für Eigentümer und Eigentümergemeinschaften, ohne Vertragsbindung."
 image: /assets/images/eigentuemer-3.avif
 permalink: /kunden/eigentuemer/
 include_form_handler: true
@@ -36,6 +36,6 @@ steps:
     text: "Alles dokumentiert – ohne dass Sie vor Ort sein müssen."
 ---
 
-Als **Eigentümer** oder Eigentümergemeinschaft wollen Sie Zuverlässigkeit ohne Extra-Organisation. Mit tonns legen Sie Objekt und Tonnen einmal an und buchen nach Bedarf.
+Als **Eigentümer** oder Eigentümergemeinschaft wollen Sie Zuverlässigkeit ohne Extra-Organisation. Mit tonns lassen Sie **Mülltonnen raus- und reinstellen**: Objekt und Tonnen einmal anlegen, danach läuft der Mülltonnendienst mit.
 
 Wir stellen pünktlich bereit, bringen die Tonnen zurück und dokumentieren die Vorgänge – transparent und CO₂-neutral.

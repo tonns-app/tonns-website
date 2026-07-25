@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Bamberg"
 headline: "Mülltonnenservice in Bamberg – zuverlässig zur Leerung"
 city: Bamberg
-description: "Mülltonnenservice Bamberg: Tonnen pünktlich bereitstellen und zurückstellen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
+description: "Mülltonnen in Bamberg pünktlich bereitstellen und zurückstellen lassen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
 image: /assets/images/bamberg.jpg
 include_form_handler: true
 cta_title: "Bamberg ohne Abfuhr-Stress."

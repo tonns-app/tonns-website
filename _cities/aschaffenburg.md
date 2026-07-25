@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Aschaffenburg"
 headline: "Mülltonnenservice in Aschaffenburg – unkompliziert im Abo"
 city: Aschaffenburg
-description: "Mülltonnenservice Aschaffenburg: Tonnen zur Abfuhr bereitstellen und zurückstellen. Digital, dokumentiert, flexibel pausierbar."
+description: "In Aschaffenburg Mülltonnen zur Abfuhr bereitstellen und zurückstellen lassen. Digital, dokumentiert, flexibel pausierbar."
 image: /assets/images/aschaffenburg.jpg
 include_form_handler: true
 cta_title: "Aschaffenburg ohne Tonnen-Chaos."

@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Neumarkt"
 headline: "Mülltonnenservice in Neumarkt – planbar statt spontan"
 city: Neumarkt
-description: "Mülltonnenservice Neumarkt in der Oberpfalz: Tonnen rausstellen und reinstellen lassen. Automatische Termine, digitale Nachweise."
+description: "In Neumarkt Mülltonnen rausstellen und reinstellen lassen – automatische Termine und digitale Nachweise."
 image: /assets/images/neumarkt.jpg
 include_form_handler: true
 cta_title: "Neumarkt ohne Tonnen-Stress."

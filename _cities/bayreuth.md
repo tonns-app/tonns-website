@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Bayreuth"
 headline: "Mülltonnenservice in Bayreuth – digital und termintreu"
 city: Bayreuth
-description: "Tonnendienst Bayreuth: Mülltonnen rausstellen und reinstellen lassen. Automatische Termine, digitale Nachweise, flexibel kündbar."
+description: "In Bayreuth Mülltonnen rausstellen und reinstellen lassen – automatische Termine, digitale Nachweise, flexibel kündbar."
 image: /assets/images/bayreuth.jpg
 include_form_handler: true
 cta_title: "Bayreuth: Abfuhrtag ohne Nachfrage-Chaos."

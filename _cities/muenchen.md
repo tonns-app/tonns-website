@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice München"
 headline: "Mülltonnenservice in München – skaliert für den Bestand"
 city: München
-description: "Mülltonnen-Service für München: digital organisiert, zuverlässig ausgeführt, CO₂-neutral unterwegs."
+description: "In München Mülltonnen raus- und reinstellen lassen – digital organisiert, zuverlässig und CO₂-neutral."
 image: /assets/images/muenchen.avif
 include_form_handler: true
 cta_title: "München braucht Prozesse, die mitwachsen."

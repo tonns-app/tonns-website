@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Ansbach"
 headline: "Mülltonnenservice in Ansbach – planbar und digital"
 city: Ansbach
-description: "Mülltonnen in Ansbach raus- und reinstellen lassen. Automatische Abfuhrtermine, digitale Nachweise, flexibel pausierbar."
+description: "In Ansbach Mülltonnen raus- und reinstellen lassen – automatische Abfuhrtermine, digitale Nachweise, flexibel pausierbar."
 image: /assets/images/ansbach.jpg
 include_form_handler: true
 cta_title: "Ansbach ohne Abfuhr-Stress."

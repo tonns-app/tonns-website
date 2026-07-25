@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Weiden"
 headline: "Mülltonnenservice in Weiden – unkompliziert im Abo"
 city: Weiden
-description: "Mülltonnenservice Weiden in der Oberpfalz: Tonnen bereitstellen und zurückstellen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
+description: "Mülltonnen in Weiden bereitstellen und zurückstellen lassen. Digital geplant, dokumentiert, ab 30 € pro Objekt."
 image: /assets/images/weiden.jpg
 include_form_handler: true
 cta_title: "Weiden: Abfuhrtag ohne Extra-Fahrten."

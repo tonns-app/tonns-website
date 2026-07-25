@@ -3,7 +3,7 @@ layout: audience
 title: "Mülltonnenservice für Hausmeister"
 headline: "Mehr Zeit fürs Kerngeschäft. Weniger Tonnenfahrten."
 audience: Für Hausmeisterdienste
-description: "tonns übernimmt die Bereitstellung als starker Subpartner – Sie behalten den Kunden, wir die operative Arbeit."
+description: "Mülltonnenservice für Hausmeister: Tonnenbereitstellung auslagern, Kunden behalten. Weniger Fahrten, mehr Kapazität – digital und dokumentiert."
 image: /assets/images/hausmeister.avif
 permalink: /kunden/hausmeister/
 include_form_handler: true
@@ -36,6 +36,6 @@ steps:
     text: "Status und Nachweise jederzeit einsehbar – ohne Extra-Fahrten."
 ---
 
-Als **Hausmeisterdienst** kosten Tonnenfahrten Zeit, Sprit und Nerven – oft genau dann, wenn andere Aufträge warten. Mit tonns lagern Sie genau diesen Job aus, ohne die Kundenbeziehung abzugeben.
+Als **Hausmeisterdienst** kosten Tonnenfahrten Zeit, Sprit und Nerven – oft genau dann, wenn andere Aufträge warten. Mit tonns lagern Sie den **Mülltonnendienst** aus, ohne die Kundenbeziehung abzugeben.
 
 Das Ergebnis: zuverlässige Bereitstellung, weniger Chaos an Abfuhrtagen und mehr Raum für Aufgaben, die Ihre Marge wirklich tragen.

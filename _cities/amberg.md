@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Amberg"
 headline: "Mülltonnenservice in Amberg – digital und termintreu"
 city: Amberg
-description: "Tonnendienst Amberg: Mülltonnen raus- und reinstellen lassen. Automatische Termine, digitale Nachweise, flexibel pausierbar."
+description: "In Amberg Mülltonnen raus- und reinstellen lassen – automatische Termine, digitale Nachweise, flexibel pausierbar."
 image: /assets/images/amberg.jpg
 include_form_handler: true
 cta_title: "Amberg ohne Abfuhr-Chaos."

@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Erlangen"
 headline: "Mülltonnenservice in Erlangen – planbar und unkompliziert"
 city: Erlangen
-description: "Mülltonnen in Erlangen raus- und reinstellen lassen: digital buchen, flexibel steuern, CO₂-neutral ausführen."
+description: "In Erlangen Mülltonnen raus- und reinstellen lassen: digital buchen, flexibel steuern, CO₂-neutral ausführen."
 image: /assets/images/erlangen.avif
 include_form_handler: true
 cta_title: "Erlangen läuft ruhiger mit tonns."

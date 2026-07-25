@@ -1,17 +1,17 @@
+- question: "Was ist ein Mülltonnendienst?"
+  answer: "Ein Mülltonnendienst stellt Ihre Mülltonnen zur Leerung bereit und bringt sie danach wieder zurück. Bei tonns läuft das digital: Sie legen Objekt und Tonnen einmal an, Abfuhrtermine werden erkannt, die Bereitstellung dokumentiert."
+
+- question: "Kann ich Mülltonnen rausstellen lassen?"
+  answer: "Ja. Mit tonns lassen Sie Mülltonnen raus- und reinstellen – pünktlich zur Abfuhr, ohne dass Sie selbst vor Ort sein müssen. Ideal für Eigentümer, Hausmeisterdienste und Hausverwaltungen."
+
+- question: "Was kostet der Mülltonnenservice?"
+  answer: "Ab 30 € pro Objekt, abhängig von Standort und Häufigkeit. Den Tarif sehen Sie vor der Buchung im Dashboard – ohne versteckte Stückpreise."
+
+- question: "Für wen ist tonns geeignet?"
+  answer: "Für Hausmeisterdienste, Hausverwaltungen, Eigentümer und Kommunen, die den Abfuhrtag auslagern und trotzdem den Überblick behalten wollen."
+
 - question: "Wie funktioniert die Beauftragung?"
-  answer: "Online registrieren, Standorte und Tonnen anlegen – den Rest übernehmen wir. Abholtermine erkennt das System automatisch."
-
-- question: "Was kostet der Service?"
-  answer: "Ab 30 € pro Objekt, abhängig von Standort und Häufigkeit. Den Tarif sehen Sie vor der Buchung im Dashboard."
-
-- question: "Wie erfolgt die Abrechnung?"
-  answer: "Monatlich per digitaler Rechnung. Alle Vorgänge bleiben im Dashboard einsehbar."
-
-- question: "Wer stellt die Tonnen bereit?"
-  answer: "Geschulte Mitarbeitende stellen die Tonnen pünktlich raus und nach der Leerung wieder rein."
-
-- question: "Was ist mit Feiertagen?"
-  answer: "Feiertage und Verschiebungen werden automatisch berücksichtigt. Sie müssen nichts nachhalten."
+  answer: "Online registrieren, Standorte und Tonnen anlegen – den Rest übernehmen wir. Abholtermine erkennt das System automatisch, auch an Feiertagen."
 
 - question: "Gibt es eine Vertragsbindung?"
-  answer: "Nein. Flexibel buchen, pausieren oder beenden – ohne Mindestlaufzeit."
+  answer: "Nein. Sie buchen flexibel, können pausieren oder beenden – ohne Mindestlaufzeit."

@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Berlin"
 headline: "Mülltonnenservice in Berlin – digital statt Fahrtenchaos"
 city: Berlin
-description: "Tonnen raus- und reinstellen in Berlin: automatische Termine, lokale Ausführung, CO₂-neutral."
+description: "In Berlin Mülltonnen raus- und reinstellen lassen: automatische Termine, lokale Ausführung, CO₂-neutral."
 image: /assets/images/berlin.avif
 include_form_handler: true
 cta_title: "Berlin ist groß. Ihr Prozess muss es nicht sein."

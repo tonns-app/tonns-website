@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Coburg"
 headline: "Mülltonnenservice in Coburg – termintreu und unkompliziert"
 city: Coburg
-description: "Mülltonnen in Coburg rausstellen und reinstellen lassen. Digitaler Mülltonnenservice mit automatischen Terminen und klaren Nachweisen."
+description: "In Coburg Mülltonnen rausstellen und reinstellen lassen – digitaler Service mit automatischen Terminen und klaren Nachweisen."
 image: /assets/images/coburg.jpg
 include_form_handler: true
 cta_title: "Coburg ohne Tonnen-Chaos."

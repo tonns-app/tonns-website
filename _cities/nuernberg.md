@@ -17,6 +17,6 @@ stats:
     label: "Ohne Vertragsbindung pausieren"
 ---
 
-In **Nürnberg** entlastet tonns Hausmeister, Hausverwaltungen und Eigentümer beim Mülltonnenservice. Standorte einmal anlegen – Abholtermine laufen automatisch mit.
+In **Nürnberg** entlastet tonns Hausmeister, Hausverwaltungen und Eigentümer mit einem digitalen Mülltonnendienst. Standorte einmal anlegen – Abholtermine laufen automatisch mit.
 
-Statt Extra-Fahrten und Ausfällen bekommen Sie einen klaren, digitalen Prozess: bereitstellen, zurückstellen, nachweisen.
+Statt Extra-Fahrten und Ausfällen bekommen Sie einen klaren Prozess: Mülltonnen bereitstellen, zurückstellen, nachweisen.

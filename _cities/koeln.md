@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Köln"
 headline: "Mülltonnenservice in Köln – flexibel und digital"
 city: Köln
-description: "Mülltonnen in Köln bereitstellen und zurückbringen lassen – ohne Vertragsbindung, mit klaren Nachweisen."
+description: "In Köln Mülltonnen bereitstellen und zurückbringen lassen – ohne Vertragsbindung, mit klaren Nachweisen."
 image: /assets/images/koeln.avif
 include_form_handler: true
 cta_title: "Köln läuft besser ohne Abfuhr-Stress."

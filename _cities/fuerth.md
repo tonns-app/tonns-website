@@ -17,6 +17,6 @@ stats:
     label: "Buchung, Nachweis und Abrechnung im Dashboard"
 ---
 
-tonns kommt aus **Fürth**. Wir kennen die Abfuhrlogik vor Ort und übernehmen das Raus- und Reinstellen Ihrer Mülltonnen – digital organisiert, zuverlässig ausgeführt.
+tonns kommt aus **Fürth**. Als lokaler Mülltonnendienst kennen wir die Abfuhrlogik vor Ort und übernehmen das Raus- und Reinstellen Ihrer Mülltonnen – digital organisiert, zuverlässig ausgeführt.
 
 Ob Mehrfamilienhaus, Gewerbe oder verwalteter Bestand: Sie legen Standort und Tonnen einmal an. Den Rest erledigen wir – auch an Feiertagen.

@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Regensburg"
 headline: "Mülltonnenservice in Regensburg – planbar statt spontan"
 city: Regensburg
-description: "Mülltonnen in Regensburg raus- und reinstellen lassen: automatische Abfuhrtermine, digitale Nachweise, flexibel pausierbar."
+description: "In Regensburg Mülltonnen raus- und reinstellen lassen – automatische Abfuhrtermine und digitale Nachweise."
 image: /assets/images/regensburg.jpg
 include_form_handler: true
 cta_title: "Regensburg verdient ruhige Abfuhrtage."

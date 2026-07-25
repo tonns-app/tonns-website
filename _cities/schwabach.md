@@ -3,7 +3,7 @@ layout: city
 title: "Mülltonnenservice Schwabach"
 headline: "Mülltonnenservice in Schwabach – digital statt Fahrtenchaos"
 city: Schwabach
-description: "Mülltonnenservice Schwabach: Tonnen raus- und reinstellen lassen. Automatische Termine, digitale Nachweise, flexibel kündbar."
+description: "In Schwabach Mülltonnen raus- und reinstellen lassen – automatische Termine, digitale Nachweise, flexibel kündbar."
 image: /assets/images/schwabach.jpg
 include_form_handler: true
 cta_title: "Schwabach läuft ruhiger mit tonns."

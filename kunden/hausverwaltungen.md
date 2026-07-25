@@ -3,7 +3,7 @@ layout: audience
 title: "Mülltonnenservice für Hausverwaltungen"
 headline: "Weniger Beschwerden. Mehr Transparenz im Bestand."
 audience: Für Hausverwaltungen
-description: "Digitaler Mülltonnenservice für verwaltete Objekte – planbar, nachvollziehbar und ohne Mindestlaufzeit."
+description: "Mülltonnenservice für Hausverwaltungen: weniger Beschwerden, digitale Nachweise, planbare Prozesse – ohne Mindestlaufzeit."
 image: /assets/images/hausverwaltung.avif
 permalink: /kunden/hausverwaltungen/
 include_form_handler: true
@@ -36,6 +36,6 @@ steps:
     text: "Status, Nachweise und Abrechnung bleiben jederzeit einsehbar."
 ---
 
-**Hausverwaltungen** brauchen ruhige Prozesse und belastbare Nachweise – nicht noch einen Baustein, der manuell gesteuert werden muss. tonns übernimmt den Mülltonnenservice digital und zuverlässig.
+**Hausverwaltungen** brauchen ruhige Prozesse und belastbare Nachweise – nicht noch einen Baustein, der manuell gesteuert werden muss. tonns übernimmt den **Mülltonnendienst** digital und zuverlässig.
 
 Ihre Eigentümer bekommen einen klaren, CO₂-neutralen Service. Sie reduzieren Beschwerden, Abstimmungsaufwand und operative Reibung rund um die Müllabfuhr.
