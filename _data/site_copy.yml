@@ -3,17 +3,48 @@ footer:
     kicker: "FAQ"
     title: "Häufige Fragen"
     lead: "Kurz und klar – die wichtigsten Antworten auf einen Blick."
+  brand:
+    name: "tonns"
+    tagline: "Mülltonnen raus und rein – digital, zuverlässig und CO₂-neutral."
+  columns:
+    product:
+      title: "Produkt"
+      links:
+        - label: "Für wen?"
+          href: "/#customers"
+        - label: "So funktioniert’s"
+          href: "/#workflow"
+        - label: "Standorte"
+          href: "/#city"
+        - label: "Müllabfuhr-Termine"
+          href: "/#action-check"
+    company:
+      title: "Unternehmen"
+      links:
+        - label: "Über uns"
+          href: "/#sustainability"
+        - label: "Beweger werden"
+          href: "/beweger/"
+        - label: "App laden"
+          href: "/#download-app"
+    audiences:
+      title: "Für wen"
+      links:
+        - label: "Hausmeister"
+          href: "/kunden/hausmeister/"
+        - label: "Hausverwaltungen"
+          href: "/kunden/hausverwaltungen/"
+        - label: "Eigentümer"
+          href: "/kunden/eigentuemer/"
+        - label: "Stadtverwaltungen"
+          href: "/kunden/stadt/"
   contact:
-    kicker: "Kontakt"
-    title: "Schreiben oder anrufen"
+    title: "Support"
+    email_label: "E-Mail"
     email: "info@tonns.app"
+    phone_label: "Telefon"
     phone_display: "0911 / 47 88 35 46"
-  about:
-    kicker: "Über tonns"
-    title: "Wir übernehmen die Tonnen"
-    text: >-
-      Professionell und zuverlässig um Ihre Mülltonnen – Sie konzentrieren sich auf Ihr Kerngeschäft.
-      tonns senkt Kosten, spart Wege und schont die Umwelt.
+    address_label: "Sitz"
   legal:
     impressum_label: "Impressum"
     privacy_label: "Datenschutz"

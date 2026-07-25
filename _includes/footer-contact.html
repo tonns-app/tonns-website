@@ -1,10 +1,11 @@
+{% assign f = site.data.site_copy.footer %}
 <div id="contact">
   <div class="footer-shell">
     <section class="footer-faq" aria-labelledby="footer-faq-title">
       <div class="footer-faq-intro">
-        <p class="footer-kicker">{{ site.data.site_copy.footer.faq.kicker }}</p>
-        <h2 id="footer-faq-title">{{ site.data.site_copy.footer.faq.title }}</h2>
-        <p class="footer-lead">{{ site.data.site_copy.footer.faq.lead }}</p>
+        <p class="footer-kicker">{{ f.faq.kicker }}</p>
+        <h2 id="footer-faq-title">{{ f.faq.title }}</h2>
+        <p class="footer-lead">{{ f.faq.lead }}</p>
       </div>
 
       <div id="faq" class="footer-faq-list">
@@ -17,29 +18,66 @@
       </div>
     </section>
 
-    <div class="footer-meta">
-      <div class="footer-meta-card">
-        <p class="footer-kicker">{{ site.data.site_copy.footer.contact.kicker }}</p>
-        <h3>{{ site.data.site_copy.footer.contact.title }}</h3>
-        <div class="contact-mail-phone">
-          <a href="mailto:{{ site.data.site_copy.footer.contact.email }}">{{ site.data.site_copy.footer.contact.email }}</a>
-          <a href="tel:{{ site.phone_international }}">{{ site.data.site_copy.footer.contact.phone_display }}</a>
-        </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">{{ f.brand.name }}</a>
+        <p class="footer-tagline">{{ f.brand.tagline }}</p>
       </div>
 
-      <div class="footer-meta-card">
-        <p class="footer-kicker">{{ site.data.site_copy.footer.about.kicker }}</p>
-        <h3>{{ site.data.site_copy.footer.about.title }}</h3>
-        <p class="description">{{ site.data.site_copy.footer.about.text }}</p>
-      </div>
+      <nav class="footer-columns" aria-label="Footer">
+        <div class="footer-col">
+          <p class="footer-col-title">{{ f.columns.product.title }}</p>
+          <ul>
+            {% for link in f.columns.product.links %}
+            <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">{{ f.columns.audiences.title }}</p>
+          <ul>
+            {% for link in f.columns.audiences.links %}
+            <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">{{ f.columns.company.title }}</p>
+          <ul>
+            {% for link in f.columns.company.links %}
+            <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col--support">
+          <p class="footer-col-title">{{ f.contact.title }}</p>
+          <ul class="footer-support">
+            <li>
+              <span class="footer-support-label">{{ f.contact.email_label }}</span>
+              <a href="mailto:{{ f.contact.email }}">{{ f.contact.email }}</a>
+            </li>
+            <li>
+              <span class="footer-support-label">{{ f.contact.phone_label }}</span>
+              <a href="tel:{{ site.phone_international }}">{{ f.contact.phone_display }}</a>
+            </li>
+            <li>
+              <span class="footer-support-label">{{ f.contact.address_label }}</span>
+              <span class="footer-support-text">{{ site.street }}<br>{{ site.city }}</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
-    <div class="impressum">
-      <a href="/impressum/">{{ site.data.site_copy.footer.legal.impressum_label }}</a>
-      <span aria-hidden="true">·</span>
-      <a href="/privacy/">{{ site.data.site_copy.footer.legal.privacy_label }}</a>
-      <span aria-hidden="true">·</span>
-      <span>&copy; {{ site.time | date: "%Y" }} {{ site.company }}</span>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; {{ site.time | date: "%Y" }} {{ site.company }}</p>
+      <div class="footer-legal">
+        <a href="/impressum/">{{ f.legal.impressum_label }}</a>
+        <a href="/privacy/">{{ f.legal.privacy_label }}</a>
+      </div>
     </div>
   </div>
 </div>
