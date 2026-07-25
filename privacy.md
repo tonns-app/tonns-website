@@ -1,8 +1,9 @@
 ---
-layout: layouted-page
-title: Datenschutzerklärung
+layout: legal
+title: Datenschutz
 eyebrow: Rechtliches
-description: "Datenschutzerklärung der tonns GmbH – Informationen zur Verarbeitung personenbezogener Daten auf tonns.app."
+description: "Informationen zur Verarbeitung personenbezogener Daten auf tonns.app."
+permalink: /privacy/
 ---
 
 ### General notes

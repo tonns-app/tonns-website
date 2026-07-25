@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign legal = site.data.site_copy.footer.legal %}
+
+<section class="legal-hero">
+  <div class="content legal-hero-inner reveal-in">
+    <p class="section-kicker">{{ page.eyebrow | default: legal.nav_label }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="legal-hero-lead">{{ page.description }}</p>
+    {% endif %}
+    <nav class="legal-switch" aria-label="{{ legal.nav_label }}">
+      <a href="{{ legal.impressum_href }}"{% if page.url == legal.impressum_href %} aria-current="page"{% endif %}>{{ legal.impressum_label }}</a>
+      <a href="{{ legal.privacy_href }}"{% if page.url == legal.privacy_href %} aria-current="page"{% endif %}>{{ legal.privacy_label }}</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section legal-page">
+  <div class="content legal-page-content reveal">
+    <div class="legal-prose">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted legal-footer-cta">
+  <div class="content legal-footer-panel reveal">
+    <p class="brand-mark brand-mark--dark">tonns</p>
+    <h2>{{ legal.related_title }}</h2>
+    <div class="closing-actions">
+      <a href="{{ legal.contact_href }}" class="btn btn-green">{{ legal.contact_label }}</a>
+      {% if page.url == legal.impressum_href %}
+      <a href="{{ legal.privacy_href }}" class="btn btn-outline-green">{{ legal.privacy_label }}</a>
+      {% else %}
+      <a href="{{ legal.impressum_href }}" class="btn btn-outline-green">{{ legal.impressum_label }}</a>
+      {% endif %}
+    </div>
+    <p class="legal-home-link"><a href="/">{{ legal.back_home }}</a></p>
+  </div>
+</section>
+
+{% include structured_data/webpage.html %}

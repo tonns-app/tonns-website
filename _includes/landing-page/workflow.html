@@ -5,18 +5,17 @@
       <h2>{{ page.sections.workflow.title }}</h2>
     </div>
 
-    <ol class="steps-grid reveal">
+    <div class="steps-grid reveal">
       {% for card in site.data.workflow %}
-      <li class="step-item">
-        <span class="step-index">{{ forloop.index }}</span>
+      <article class="step-item">
         <div class="step-media">
           <img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="480" height="320" />
         </div>
         <h3>{{ card.title }}</h3>
         <p>{{ card.description }}</p>
-      </li>
+      </article>
       {% endfor %}
-    </ol>
+    </div>
 
     <a href="{{ page.sections.workflow.cta_href }}" class="btn btn-green reveal">{{ page.sections.workflow.cta_label }}</a>
   </div>

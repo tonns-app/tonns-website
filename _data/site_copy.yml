@@ -48,6 +48,13 @@ footer:
   legal:
     impressum_label: "Impressum"
     privacy_label: "Datenschutz"
+    impressum_href: "/impressum/"
+    privacy_href: "/privacy/"
+    nav_label: "Rechtliches"
+    back_home: "Zur Startseite"
+    contact_label: "Kontakt aufnehmen"
+    contact_href: "/#contact"
+    related_title: "Weitere Informationen"
 
 app:
   title: "Lade die App herunter"
