@@ -37,12 +37,19 @@
 }
 
 .section-muted {
-  background: linear-gradient(180deg, var(--surface) 0%, rgba(243, 247, 244, 0.4) 100%);
+  background: linear-gradient(180deg, var(--surface) 0%, rgba(243, 247, 244, 0.45) 100%);
+}
+
+.section-emphasis {
+  background:
+    radial-gradient(720px 280px at 50% 0%, rgba(26, 173, 69, 0.14), transparent 70%),
+    linear-gradient(180deg, #e7efe9 0%, #f3f7f4 100%);
 }
 
 .section-hook {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(232, 240, 235, 0.55) 0%, transparent 100%);
 
   &::before {
     content: "";
@@ -445,6 +452,7 @@
 
 .section-closing {
   padding-bottom: 2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(232, 240, 235, 0.65) 100%);
 }
 
 .closing-panel {
