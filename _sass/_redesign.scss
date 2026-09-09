@@ -542,6 +542,83 @@
   line-height: 1.55;
 }
 
+.action-check-panel.is-success {
+  .headline-02,
+  .action-check-lead,
+  #hubspotForm {
+    display: none;
+  }
+}
+
+.action-check-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  animation: action-check-success-in 0.35s ease;
+}
+
+.action-check-success[hidden] {
+  display: none !important;
+}
+
+.action-check-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: rgba(26, 173, 69, 0.16);
+  color: var(--middle-green);
+}
+
+.action-check-success-title {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.action-check-success-text {
+  margin: 0;
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+@keyframes action-check-success-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.action-check-message {
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius);
+  background: rgba(180, 42, 42, 0.08);
+  border: 1px solid rgba(180, 42, 42, 0.18);
+  color: #8a1f1f;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.action-check-message[hidden] {
+  display: none !important;
+}
+
 .section-closing {
   padding-bottom: 2rem;
   background: linear-gradient(180deg, transparent 0%, rgba(232, 240, 235, 0.65) 100%);

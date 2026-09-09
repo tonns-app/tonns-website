@@ -78,6 +78,9 @@ action_check:
   email_label: "E-Mail-Adresse"
   privacy_html: 'Ich habe die <a href="/privacy/" target="_blank" rel="noopener"><strong>Datenschutzbestimmungen</strong></a> gelesen und stimme zu.'
   submit_label: "Termine prüfen"
+  success_title: "Anfrage unterwegs"
+  success_text: "Wir prüfen die Abholtermine für Ihre Adresse und senden sie in Kürze an Ihre E-Mail."
+  success_reset_label: "Weitere Adresse prüfen"
 
 cookie:
   text: >-

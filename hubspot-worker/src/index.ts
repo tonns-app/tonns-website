@@ -74,13 +74,18 @@ export default {
       });
     }
 
-    // Minimal lauffähige Ticket-Properties (nur Standardfelder)
     const ticketData = {
       properties: {
         hs_pipeline: "0",
         hs_pipeline_stage: "1",
         subject: "Neue Anfrage für Abfuhrtermine",
-        content: `E-Mail: ${email}\n` + `Adresse: ${street} ${houseNumber}\n` + `PLZ/Ort: ${zip} ${city}`,
+        content:
+          `E-Mail: ${email}\n\n` +
+          "Anfrage für den Mülltonnendienst.",
+        address_ticket: `${street} ${houseNumber}`,
+        zip_ticket: String(zip),
+        city_ticket: city,
+        ticketart: "Anfrage",
       },
     };
 

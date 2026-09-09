@@ -11,6 +11,9 @@
     {% include footer.html %}
 
     {%- if page.include_form_handler -%}
+      {%- if site.data.google.maps_api_key -%}
+        {% include scripts/google-maps.html %}
+      {%- endif -%}
       <script src="{{ "/assets/js/form-handler-hubspot-termin.js" | relative_url }}"></script>
     {%- endif -%}
 

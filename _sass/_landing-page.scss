@@ -249,42 +249,56 @@ textarea {
 }
 
 /* Autocomplete Container */
-.autocomplete-container {
+section .autocomplete-container {
   position: relative;
   width: 100%;
-  z-index: 1000;
+  z-index: 20;
+  overflow: visible;
 }
 
-/* Dropdown für Adressvorschläge */
+/* Dropdown für Adressvorschläge (am body, analog Dashboard v2) */
 #address-suggestions {
   list-style-type: none;
   padding: 0;
   margin: 0;
   border: 1px solid #ccc;
   background: white;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;
-  max-width: 400px;
-  z-index: 1050;
+  z-index: 4000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   display: none;
   overflow-y: auto;
-  max-height: 200px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  max-height: 240px;
+  border-radius: 5px;
+  text-align: left;
 }
 
 /* Dropdown-Einträge */
 #address-suggestions li {
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
   font-size: 0.9rem;
   color: #333;
   background: white;
-  &:hover {
+}
+
+#address-suggestions li button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
     background: #f0f0f0;
+    outline: none;
   }
 }
 

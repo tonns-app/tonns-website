@@ -9,8 +9,21 @@
     <form id="hubspotForm" action="#" method="POST">
       <div class="autocomplete-container">
         <label for="address" class="visually-hidden">{{ o.address_label | default: d.address_label }}</label>
-        <input class="input" type="text" id="address" name="address" placeholder="{{ o.address_placeholder | default: d.address_placeholder }}" required autocomplete="off" />
-        <ul id="address-suggestions"></ul>
+        <input
+          class="input"
+          type="text"
+          id="address"
+          name="address"
+          placeholder="{{ o.address_placeholder | default: d.address_placeholder }}"
+          required
+          autocomplete="off"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="address-suggestions"
+          aria-label="{{ o.address_label | default: d.address_label }}"
+        />
+        <ul id="address-suggestions" role="listbox"></ul>
       </div>
 
       <div class="input-container">
@@ -23,7 +36,20 @@
         <label for="agree-checkbox">{{ o.privacy_html | default: d.privacy_html | raw }}</label>
       </div>
 
+      <p id="action-check-error" class="action-check-message" hidden role="alert"></p>
+
       <button class="btn btn-green" type="submit">{{ o.submit_label | default: d.submit_label }}</button>
     </form>
+
+    <div id="action-check-success" class="action-check-success" hidden tabindex="-1" aria-live="polite">
+      <div class="action-check-success-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6.5 9.5 17 4 11.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="action-check-success-title">{{ o.success_title | default: d.success_title }}</h3>
+      <p class="action-check-success-text">{{ o.success_text | default: d.success_text }}</p>
+      <button class="btn btn-green" type="button" id="action-check-reset">{{ o.success_reset_label | default: d.success_reset_label }}</button>
+    </div>
   </div>
 </section>
